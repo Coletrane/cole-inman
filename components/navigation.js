@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {isMobile} from './layout.js'
+import {isMobile} from './Layout.js'
 
 // Components
 import IconButton from 'material-ui/IconButton';
