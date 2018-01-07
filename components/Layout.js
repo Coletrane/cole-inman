@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import { colors } from '../util/styles.js'
-import { isMobile } from '../util/functions.js'
+import { isMobile } from '../util/functions'
 
 // Components
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import Navigation from './Navigation.js'
+import Header from './Header'
 
-const title = 'COLE INMAN'
 
 export default class Layout extends Component {
 
@@ -17,29 +17,67 @@ export default class Layout extends Component {
     return (
       <AppWrapper>
 
-        <AppBarWrapper>
-          <AppBar className="app-bar"
-                  position="static">
-            <Toolbar>
-              <Title>
-                <h1>
-                  {title}
-                </h1>
-              </Title>
-              <Navigation bottom={false}/>
-            </Toolbar>
-          </AppBar>
-        </AppBarWrapper>
+        <Header/>
 
-        <MainContent>
-          {this.props.children}
-        </MainContent>
+        <MainContent children={this.props.children}/>
 
         <Navigation bottom={true}/>
+
       </AppWrapper>
     )
   }
 };
+
+class MainContent extends Component {
+
+  constructor(props) {
+    super(props)
+    this.onResize = this.onResize.bind(this)
+    this.state = {
+      mobile: isMobile(),
+    }
+  }
+
+  onResize() {
+    this.setState({
+      mobile: isMobile()
+    })
+  }
+
+  // Lifecycle
+  componentDidMount() {
+    if (process.browser) {
+      window.addEventListener('resize', this.onResize)
+    }
+  }
+
+  componentWillUnmount() {
+    if (process.browser) {
+      window.removeEventListener('resize', this.onResize)
+    }
+  }
+
+  // Check if we are under the mobile threshold to avoid needless calls to render
+  shouldComponentUpdate(nextProps, nextState) {
+    return (isMobile() !== this.state.mobile)
+  }
+
+  render() {
+    if (!this.state.mobile) {
+      return(
+        <MainContentDesktop>
+          {this.props.children}
+        </MainContentDesktop>
+      )
+    } else {
+      return(
+        <MainContentMobile>
+          {this.props.children}
+        </MainContentMobile>
+      )
+    }
+  }
+}
 
 // Styles
 const AppWrapper = styled.div`
@@ -51,10 +89,7 @@ const AppWrapper = styled.div`
   }
 `
 const AppBarWrapper = styled.div`
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
+  
 `
 
 const Title = styled.div`
@@ -62,6 +97,12 @@ const Title = styled.div`
   text-align: center;
 `
 
-const MainContent = styled.div`
-  
+const MainContentDesktop = styled.div`
+  margin-top: 100px;
+  margin-bottom: 60px;
+`
+
+const MainContentMobile = styled.div`
+  margin-top: 60px;
+  margin-bottom: 60px;
 `

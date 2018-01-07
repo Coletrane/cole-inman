@@ -12,9 +12,7 @@ export default class Index extends Component {
       <GlobalStyles>
         <Layout>
 
-          {/*<Section>*/}
             <Projects/>
-          {/*</Section>*/}
 
 
         </Layout>

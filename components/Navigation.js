@@ -124,8 +124,7 @@ function NavButtons() {
 
 // Styles
 const TopNav = styled.div`
-  float: right;
-  text-align: right;
+  
 `
 
 // TODO: get them equidistant from eachother
