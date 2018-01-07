@@ -1,9 +1,11 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var mobileWidth = exports.mobileWidth = 600;
+exports.getComponent = exports.isMobile = undefined;
+
+var _functions = require('./functions');
 
 var isMobile = exports.isMobile = function isMobile() {
   // Normally this would be done using @media queries
@@ -12,7 +14,7 @@ var isMobile = exports.isMobile = function isMobile() {
   // Additionally, this shows the split between client and server side
   // code by checking if we are in the browser or server
   if (process.browser) {
-    return document.documentElement.clientWidth < mobileWidth;
+    return document.documentElement.clientWidth < _functions.mobileWidth;
   } else {
     return false;
   }
@@ -23,4 +25,4 @@ var getComponent = exports.getComponent = function getComponent(props, slot) {
     return comp.slot === slot;
   });
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWwvZnVuY3Rpb25zLmpzIl0sIm5hbWVzIjpbIm1vYmlsZVdpZHRoIiwiaXNNb2JpbGUiLCJwcm9jZXNzIiwiYnJvd3NlciIsImRvY3VtZW50IiwiZG9jdW1lbnRFbGVtZW50IiwiY2xpZW50V2lkdGgiLCJnZXRDb21wb25lbnQiLCJwcm9wcyIsInNsb3QiLCJjaGlsZHJlbiIsImZpbHRlciIsImNvbXAiXSwibWFwcGluZ3MiOiI7Ozs7O0FBQU8sSUFBTSxvQ0FBTixBQUFvQixBQUUzQjs7QUFBTyxJQUFNLDhCQUFXLFNBQVgsQUFBVyxXQUFNLEFBQzVCO0FBQ0E7QUFFQTs7QUFDQTtBQUNBO01BQUksUUFBSixBQUFZLFNBQVMsQUFDbkI7V0FBTyxTQUFBLEFBQVMsZ0JBQVQsQUFBeUIsY0FBaEMsQUFBOEMsQUFDL0M7QUFGRCxTQUVPLEFBQ0w7V0FBQSxBQUFPLEFBQ1I7QUFDRjtBQVhNLEFBY1A7O0FBQU8sSUFBTSxzQ0FBZSxTQUFmLEFBQWUsYUFBQSxBQUFDLE9BQUQsQUFBUSxNQUFTLEFBQzNDO2VBQU8sQUFBTSxTQUFOLEFBQWUsT0FBUSxVQUFBLEFBQUMsTUFBUyxBQUN0QztXQUFPLEtBQUEsQUFBSyxTQUFaLEFBQXFCLEFBQ3RCO0FBRkQsQUFBTyxBQUdSLEdBSFE7QUFERiIsImZpbGUiOiJmdW5jdGlvbnMuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2NvbGVpbm1hbi9Qcm9ncmFtcy9jb2xlLWlubWFuIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWwvZnVuY3Rpb25zLmpzIl0sIm5hbWVzIjpbIm1vYmlsZVdpZHRoIiwiaXNNb2JpbGUiLCJwcm9jZXNzIiwiYnJvd3NlciIsImRvY3VtZW50IiwiZG9jdW1lbnRFbGVtZW50IiwiY2xpZW50V2lkdGgiLCJnZXRDb21wb25lbnQiLCJwcm9wcyIsInNsb3QiLCJjaGlsZHJlbiIsImZpbHRlciIsImNvbXAiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQSxBQUFRLEFBQWtCLEFBRTFCOztBQUFPLElBQU0sOEJBQVcsU0FBWCxBQUFXLFdBQU0sQUFDNUI7QUFDQTtBQUVBOztBQUNBO0FBQ0E7TUFBSSxRQUFKLEFBQVksU0FBUyxBQUNuQjtXQUFPLFNBQUEsQUFBUyxnQkFBaEIsQUFBTyxBQUF5QixBQUFjLEFBQy9DO0FBRkQsU0FFTyxBQUNMO1dBQUEsQUFBTyxBQUNSO0FBQ0Y7QUFYTSxBQWNQOztBQUFPLElBQU0sc0NBQWUsU0FBZixBQUFlLGFBQUEsQUFBQyxPQUFELEFBQVEsTUFBUyxBQUMzQztlQUFPLEFBQU0sU0FBTixBQUFlLE9BQVEsVUFBQSxBQUFDLE1BQVMsQUFDdEM7V0FBTyxLQUFBLEFBQUssU0FBWixBQUFxQixBQUN0QjtBQUZELEFBQU8sQUFHUixHQUhRO0FBREYiLCJmaWxlIjoiZnVuY3Rpb25zLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jb2xlaW5tYW4vUHJvZ3JhbXMvY29sZS1pbm1hbiJ9

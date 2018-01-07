@@ -47,7 +47,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _jsxFileName = '/Users/coleinman/Programs/cole-inman/components/Header.js';
 
 var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  color: ', ';\n  text-align: center;\n  \n  background-color: ', ';\n  box-shadow: ', ';\n  \n  position: fixed;\n  left: 0px;\n  top: 0px;\n  width: 100%;\n'], ['\n  color: ', ';\n  text-align: center;\n  \n  background-color: ', ';\n  box-shadow: ', ';\n  \n  position: fixed;\n  left: 0px;\n  top: 0px;\n  width: 100%;\n']),
-    _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n  h1 {\n    margin: 0;\n  }\n'], ['\n  h1 {\n    margin: 0;\n  }\n']);
+    _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n  margin: 0;\n'], ['\n  margin: 0;\n']);
 
 // Components
 
@@ -81,14 +81,9 @@ var Header = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 17
         }
-      }, _react2.default.createElement('h1', {
-        __source: {
+      }, title), _react2.default.createElement(_Navigation2.default, { bottom: false, __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
-        }
-      }, title)), _react2.default.createElement(_Navigation2.default, { bottom: false, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 21
         }
       })));
     }
@@ -104,5 +99,5 @@ exports.default = Header;
 
 var HeaderWrapper = _styledComponents2.default.div(_templateObject, _styles.colors.barFontColor, _styles.colors.barColor, _styles.boxShadow);
 
-var Title = _styledComponents2.default.div(_templateObject2);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvSGVhZGVyLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiY29sb3JzIiwiYm94U2hhZG93IiwiTmF2aWdhdGlvbiIsInRpdGxlIiwiSGVhZGVyIiwiSGVhZGVyV3JhcHBlciIsImRpdiIsImJhckZvbnRDb2xvciIsImJhckNvbG9yIiwiVGl0bGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPOzs7O0FBRVAsQUFBUyxBQUFRLEFBQWlCOztBQUdsQyxBQUFPLEFBQWdCOzs7Ozs7Ozs7OztBQUR2Qjs7O0FBR0EsSUFBTSxRQUFOLEFBQWM7O0lBRU8sQTs7Ozs7Ozs7Ozs7NkJBRVYsQUFDUDs2QkFDRyxjQUFEOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNHLGNBQUQ7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0M7QUFERDtBQUFBLFNBRkosQUFDRSxBQUNFLEFBS0YseUJBQUEsQUFBQyxzQ0FBVyxRQUFaLEFBQW9CO29CQUFwQjtzQkFUTixBQUNFLEFBQ0UsQUFPRSxBQUlQO0FBSk87Ozs7OztBQVowQixBOztBQW1CcEM7OztrQkFuQnFCLEE7O0FBb0JyQixJQUFNLGdCQUFnQiwyQkFBaEIsQUFBdUIscUJBQ2xCLGVBREwsQUFDWSxjQUdJLGVBSnRCLEFBQU0sQUFJdUIsQUFDYjs7QUFRaEIsSUFBTSxRQUFRLDJCQUFSLEFBQWUsSUFBckIiLCJmaWxlIjoiSGVhZGVyLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jb2xlaW5tYW4vUHJvZ3JhbXMvY29sZS1pbm1hbiJ9
+var Title = _styledComponents2.default.h1(_templateObject2);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvSGVhZGVyLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiY29sb3JzIiwiYm94U2hhZG93IiwiTmF2aWdhdGlvbiIsInRpdGxlIiwiSGVhZGVyIiwiSGVhZGVyV3JhcHBlciIsImRpdiIsImJhckZvbnRDb2xvciIsImJhckNvbG9yIiwiVGl0bGUiLCJoMSJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQU87Ozs7QUFFUCxBQUFTLEFBQVEsQUFBaUI7O0FBR2xDLEFBQU8sQUFBZ0I7Ozs7Ozs7Ozs7O0FBRHZCOzs7QUFHQSxJQUFNLFFBQU4sQUFBYzs7SSxBQUVPOzs7Ozs7Ozs7Ozs2QkFFVixBQUNQOzZCQUNHLGNBQUQ7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRTtBQURGO0FBQUEseUJBQ0csY0FBRDs7b0JBQUE7c0JBQUEsQUFDRztBQURIO0FBQUEsU0FERixBQUNFLEFBSUEsd0JBQUEsQUFBQyxzQ0FBVyxRQUFaLEFBQW9CO29CQUFwQjtzQkFQTixBQUNFLEFBQ0UsQUFLRSxBQUlQO0FBSk87Ozs7OztBQVYwQixBOztBQWlCcEM7OztrQixBQWpCcUI7O0FBa0JyQixJQUFNLGdCQUFnQiwyQkFBaEIsQUFBdUIscUJBQ2xCLGVBREwsQUFDWSxjQUdJLGVBSnRCLEFBQU0sQUFJdUIsQUFDYjs7QUFRaEIsSUFBTSxRQUFRLDJCQUFSLEFBQWUsR0FBckIiLCJmaWxlIjoiSGVhZGVyLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jb2xlaW5tYW4vUHJvZ3JhbXMvY29sZS1pbm1hbiJ9

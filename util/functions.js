@@ -1,4 +1,4 @@
-export const mobileWidth = 600
+import {mobileWidth} from './functions'
 
 export const isMobile = () => {
   // Normally this would be done using @media queries

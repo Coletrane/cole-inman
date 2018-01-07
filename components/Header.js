@@ -15,9 +15,7 @@ export default class Header extends Component {
       <HeaderWrapper>
         <header>
           <Title>
-            <h1>
             {title}
-            </h1>
           </Title>
 
           <Navigation bottom={false}/>
@@ -41,8 +39,6 @@ const HeaderWrapper = styled.div`
   width: 100%;
 `
 
-const Title = styled.div`
-  h1 {
-    margin: 0;
-  }
+const Title = styled.h1`
+  margin: 0;
 `
