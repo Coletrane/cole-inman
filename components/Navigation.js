@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { isMobile } from './Layout.js';
+import { colors, boxShadow } from '../util/styles';
+import { isMobile } from '../util/functions';
 
 // Components
 import IconButton from 'material-ui/IconButton';
@@ -18,6 +19,8 @@ const GITHUB = 'https://github.com/coletrane/';
 const FACEBOOK = 'https://www.facebook.com/uhmcole';
 const EMAIL = 'eloc49@gmail.com';
 
+const iconColor = "white"
+const iconDimensions = "1.5em"
 
 export default class Navigation extends Component {
 
@@ -30,6 +33,14 @@ export default class Navigation extends Component {
     this.state = {
       mobile: isMobile(),
     };
+  }
+
+  get displayTopNav() {
+    return !this.state.mobile && !this.props.bottom;
+  }
+
+  get displayBottomNav() {
+    return this.state.mobile && this.props.bottom;
   }
 
   onResize() {
@@ -57,17 +68,17 @@ export default class Navigation extends Component {
   }
 
   render() {
-    if (this.state.mobile && this.props.bottom) {
+    if (this.displayTopNav) {
       return (
-        <div>
-          <NavButtons/>
-        </div>
+        <TopNav>
+          <NavButtons iconColor={this.iconColor}/>
+        </TopNav>
       );
-    } else if (!this.state.mobile && !this.props.bottom) {
+    } else if (this.displayBottomNav) {
       return (
-        <div>
-          <NavButtons/>
-        </div>
+        <BottomNav>
+          <NavButtons iconColor={this.iconColor}/>
+        </BottomNav>
       );
     } else {
       return (null);
@@ -80,25 +91,50 @@ function NavButtons() {
     <div>
       <a href={LINKEDIN}>
         <IconButton aria-label="LinkedIn">
-          <FaLinkedinSquare/>
+          <FaLinkedinSquare fill={iconColor}
+                            height={iconDimensions}
+                            width={iconDimensions}/>
         </IconButton>
       </a>
       <a href={GITHUB}>
         <IconButton aria-label="Github">
-          <FaGithubSquare/>
+          <FaGithubSquare fill={iconColor}
+                          height={iconDimensions}
+                          width={iconDimensions}/>
         </IconButton>
       </a>
       <a href={FACEBOOK}>
         <IconButton aria-label="Facebook">
-          <FaFacebookSquare/>
+          <FaFacebookSquare fill={iconColor}
+                            height={iconDimensions}
+                            width={iconDimensions}/>
         </IconButton>
       </a>
       <a href={'mailto:' + EMAIL}>
         <IconButton aria-label="Email">
-          <FaEnvelopeSquare/>
+          <FaEnvelopeSquare fill={iconColor}
+                            height={iconDimensions}
+                            width={iconDimensions}/>
         </IconButton>
       </a>
     </div>
   );
 }
+
+// Styles
+const TopNav = styled.div`
+  float: right;
+  text-align: right;
+`;
+
+// TODO: get them equidistant from eachother
+const BottomNav = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 56px;
+  position: static;
+  flex-shrink: 0;
+  background-color: ${colors.barColor};
+  box-shadow: ${boxShadow};
+`;
 

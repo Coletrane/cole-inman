@@ -4,17 +4,20 @@
   "description": "Personal web site / resume for Cole Inman",
   "scripts": {
     "dev": "next",
-    "dev8080": "next -p 8080"
+    "dev8080": "next -p 8080",
+    "build": "next build",
+    "start": "NODE_ENV=production node ./server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.2",
     "material-ui": "^1.0.0-beta.27",
     "next": "^4.2.1",
+    "pageres": "^4.5.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "styled-components": "^2.4.0"
   }

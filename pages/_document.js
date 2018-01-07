@@ -1,10 +1,10 @@
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import React from 'react'
+import Document, { Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class ColeDocument extends Document {
 
-  static getInitialProps ({ renderPage }) {
+  static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
     const page = renderPage(
       App => props => sheet.collectStyles(<App {...props} />))
@@ -17,22 +17,22 @@ export default class ColeDocument extends Document {
       <html lang="en">
         <Head>
           <title>
-            { this.title }
+            {this.title}
           </title>
           <meta charSet="utf-8"/>
           <meta name="viewport"
                 content="initial-scale=1.0, width=device-width"/>
           <meta name="description"
                 content="Cole Inman Full Stack Software Developer Resume and Project showcase"/>
-          { this.props.styleTags }
+          {this.props.styleTags}
         </Head>
 
-        <body style={{margin: 0}}>
+        <body style={{ margin: 0 }}>
           <Main/>
           <NextScript/>
         </body>
 
       </html>
-    );
+    )
   }
 }
