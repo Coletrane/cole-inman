@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import { colors } from '../util/styles'
-import { isMobile } from '../util/functions'
+import { colors } from '../util/styles.js'
+import { isMobile } from '../util/functions.js'
 
 // Components
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
-import Navigation from './Navigation'
+import Navigation from './Navigation.js'
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 
 const TITLE = 'Cole Inman'

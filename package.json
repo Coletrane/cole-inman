@@ -6,7 +6,7 @@
     "dev": "next",
     "dev8080": "next -p 8080",
     "build": "next build",
-    "start": "NODE_ENV=production node ./server.js"
+    "start": "rimraf static/img/webshots && mkdir static/img/webshots &&NODE_ENV=production node ./server.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
+    "rimraf": "^2.6.2",
     "styled-components": "^2.4.0"
   }
 }

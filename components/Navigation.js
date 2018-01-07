@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { colors, boxShadow } from '../util/styles';
-import { isMobile } from '../util/functions';
+import { colors, boxShadow } from '../util/styles.js';
+import { isMobile } from '../util/functions.js';
 
 // Components
 import IconButton from 'material-ui/IconButton';
