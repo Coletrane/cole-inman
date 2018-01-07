@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 
 // Components
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import Navigation from './navigation.js';
+import Navigation from './Navigation';
+
+const TITLE = "Cole Inman";
 
 const MOBILE_WIDTH = 600;
 
@@ -17,35 +20,50 @@ export const isMobile = () => {
   if (process.browser) {
     return document.documentElement.clientWidth < MOBILE_WIDTH;
   } else {
-    return false
+    return false;
   }
-}
+};
 
 export default class Layout extends Component {
-
-  get title() {
-    return "Cole Inman"
-  }
-
+  
   render() {
     return (
-      <div>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography type="title">
-              {this.title}
-            </Typography>
-            <Navigation/>
-          </Toolbar>
-        </AppBar>
+      <Wrapper>
 
-        <div className="main-content">
-          { this.props.children }
-        </div>
+          <AppBar className="app-bar"
+                  position="static">
+            <Toolbar>
+              <Typography type="title">
+                <Title>
+                  {TITLE}
+                </Title>
+                <Navigation bottom={false}/>
+              </Typography>
+            </Toolbar>
+          </AppBar>
 
-        <Navigation/>
+          <MainContent>
+            { this.props.children }
+          </MainContent>
 
-      </div>
+        <Navigation bottom={true}/>
+
+      </Wrapper>
     );
   }
 };
+
+// Styles
+const Wrapper = styled.div`
+  background-color: #001880;
+  background-image: url('../static/img/dark-wood.png');
+`
+
+const Title = styled.div`
+  color: white;
+  text-align: center;
+`
+
+const MainContent = styled.div`
+  
+`
