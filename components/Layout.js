@@ -7,56 +7,54 @@ import { isMobile } from '../util/functions.js'
 // Components
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
-import Typography from 'material-ui/Typography'
 import Navigation from './Navigation.js'
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 
-const TITLE = 'Cole Inman'
-
-const theme = createMuiTheme({
-  palette: {
-    type: 'dark'
-  }
-})
+const title = 'COLE INMAN'
 
 export default class Layout extends Component {
 
   render() {
     return (
-      <Wrapper>
-        {/*<MuiThemeProvider theme={theme}>*/}
-        {/*<WithTheme/>*/}
-        <AppBar className="app-bar"
-                position="static">
-          <Toolbar>
-            <Typography type="title">
+      <AppWrapper>
+
+        <AppBarWrapper>
+          <AppBar className="app-bar"
+                  position="static">
+            <Toolbar>
               <Title>
-                {TITLE}
+                <h1>
+                  {title}
+                </h1>
               </Title>
-            </Typography>
-            <Navigation bottom={false}/>
-          </Toolbar>
-        </AppBar>
+              <Navigation bottom={false}/>
+            </Toolbar>
+          </AppBar>
+        </AppBarWrapper>
 
         <MainContent>
           {this.props.children}
         </MainContent>
 
         <Navigation bottom={true}/>
-        {/*</MuiThemeProvider>*/}
-      </Wrapper>
+      </AppWrapper>
     )
   }
 };
 
 // Styles
-const Wrapper = styled.div`
+const AppWrapper = styled.div`
   //background-color: #001880;
   // background-image: url('../static/img/dark-wood.png');
   
   header {
     background-color: ${colors.barColor};
   }
+`
+const AppBarWrapper = styled.div`
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
 `
 
 const Title = styled.div`

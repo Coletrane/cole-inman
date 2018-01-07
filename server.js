@@ -3,31 +3,27 @@ const next = require('next')
 const app = next('.', { dev: true })
 const handle = app.getRequestHandler()
 const Pageres = require('pageres')
-
-const pages = {
-  mtbva: "bikeva.com",
-  handsmith: "handsmith.org",
-  coledrums: "coledrums.com",
-  webjam: "web-jam.com"
-}
-
-const resolutions = [
-  '1024x768'
-]
+const webshots = require('./util/webshots')
 
 console.log("Capturing pages:\n")
-for (page in pages) {
-  if (pages.hasOwnProperty(page)) {
-    console.log(pages[page])
+for (page in webshots.pages) {
+  if (webshots.pages.hasOwnProperty(page)) {
+    console.log(webshots.pages[page].url)
   }
 }
 console.log("\n")
 
 const pageresInstance = new Pageres({delay: 2})
-  .src(pages.mtbva, resolutions)
-  .src(pages.handsmith)
-  .src(pages.coledrums)
-  .src(pages.webjam)
+  .src(
+    webshots.pages.mtbva.url,
+    webshots.resolutions,
+    webshots.pages.mtbva.options)
+  .src(
+    webshots.pages.handsmith.url,
+    webshots.resolutions,
+    webshots.pages.handsmith.options)
+  // .src(pages.coledrums)
+  // .src(pages.webjam)
   .dest(__dirname + '/static/img/webshots')
   .run()
   .then(() => {

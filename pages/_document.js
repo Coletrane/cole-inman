@@ -24,7 +24,10 @@ export default class ColeDocument extends Document {
                 content="initial-scale=1.0, width=device-width"/>
           <meta name="description"
                 content="Cole Inman Full Stack Software Developer Resume and Project showcase"/>
+          <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet"/>
+
           {this.props.styleTags}
+
         </Head>
 
         <body style={{ margin: 0 }}>
