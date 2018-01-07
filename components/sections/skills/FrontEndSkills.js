@@ -7,52 +7,27 @@ import SkillsList from './SkillsList'
 
 export default class FrontEndSkills extends Component {
 
-  get jsSkills() {
-    let skills = [
-      <Html key="html"/>,
-      <Css key="css"/>,
-      <Jquery key="jquery"/>,
-      <Javascript key="javascript"/>,
-      <Typescript key="typescript"/>,
-      <Aurelia key="aurelia"/>,
-      <ReactLolNameCollision key="react"/>,
-      <Redux key="redux"/>,
-      <Angular key="angular"/>,
-      <Vue key="vue"/>,
-      <Node key="node"/>,
-      <Webpack key="webpack"/>,
-      <Express key="express"/>,
-      <Rails key="rails"/>,
-    ]
-
-    let indexed = []
-    skills.forEach((skill, i, arr) => {
-      indexed.push(cloneElement(skill, {className: `${i}`}))
-    })
-
-    return indexed
-  }
-
   render() {
     return (
-      <div>
-
-      <FrontEndSkillsTitle>
-        Front End
-      </FrontEndSkillsTitle>
-      <SkillsList>
-        {this.jsSkills}
+      <SkillsList title="Front End">
+        <Html/>
+        <Css/>
+        <Jquery/>
+        <Javascript/>
+        <Typescript/>
+        <Aurelia/>
+        <ReactLolNameCollision/>
+        <Redux/>
+        <Angular/>
+        <Vue/>
+        <Node/>
+        <Webpack/>
+        <Express/>
+        <Rails/>
       </SkillsList>
-
-      </div>
     )
   }
 }
-
-// Styles
-const FrontEndSkillsTitle = styled.h3`
-  margin: 0;
-`
 
 // Skill Components
 // TODO: align the text and images

@@ -44,9 +44,17 @@ var _Card = require('material-ui/Card');
 
 var _Card2 = _interopRequireDefault(_Card);
 
+var _GeneralSkills = require('./skills/GeneralSkills');
+
+var _GeneralSkills2 = _interopRequireDefault(_GeneralSkills);
+
 var _FrontEndSkills = require('./skills/FrontEndSkills');
 
 var _FrontEndSkills2 = _interopRequireDefault(_FrontEndSkills);
+
+var _BackEndSkills = require('./skills/BackEndSkills');
+
+var _BackEndSkills2 = _interopRequireDefault(_BackEndSkills);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -72,26 +80,36 @@ var Skills = function (_Component) {
       return _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 20
         }
       }, _react2.default.createElement('h1', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 21
         }
       }, ' Skills'), _react2.default.createElement(_Card2.default, { title: 'Javascript', __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 23
         }
       }, _react2.default.createElement(SkillsStyle, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 24
         }
-      }, _react2.default.createElement(_FrontEndSkills2.default, {
+      }, _react2.default.createElement(_GeneralSkills2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 25
+        }
+      }), _react2.default.createElement(_FrontEndSkills2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        }
+      }), _react2.default.createElement(_BackEndSkills2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
         }
       }))));
     }
@@ -117,4 +135,4 @@ var SkillsStyle = _styledComponents2.default.div(_templateObject);
 // //
 // //   )
 // // }
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvU2tpbGxzLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiUHJvcFR5cGVzIiwiQ2FyZCIsIkNhcmRDb250ZW50IiwiQ2FyZEhlYWRlciIsIkNhcmRBY3Rpb25zIiwiRnJvbnRFbmRTa2lsbHMiLCJTa2lsbHMiLCJTa2lsbHNTdHlsZSIsImRpdiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQU87Ozs7QUFDUCxBQUFPOzs7O0FBR1AsQUFBTyxBQUVMLEFBQ0EsQUFDQTs7OztBQUVGLEFBQU8sQUFBb0I7Ozs7Ozs7Ozs7QUFQM0I7OztJLEFBVXFCOzs7Ozs7Ozs7Ozs2QkFFVixBQUNQOzZCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBREYsQUFDRSxBQUVBLDRCQUFBLEFBQUMsZ0NBQUssT0FBTixBQUFZO29CQUFaO3NCQUFBLEFBQ0U7QUFERjt5QkFDRyxjQUFEOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxBQUFDOztvQkFBRDtzQkFOUixBQUNFLEFBR0UsQUFDRSxBQUNFLEFBS1Q7QUFMUztBQUFBOzs7OztBQVR3QixBOztrQkFBZixBOzs7QUFpQnJCLElBQU0sY0FBYywyQkFBZCxBQUFxQixJQUEzQjs7QUFTQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiU2tpbGxzLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jb2xlaW5tYW4vUHJvZ3JhbXMvY29sZS1pbm1hbiJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvU2tpbGxzLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiUHJvcFR5cGVzIiwiQ2FyZCIsIkNhcmRDb250ZW50IiwiQ2FyZEhlYWRlciIsIkNhcmRBY3Rpb25zIiwiR2VuZXJhbFNraWxscyIsIkZyb250RW5kU2tpbGxzIiwiQmFja0VuZFNraWxscyIsIlNraWxscyIsIlNraWxsc1N0eWxlIiwiZGl2Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBTzs7OztBQUNQLEFBQU87Ozs7QUFHUCxBQUFPLEFBRUwsQUFDQSxBQUNBOzs7O0FBRUYsQUFBTyxBQUFtQjs7OztBQUMxQixBQUFPLEFBQW9COzs7O0FBQzNCLEFBQU8sQUFBbUI7Ozs7Ozs7Ozs7QUFUMUI7OztJLEFBV3FCOzs7Ozs7Ozs7Ozs2QkFFVixBQUNQOzZCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBREYsQUFDRSxBQUVBLDRCQUFBLEFBQUMsZ0NBQUssT0FBTixBQUFZO29CQUFaO3NCQUFBLEFBQ0U7QUFERjt5QkFDRyxjQUFEOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxBQUFDOztvQkFBRDtzQkFERixBQUNFLEFBQ0E7QUFEQTtBQUFBLDBCQUNBLEFBQUM7O29CQUFEO3NCQUZGLEFBRUUsQUFDQTtBQURBO0FBQUEsMEJBQ0EsQUFBQzs7b0JBQUQ7c0JBUlIsQUFDRSxBQUdFLEFBQ0UsQUFHRSxBQUtUO0FBTFM7QUFBQTs7Ozs7QSxBQVh3Qjs7a0IsQUFBZjs7O0FBbUJyQixJQUFNLGNBQWMsMkJBQWQsQUFBcUIsSUFBM0I7O0FBU0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwiZmlsZSI6IlNraWxscy5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY29sZWlubWFuL1Byb2dyYW1zL2NvbGUtaW5tYW4ifQ==

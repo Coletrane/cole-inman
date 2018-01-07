@@ -9,8 +9,9 @@ import Card,
   CardHeader,
   CardActions
 } from 'material-ui/Card'
+import GeneralSkills from './skills/GeneralSkills'
 import FrontEndSkills from './skills/FrontEndSkills'
-
+import BackEndSkills from './skills/BackEndSkills'
 
 export default class Skills extends Component {
 
@@ -21,7 +22,9 @@ export default class Skills extends Component {
 
         <Card title="Javascript">
           <SkillsStyle>
+            <GeneralSkills/>
             <FrontEndSkills/>
+            <BackEndSkills/>
           </SkillsStyle>
         </Card>
       </div>

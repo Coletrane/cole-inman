@@ -40,7 +40,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _jsxFileName = '/Users/coleinman/Programs/cole-inman/components/sections/skills/SkillsList.js';
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  text-align: center;\n  display: grid;\n  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;\n'], ['\n  text-align: center;\n  display: grid;\n  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;\n']);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  margin: 0;\n'], ['\n  margin: 0;\n']),
+    _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n  text-align: center;\n  display: grid;\n  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;\n'], ['\n  text-align: center;\n  display: grid;\n  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;\n']);
 
 var SkillsList = function (_Component) {
   (0, _inherits3.default)(SkillsList, _Component);
@@ -54,12 +55,22 @@ var SkillsList = function (_Component) {
   (0, _createClass3.default)(SkillsList, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(List, {
+      return _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 8
         }
-      }, this.props.children);
+      }, _react2.default.createElement(SkillsListTitle, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        }
+      }, this.props.title), _react2.default.createElement(List, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        }
+      }, this.props.children));
     }
   }]);
 
@@ -71,5 +82,6 @@ var SkillsList = function (_Component) {
 
 exports.default = SkillsList;
 
-var List = _styledComponents2.default.div(_templateObject);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvc2tpbGxzL1NraWxsc0xpc3QuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJzdHlsZWQiLCJTa2lsbHNMaXN0IiwicHJvcHMiLCJjaGlsZHJlbiIsIkxpc3QiLCJkaXYiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPOzs7Ozs7Ozs7O0lBRWMsQTs7Ozs7Ozs7Ozs7NkJBRVYsQUFDUDs2QkFDRyxjQUFEOztvQkFBQTtzQkFBQSxBQUNHO0FBREg7QUFBQSxPQUFBLE9BQ0csQUFBSyxNQUZWLEFBQ0UsQUFDYyxBQUdqQjs7Ozs7QSxBQVJxQzs7QUFXeEM7OztrQkFYcUIsQTs7QUFZckIsSUFBTSxPQUFPLDJCQUFQLEFBQWMsSUFBcEIiLCJmaWxlIjoiU2tpbGxzTGlzdC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY29sZWlubWFuL1Byb2dyYW1zL2NvbGUtaW5tYW4ifQ==
+var SkillsListTitle = _styledComponents2.default.h3(_templateObject);
+var List = _styledComponents2.default.div(_templateObject2);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvc2tpbGxzL1NraWxsc0xpc3QuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJzdHlsZWQiLCJTa2lsbHNMaXN0IiwicHJvcHMiLCJ0aXRsZSIsImNoaWxkcmVuIiwiU2tpbGxzTGlzdFRpdGxlIiwiaDMiLCJMaXN0IiwiZGl2Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBTzs7Ozs7Ozs7Ozs7SUFFYyxBOzs7Ozs7Ozs7Ozs2QkFFVixBQUNQOzZCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0csY0FBRDs7b0JBQUE7c0JBQUEsQUFDRztBQURIO0FBQUEsY0FDRyxBQUFLLE1BRlYsQUFDRSxBQUNjLEFBRWQsd0JBQUMsY0FBRDs7b0JBQUE7c0JBQUEsQUFDRztBQURIO0FBQUEsY0FDRyxBQUFLLE1BTlosQUFDRSxBQUlFLEFBQ2MsQUFJbkI7Ozs7O0FBYnFDLEE7O0FBZ0J4Qzs7O2tCQWhCcUIsQTs7QUFpQnJCLElBQU0sa0JBQWtCLDJCQUFsQixBQUF5QixHQUEvQjtBQUdBLElBQU0sT0FBTywyQkFBUCxBQUFjLElBQXBCIiwiZmlsZSI6IlNraWxsc0xpc3QuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2NvbGVpbm1hbi9Qcm9ncmFtcy9jb2xlLWlubWFuIn0=

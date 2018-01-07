@@ -5,14 +5,22 @@ export default class SkillsList extends Component {
 
   render() {
     return (
-      <List>
-        {this.props.children}
-      </List>
+      <div>
+        <SkillsListTitle>
+          {this.props.title}
+        </SkillsListTitle>
+        <List>
+          {this.props.children}
+        </List>
+      </div>
     )
   }
 }
 
 // Styles
+const SkillsListTitle = styled.h3`
+  margin: 0;
+`
 const List = styled.div`
   text-align: center;
   display: grid;

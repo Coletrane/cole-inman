@@ -18,7 +18,7 @@ export default class Skill extends Component {
     if (this.props.name.includes("(")) {
       filename = this.props.name.split(" ")[0].toLowerCase()
     } else {
-      filename = this.props.name.split(" ").join("")
+      filename = this.props.name.split(" ").join("").toLowerCase()
     }
 
     return `/static/img/logos/${filename}.png`
