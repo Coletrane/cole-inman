@@ -1,4 +1,4 @@
-const mobileWidth = 600
+export const mobileWidth = 600
 
 export const isMobile = () => {
   // Normally this would be done using @media queries

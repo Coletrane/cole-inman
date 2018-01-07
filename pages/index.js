@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 // Components
 import Layout from '../components/Layout'
+import Skills from '../components/sections/Skills'
 import Projects from '../components/sections/Projects'
 import Section from '../components/Section'
 
@@ -11,6 +12,8 @@ export default class Index extends Component {
     return (
       <GlobalStyles>
         <Layout>
+
+            <Skills/>
 
             <Projects/>
 
