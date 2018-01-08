@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, { Component } from "react"
+import styled from "styled-components"
 // Components
-import Layout from '../components/Layout'
-import Skills from '../components/sections/Skills'
-import Projects from '../components/sections/Projects'
-import Section from '../components/Section'
+import Layout from "../components/Layout"
+import Skills from "../components/sections/Skills"
+import Projects from "../components/sections/Projects"
+import Education from "../components/sections/Education"
 
 export default class Index extends Component {
 
@@ -13,10 +13,13 @@ export default class Index extends Component {
       <GlobalStyles>
         <Layout>
 
+          <TwoColumnWrapper>
+            <Education/>
+
             <Skills/>
+          </TwoColumnWrapper>
 
-            <Projects/>
-
+          <Projects/>
 
         </Layout>
       </GlobalStyles>
@@ -30,4 +33,8 @@ const GlobalStyles = styled.div`
     font-family: 'Playfair Display SC', serif;
     font-weight: 400;
   }
+`
+const TwoColumnWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 50% 50%;
 `

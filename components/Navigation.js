@@ -1,27 +1,22 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React, {Component} from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
-import { colors, boxShadow } from '../util/styles.js'
-import { isMobile } from '../util/functions.js'
-
+import {boxShadow, colors} from "../util/styles.js"
+import {isMobile} from "../util/functions.js"
 // Components
-import IconButton from 'material-ui/IconButton'
-
+import IconButton from "material-ui/IconButton"
 // Icon Components
-import { FaLinkedinSquare } from 'react-icons/lib/fa'
-import { FaGithubSquare } from 'react-icons/lib/fa'
-import { FaFacebookSquare } from 'react-icons/lib/fa'
-import { FaEnvelopeSquare } from 'react-icons/lib/fa'
+import {FaEnvelopeSquare, FaFacebookSquare, FaGithubSquare, FaLinkedinSquare} from "react-icons/lib/fa"
 
-const linkedIn = 'https://www.linkedin.com/in/cole-inman-61738565/'
-export const gitHub = 'https://github.com/coletrane/' // exporting this for constructing github links in components
-const facebook = 'https://www.facebook.com/uhmcole'
-const email = 'eloc49@gmail.com'
+const linkedIn = "https://www.linkedin.com/in/cole-inman-61738565/"
+export const gitHub = "https://github.com/coletrane/" // exporting this for constructing github links in components
+const facebook = "https://www.facebook.com/uhmcole"
+const email = "eloc49@gmail.com"
 
-const iconColor = 'white'
+const iconColor = "white"
 
-const iconDimensions = '1.5em'
+const iconDimensions = "1.5em"
 
 export default class Navigation extends Component {
 
@@ -32,7 +27,7 @@ export default class Navigation extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      mobile: isMobile(),
+      mobile: isMobile()
     }
   }
 
@@ -53,13 +48,13 @@ export default class Navigation extends Component {
   // Lifecycle
   componentDidMount() {
     if (process.browser) {
-      window.addEventListener('resize', this.onResize.bind(this))
+      window.addEventListener("resize", this.onResize.bind(this))
     }
   }
 
   componentWillUnmount() {
     if (process.browser) {
-      window.removeEventListener('resize', this.onResize.bind(this))
+      window.removeEventListener("resize", this.onResize.bind(this))
     }
   }
 
@@ -111,7 +106,7 @@ function NavButtons() {
                             width={iconDimensions}/>
         </IconButton>
       </a>
-      <a href={'mailto:' + email}>
+      <a href={"mailto:" + email}>
         <IconButton aria-label="Email">
           <FaEnvelopeSquare fill={iconColor}
                             height={iconDimensions}

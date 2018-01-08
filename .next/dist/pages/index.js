@@ -1,62 +1,63 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');
+var _taggedTemplateLiteral2 = require("babel-runtime/helpers/taggedTemplateLiteral");
 
 var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
 
-var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = require('babel-runtime/helpers/createClass');
+var _createClass2 = require("babel-runtime/helpers/createClass");
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = require('babel-runtime/helpers/inherits');
+var _inherits2 = require("babel-runtime/helpers/inherits");
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = require('styled-components');
+var _styledComponents = require("styled-components");
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _Layout = require('../components/Layout');
+var _Layout = require("../components/Layout");
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _Skills = require('../components/sections/Skills');
+var _Skills = require("../components/sections/Skills");
 
 var _Skills2 = _interopRequireDefault(_Skills);
 
-var _Projects = require('../components/sections/Projects');
+var _Projects = require("../components/sections/Projects");
 
 var _Projects2 = _interopRequireDefault(_Projects);
 
-var _Section = require('../components/Section');
+var _Education = require("../components/sections/Education");
 
-var _Section2 = _interopRequireDefault(_Section);
+var _Education2 = _interopRequireDefault(_Education);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/coleinman/Programs/cole-inman/pages/index.js?entry';
+var _jsxFileName = "/Users/coleinman/Programs/cole-inman/pages/index.js?entry";
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  h1, h2, h3, h4, h5, h6 {\n    font-family: \'Playfair Display SC\', serif;\n    font-weight: 400;\n  }\n'], ['\n  h1, h2, h3, h4, h5, h6 {\n    font-family: \'Playfair Display SC\', serif;\n    font-weight: 400;\n  }\n']);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  h1, h2, h3, h4, h5, h6 {\n    font-family: 'Playfair Display SC', serif;\n    font-weight: 400;\n  }\n"], ["\n  h1, h2, h3, h4, h5, h6 {\n    font-family: 'Playfair Display SC', serif;\n    font-weight: 400;\n  }\n"]),
+    _templateObject2 = (0, _taggedTemplateLiteral3.default)(["\n  display: grid;\n  grid-template-columns: 50% 50%;\n"], ["\n  display: grid;\n  grid-template-columns: 50% 50%;\n"]);
 // Components
 
 
@@ -70,7 +71,7 @@ var Index = function (_Component) {
   }
 
   (0, _createClass3.default)(Index, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(GlobalStyles, {
         __source: {
@@ -82,15 +83,25 @@ var Index = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 14
         }
-      }, _react2.default.createElement(_Skills2.default, {
+      }, _react2.default.createElement(TwoColumnWrapper, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 16
         }
-      }), _react2.default.createElement(_Projects2.default, {
+      }, _react2.default.createElement(_Education2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 17
+        }
+      }), _react2.default.createElement(_Skills2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        }
+      })), _react2.default.createElement(_Projects2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
         }
       })));
     }
@@ -105,4 +116,5 @@ exports.default = Index;
 
 // Styles
 var GlobalStyles = _styledComponents2.default.div(_templateObject);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiTGF5b3V0IiwiU2tpbGxzIiwiUHJvamVjdHMiLCJTZWN0aW9uIiwiSW5kZXgiLCJHbG9iYWxTdHlsZXMiLCJkaXYiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPOzs7O0FBRVAsQUFBTyxBQUFZOzs7O0FBQ25CLEFBQU8sQUFBWTs7OztBQUNuQixBQUFPLEFBQWM7Ozs7QUFDckIsQUFBTyxBQUFhOzs7Ozs7Ozs7QUFKcEI7OztJQU1xQixBOzs7Ozs7Ozs7Ozs2QkFFVixBQUNQOzZCQUNHLGNBQUQ7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsQUFBQzs7b0JBQUQ7c0JBQUEsQUFFSTtBQUZKO0FBQUEseUJBRUksQUFBQzs7b0JBQUQ7c0JBRkosQUFFSSxBQUVBO0FBRkE7QUFBQSwwQkFFQSxBQUFDOztvQkFBRDtzQkFOUixBQUNFLEFBQ0UsQUFJSSxBQU1UO0FBTlM7QUFBQTs7Ozs7QUFUdUIsQTs7a0JBQWQsQTs7QUFnQnBCOztBQUVEO0FBQ0EsSUFBTSxlQUFlLDJCQUFmLEFBQXNCLElBQTVCIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jb2xlaW5tYW4vUHJvZ3JhbXMvY29sZS1pbm1hbiJ9
+var TwoColumnWrapper = _styledComponents2.default.div(_templateObject2);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiTGF5b3V0IiwiU2tpbGxzIiwiUHJvamVjdHMiLCJFZHVjYXRpb24iLCJJbmRleCIsIkdsb2JhbFN0eWxlcyIsImRpdiIsIlR3b0NvbHVtbldyYXBwZXIiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPOzs7O0FBRVAsQUFBTyxBQUFZOzs7O0FBQ25CLEFBQU8sQUFBWTs7OztBQUNuQixBQUFPLEFBQWM7Ozs7QUFDckIsQUFBTyxBQUFlOzs7Ozs7Ozs7O0FBSnRCOzs7SSxBQU1xQjs7Ozs7Ozs7Ozs7NkJBRVYsQUFDUDs2QkFDRyxjQUFEOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLEFBQUM7O29CQUFEO3NCQUFBLEFBRUU7QUFGRjtBQUFBLHlCQUVHLGNBQUQ7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLEFBQUM7O29CQUFEO3NCQURGLEFBQ0UsQUFFQTtBQUZBO0FBQUEsMEJBRUEsQUFBQzs7b0JBQUQ7c0JBTEosQUFFRSxBQUdFLEFBR0Y7QUFIRTtBQUFBLDJCQUdGLEFBQUM7O29CQUFEO3NCQVZOLEFBQ0UsQUFDRSxBQVFFLEFBS1A7QUFMTztBQUFBOzs7OztBQWJ5QixBOztrQkFBZCxBOztBQW1CcEI7O0FBRUQ7QUFDQSxJQUFNLGVBQWUsMkJBQWYsQUFBc0IsSUFBNUI7QUFNQSxJQUFNLG1CQUFtQiwyQkFBbkIsQUFBMEIsSUFBaEMiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL2NvbGVpbm1hbi9Qcm9ncmFtcy9jb2xlLWlubWFuIn0=

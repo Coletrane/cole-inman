@@ -1,9 +1,7 @@
-import React, {Component, cloneElement} from 'react'
-import styled from 'styled-components'
-
+import React, {Component} from "react"
 // Components
-import Skill from './Skill'
-import SkillsList from './SkillsList'
+import Skill from "./Skill"
+import SkillsList from "./SkillsList"
 
 export default class GeneralSkills extends Component {
 
@@ -63,7 +61,7 @@ function Bash() {
 }
 
 function Linux() {
-  return(
+  return (
     <Skill name="Linux"
            desktop="50px"
            mobile="35px"/>

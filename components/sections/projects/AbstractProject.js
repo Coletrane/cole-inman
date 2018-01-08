@@ -1,16 +1,9 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import webshots from '../../../util/webshots'
-
+import React, {Component} from "react"
+import styled from "styled-components"
+import PropTypes from "prop-types"
 // Components
-import Card,
-{
-  CardContent,
-  CardHeader,
-  CardActions
-} from 'material-ui/Card'
-import Button from 'material-ui/Button'
-import PropTypes from 'prop-types'
+import Button from "material-ui/Button"
+import Card from "../../generic/Card"
 
 export default class AbstractProject extends Component {
 
@@ -24,25 +17,15 @@ export default class AbstractProject extends Component {
 
     return (
       <Card>
-        <CardHeader title={this.props.title}
-                    subheader={this.props.subheader}/>
-
-        <SiteImg>
-          <img src={this.props.imgSrc}
-               alt={this.props.title}/>
-        </SiteImg>
-
-        <CardContent>
-          {this.props.children}
-        </CardContent>
-
-        <CardActions>
-          <ProjectButton url={"http://" + this.props.liveSite}
-                         text="Live Site"/>
-          <ProjectButton url={this.props.gitHub}
-                         text="Github Repo"/>
-        </CardActions>
-
+        {/*<CardHeader title={this.props.title}*/}
+        {/*subheader={this.props.subheader}/>*/}
+        <SiteImg src={this.props.imgSrc}
+                 alt={this.props.title}/>
+        {this.props.children}
+        <ProjectButton url={"http://" + this.props.liveSite}
+                       text="Live Site"/>
+        <ProjectButton url={this.props.gitHub}
+                       text="Github Repo"/>
       </Card>
     )
   }
@@ -65,9 +48,7 @@ function ProjectButton(props) {
 }
 
 // Styles
-const SiteImg = styled.div`
-  img {
+const SiteImg = styled.img`
     width: 50%;
     height: auto;
-  }
 `

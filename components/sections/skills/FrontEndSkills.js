@@ -1,9 +1,7 @@
-import React, { Component, cloneElement } from 'react'
-import styled from 'styled-components'
-
+import React, {Component} from "react"
 // Components
-import Skill from './Skill'
-import SkillsList from './SkillsList'
+import Skill from "./Skill"
+import SkillsList from "./SkillsList"
 
 export default class FrontEndSkills extends Component {
 

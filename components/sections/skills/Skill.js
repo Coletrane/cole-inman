@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import {skillMediaQueries} from '../../../util/styles'
+import React, {Component} from "react"
+import styled from "styled-components"
+import PropTypes from "prop-types"
+import {skillMediaQueries} from "../../../util/styles"
 
 // Components
 

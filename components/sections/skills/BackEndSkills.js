@@ -1,9 +1,7 @@
-import React, { Component, cloneElement } from 'react'
-import styled from 'styled-components'
-
+import React, {Component} from "react"
 // Components
-import Skill from './Skill'
-import SkillsList from './SkillsList'
+import Skill from "./Skill"
+import SkillsList from "./SkillsList"
 
 export default class BackEndSkills extends Component {
 
@@ -86,7 +84,7 @@ function JaxRs() {
 }
 
 function Hibernate() {
-  return(
+  return (
     <Skill name="Hibernate"
            desktop="50px"
            mobile="35px"/>
@@ -94,7 +92,7 @@ function Hibernate() {
 }
 
 function Postgresql() {
-  return(
+  return (
     <Skill name="PostgreSQL"
            desktop="50px"
            mobile="35px"/>
@@ -102,7 +100,7 @@ function Postgresql() {
 }
 
 function MongoDB() {
-  return(
+  return (
     <Skill name="MongoDB"
            desktop="50px"
            mobile="35px"/>
@@ -110,7 +108,7 @@ function MongoDB() {
 }
 
 function Elasticsearch() {
-  return(
+  return (
     <Skill name="Elasticsearch"
            desktop="50px"
            mobile="35px"/>
@@ -118,7 +116,7 @@ function Elasticsearch() {
 }
 
 function Hadoop() {
-  return(
+  return (
     <Skill name="Hadoop"
            desktop="50px"
            mobile="35px"/>

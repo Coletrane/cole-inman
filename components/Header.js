@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, {Component} from "react"
+import styled from "styled-components"
 
-import { colors, boxShadow } from '../util/styles.js'
-
+import {boxShadow, colors} from "../util/styles.js"
 // Components
-import Navigation from './Navigation'
+import Navigation from "./Navigation"
 
-const title = 'COLE INMAN'
+const title = "COLE INMAN"
 
 export default class Header extends Component {
 
@@ -17,7 +16,6 @@ export default class Header extends Component {
           <Title>
             {title}
           </Title>
-
           <Navigation bottom={false}/>
         </header>
       </HeaderWrapper>

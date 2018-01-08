@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import React, {Component} from "react"
+import styled from "styled-components"
 
-import { colors } from '../util/styles.js'
-import { isMobile } from '../util/functions'
-
+import {colors} from "../util/styles.js"
+import {isMobile} from "../util/functions"
 // Components
-import AppBar from 'material-ui/AppBar'
-import Toolbar from 'material-ui/Toolbar'
-import Navigation from './Navigation.js'
-import Header from './Header'
+import Navigation from "./Navigation.js"
+import Header from "./Header"
 
 
 export default class Layout extends Component {
@@ -16,13 +13,9 @@ export default class Layout extends Component {
   render() {
     return (
       <AppWrapper>
-
         <Header/>
-
         <MainContent children={this.props.children}/>
-
         <Navigation bottom={true}/>
-
       </AppWrapper>
     )
   }
@@ -34,7 +27,7 @@ class MainContent extends Component {
     super(props)
     this.onResize = this.onResize.bind(this)
     this.state = {
-      mobile: isMobile(),
+      mobile: isMobile()
     }
   }
 
@@ -47,13 +40,13 @@ class MainContent extends Component {
   // Lifecycle
   componentDidMount() {
     if (process.browser) {
-      window.addEventListener('resize', this.onResize)
+      window.addEventListener("resize", this.onResize)
     }
   }
 
   componentWillUnmount() {
     if (process.browser) {
-      window.removeEventListener('resize', this.onResize)
+      window.removeEventListener("resize", this.onResize)
     }
   }
 
@@ -64,13 +57,13 @@ class MainContent extends Component {
 
   render() {
     if (!this.state.mobile) {
-      return(
+      return (
         <MainContentDesktop>
           {this.props.children}
         </MainContentDesktop>
       )
     } else {
-      return(
+      return (
         <MainContentMobile>
           {this.props.children}
         </MainContentMobile>
