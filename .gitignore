@@ -58,4 +58,8 @@ typings/
 # dotenv environment variables file
 .env
 
-/.idea/
+.idea/*
+!.idea/codeStyleSettings.xml
+!.idea/codeStyles/
+!.idea/cole-inman.iml
+!.idea/inspectionProfiles/
