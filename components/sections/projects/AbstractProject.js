@@ -1,6 +1,6 @@
 import React, {Component} from "react"
-import styled from "styled-components"
 import PropTypes from "prop-types"
+
 // Components
 import Button from "material-ui/Button"
 import Card from "../../generic/Card"
@@ -19,8 +19,9 @@ export default class AbstractProject extends Component {
       <Card>
         {/*<CardHeader title={this.props.title}*/}
         {/*subheader={this.props.subheader}/>*/}
-        <SiteImg src={this.props.imgSrc}
-                 alt={this.props.title}/>
+        <img src={this.props.imgSrc}
+             alt={this.props.title}
+             style={projectImgStyle}/>
         {this.props.children}
         <ProjectButton url={"http://" + this.props.liveSite}
                        text="Live Site"/>
@@ -48,7 +49,7 @@ function ProjectButton(props) {
 }
 
 // Styles
-const SiteImg = styled.img`
-    width: 50%;
-    height: auto;
-`
+const projectImgStyle = {
+  width: "50%",
+  height: "auto"
+}

@@ -4,10 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _taggedTemplateLiteral2 = require("babel-runtime/helpers/taggedTemplateLiteral");
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
 var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -32,10 +28,6 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = require("styled-components");
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
 var _Section = require("../generic/Section");
 
 var _Section2 = _interopRequireDefault(_Section);
@@ -56,7 +48,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _jsxFileName = "/Users/coleinman/Programs/cole-inman/components/sections/Skills.js";
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  img {\n    height: auto;\n  }\n"], ["\n  img {\n    height: auto;\n  }\n"]);
 // Components
 
 
@@ -81,8 +72,7 @@ var Skills = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 14
         }
-      }, _react2.default.createElement(SkillsStyle, {
-        __source: {
+      }, _react2.default.createElement("div", { style: skillsStyle, __source: {
           fileName: _jsxFileName,
           lineNumber: 15
         }
@@ -111,5 +101,9 @@ var Skills = function (_Component) {
 exports.default = Skills;
 
 
-var SkillsStyle = _styledComponents2.default.div(_templateObject);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvU2tpbGxzLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiU2VjdGlvbiIsIkdlbmVyYWxTa2lsbHMiLCJGcm9udEVuZFNraWxscyIsIkJhY2tFbmRTa2lsbHMiLCJTa2lsbHMiLCJTa2lsbHNTdHlsZSIsImRpdiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFROzs7O0FBQ2YsQUFBTzs7OztBQUVQLEFBQU8sQUFBYTs7OztBQUNwQixBQUFPLEFBQW1COzs7O0FBQzFCLEFBQU8sQUFBb0I7Ozs7QUFDM0IsQUFBTyxBQUFtQjs7Ozs7Ozs7O0FBSjFCOzs7SSxBQU1xQjs7Ozs7Ozs7Ozs7NkJBRVYsQUFDUDs2QkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLEFBQUMsbUNBQVEsT0FBVCxBQUFlO29CQUFmO3NCQUFBLEFBQ0U7QUFERjt5QkFDRyxjQUFEOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxBQUFDOztvQkFBRDtzQkFERixBQUNFLEFBQ0E7QUFEQTtBQUFBLDBCQUNBLEFBQUM7O29CQUFEO3NCQUZGLEFBRUUsQUFDQTtBQURBO0FBQUEsMEJBQ0EsQUFBQzs7b0JBQUQ7c0JBTlIsQUFDRSxBQUNFLEFBQ0UsQUFHRSxBQUtUO0FBTFM7QUFBQTs7Ozs7QUFUd0IsQTs7a0JBQWYsQTs7O0FBaUJyQixJQUFNLGNBQWMsMkJBQWQsQUFBcUIsSUFBM0IiLCJmaWxlIjoiU2tpbGxzLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jb2xlaW5tYW4vUHJvZ3JhbXMvY29sZS1pbm1hbiJ9
+var skillsStyle = {
+  img: {
+    height: "auto"
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvU2tpbGxzLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiU2VjdGlvbiIsIkdlbmVyYWxTa2lsbHMiLCJGcm9udEVuZFNraWxscyIsIkJhY2tFbmRTa2lsbHMiLCJTa2lsbHMiLCJza2lsbHNTdHlsZSIsImltZyIsImhlaWdodCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVE7Ozs7QUFHZixBQUFPLEFBQWE7Ozs7QUFDcEIsQUFBTyxBQUFtQjs7OztBQUMxQixBQUFPLEFBQW9COzs7O0FBQzNCLEFBQU8sQUFBbUI7Ozs7Ozs7O0FBSjFCOzs7SUFNcUIsQTs7Ozs7Ozs7Ozs7NkJBRVYsQUFDUDs2QkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLEFBQUMsbUNBQVEsT0FBVCxBQUFlO29CQUFmO3NCQUFBLEFBQ0U7QUFERjt5QkFDRSxjQUFBLFNBQUssT0FBTCxBQUFZO29CQUFaO3NCQUFBLEFBQ0U7QUFERjt5QkFDRSxBQUFDOztvQkFBRDtzQkFERixBQUNFLEFBQ0E7QUFEQTtBQUFBLDBCQUNBLEFBQUM7O29CQUFEO3NCQUZGLEFBRUUsQUFDQTtBQURBO0FBQUEsMEJBQ0EsQUFBQzs7b0JBQUQ7c0JBTlIsQUFDRSxBQUNFLEFBQ0UsQUFHRSxBQUtUO0FBTFM7QUFBQTs7Ozs7QSxBQVR3Qjs7a0IsQUFBZjs7O0FBaUJyQixJQUFNOztZQUFOLEFBQW9CLEFBQ2IsQUFDSztBQURMLEFBQ0g7QUFGZ0IsQUFDbEIiLCJmaWxlIjoiU2tpbGxzLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jb2xlaW5tYW4vUHJvZ3JhbXMvY29sZS1pbm1hbiJ9

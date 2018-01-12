@@ -1,9 +1,9 @@
 import React, {Component} from "react"
-import styled from "styled-components"
 import PropTypes from "prop-types"
-import {skillMediaQueries} from "../../../util/styles"
+import {mediaQueries} from "../../../util/styles"
 
 // Components
+import MediaQuery from 'react-responsive'
 
 export default class Skill extends Component {
 
@@ -26,31 +26,34 @@ export default class Skill extends Component {
 
   render() {
     return (
-      <ListItem>
-        <Img src={this.imgSrc}
-             desktop={this.props.desktop}
-             mobile={this.props.mobile}/>
-        <SkillTitle> {this.props.name} </SkillTitle>
-      </ListItem>
+      <div style={listItemStyle}>
+        <MediaQuery query={mediaQueries.mobileAndDesktop.mobile}>
+        <img src={this.imgSrc}
+             style={skillImgStyle({
+               width: this.props.mobile
+             })}/>
+        </MediaQuery>
+        <MediaQuery query={mediaQueries.mobileAndDesktop.desktop}>
+          <img src={this.imgSrc}
+               style={skillImgStyle({
+                 width: this.props.desktop
+               })}/>
+        </MediaQuery>
+        <div style={skillTitleStyle}> {this.props.name} </div>
+      </div>
     )
   }
 }
 
-const ListItem = styled.div`
-  padding: 5px;
-  border-radius: 5px;
-`
+const listItemStyle = {
+  padding: "5px",
+  borderRadius: "5px"
+}
 
-const SkillTitle = styled.div`
-  margin: 0;
-`
+const skillTitleStyle = {
+  margin: "0"
+}
 
-const Img = styled.img`
-  @media (min-width: ${skillMediaQueries.minWidth}) {
-    width: ${props => props.desktop};
-  }
-  @media (max-width: ${skillMediaQueries.maxWidth}) {
-    width: ${props => props.mobile};
-  }
-`
-
+const skillImgStyle = (props) => {
+  width: props.width
+}

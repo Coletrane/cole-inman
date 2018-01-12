@@ -4,10 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _taggedTemplateLiteral2 = require("babel-runtime/helpers/taggedTemplateLiteral");
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
 var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -32,25 +28,22 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = require("styled-components");
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
 var _propTypes = require("prop-types");
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styles = require("../../../util/styles");
 
+var _reactResponsive = require("react-responsive");
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "/Users/coleinman/Programs/cole-inman/components/sections/skills/Skill.js";
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  padding: 5px;\n  border-radius: 5px;\n"], ["\n  padding: 5px;\n  border-radius: 5px;\n"]),
-    _templateObject2 = (0, _taggedTemplateLiteral3.default)(["\n  margin: 0;\n"], ["\n  margin: 0;\n"]),
-    _templateObject3 = (0, _taggedTemplateLiteral3.default)(["\n  @media (min-width: ", ") {\n    width: ", ";\n  }\n  @media (max-width: ", ") {\n    width: ", ";\n  }\n"], ["\n  @media (min-width: ", ") {\n    width: ", ";\n  }\n  @media (max-width: ", ") {\n    width: ", ";\n  }\n"]);
-
 // Components
+
 
 var Skill = function (_Component) {
   (0, _inherits3.default)(Skill, _Component);
@@ -64,21 +57,35 @@ var Skill = function (_Component) {
   (0, _createClass3.default)(Skill, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement(ListItem, {
-        __source: {
+      return _react2.default.createElement("div", { style: listItemStyle, __source: {
           fileName: _jsxFileName,
           lineNumber: 29
         }
-      }, _react2.default.createElement(Img, { src: this.imgSrc,
-        desktop: this.props.desktop,
-        mobile: this.props.mobile, __source: {
+      }, _react2.default.createElement(_reactResponsive2.default, { query: _styles.mediaQueries.mobileAndDesktop.mobile, __source: {
           fileName: _jsxFileName,
           lineNumber: 30
         }
-      }), _react2.default.createElement(SkillTitle, {
-        __source: {
+      }, _react2.default.createElement("img", { src: this.imgSrc,
+        style: skillImgStyle({
+          width: this.props.mobile
+        }), __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 31
+        }
+      })), _react2.default.createElement(_reactResponsive2.default, { query: _styles.mediaQueries.mobileAndDesktop.desktop, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        }
+      }, _react2.default.createElement("img", { src: this.imgSrc,
+        style: skillImgStyle({
+          width: this.props.desktop
+        }), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        }
+      })), _react2.default.createElement("div", { style: skillTitleStyle, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
         }
       }, " ", this.props.name, " "));
     }
@@ -107,13 +114,16 @@ Skill.propTypes = {
 exports.default = Skill;
 
 
-var ListItem = _styledComponents2.default.div(_templateObject);
+var listItemStyle = {
+  padding: "5px",
+  borderRadius: "5px"
+};
 
-var SkillTitle = _styledComponents2.default.div(_templateObject2);
+var skillTitleStyle = {
+  margin: "0"
+};
 
-var Img = _styledComponents2.default.img(_templateObject3, _styles.skillMediaQueries.minWidth, function (props) {
-  return props.desktop;
-}, _styles.skillMediaQueries.maxWidth, function (props) {
-  return props.mobile;
-});
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvc2tpbGxzL1NraWxsLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiUHJvcFR5cGVzIiwic2tpbGxNZWRpYVF1ZXJpZXMiLCJTa2lsbCIsImltZ1NyYyIsInByb3BzIiwiZGVza3RvcCIsIm1vYmlsZSIsIm5hbWUiLCJmaWxlbmFtZSIsImluY2x1ZGVzIiwic3BsaXQiLCJ0b0xvd2VyQ2FzZSIsImpvaW4iLCJwcm9wVHlwZXMiLCJzdHJpbmciLCJpc1JlcXVpcmVkIiwiTGlzdEl0ZW0iLCJkaXYiLCJTa2lsbFRpdGxlIiwiSW1nIiwiaW1nIiwibWluV2lkdGgiLCJtYXhXaWR0aCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFROzs7O0FBQ2YsQUFBTzs7OztBQUNQLEFBQU87Ozs7QUFDUCxBQUFRLEFBQXdCOzs7Ozs7Ozs7O0FBRWhDOztJLEFBRXFCOzs7Ozs7Ozs7Ozs2QkFtQlYsQUFDUDs2QkFDRyxjQUFEOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGdDQUNFLEFBQUMsT0FBSSxLQUFLLEtBQVYsQUFBZSxBQUNWO2lCQUFTLEtBQUEsQUFBSyxNQURuQixBQUN5QixBQUNwQjtnQkFBUSxLQUFBLEFBQUssTUFGbEIsQUFFd0I7b0JBRnhCO3NCQURGLEFBQ0UsQUFHQTtBQUhBOzBCQUdDLGNBQUQ7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQUFjLFVBQUEsQUFBSyxNQUFuQixBQUF5QixNQUw3QixBQUNFLEFBSUUsQUFHTDs7Ozt3QkFwQlksQUFDWDtVQUFJLGdCQUFKLEFBQ0E7VUFBSSxLQUFBLEFBQUssTUFBTCxBQUFXLEtBQVgsQUFBZ0IsU0FBcEIsQUFBSSxBQUF5QixNQUFNLEFBQ2pDO21CQUFXLEtBQUEsQUFBSyxNQUFMLEFBQVcsS0FBWCxBQUFnQixNQUFoQixBQUFzQixLQUF0QixBQUEyQixHQUF0QyxBQUFXLEFBQThCLEFBQzFDO0FBRkQsYUFFTyxBQUNMO21CQUFXLEtBQUEsQUFBSyxNQUFMLEFBQVcsS0FBWCxBQUFnQixNQUFoQixBQUFzQixLQUF0QixBQUEyQixLQUEzQixBQUFnQyxJQUEzQyxBQUFXLEFBQW9DLEFBQ2hEO0FBRUQ7O29DQUFBLEFBQTRCLFdBQzdCOzs7OztBQWpCZ0MsQTs7QUFBZCxBLE1BRVosQTtRQUNDLG9CQUFBLEFBQVUsT0FEQyxBQUNNLEFBQ3ZCO1dBQVMsb0JBQUEsQUFBVSxPQUZGLEFBRVMsQUFDMUI7VUFBUSxvQkFBQSxBQUFVLE9BSEQsQUFHUSxBO0FBSFIsQUFDakI7a0IsQUFIaUI7OztBQStCckIsSUFBTSxXQUFXLDJCQUFYLEFBQWtCLElBQXhCOztBQUtBLElBQU0sYUFBYSwyQkFBYixBQUFvQixJQUExQjs7QUFJQSxJQUFNLGlDQUFBLEFBQWEsc0JBQ0ksMEJBRGpCLEFBQ21DLFVBQzVCLGlCQUFBO1NBQVMsTUFBVCxBQUFlO0FBRnRCLENBQU0sRUFJVywwQkFKakIsQUFJbUMsVUFDNUIsaUJBQUE7U0FBUyxNQUFULEFBQWU7QUFMNUIsQUFBTSIsImZpbGUiOiJTa2lsbC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY29sZWlubWFuL1Byb2dyYW1zL2NvbGUtaW5tYW4ifQ==
+var skillImgStyle = function skillImgStyle(props) {
+  width: props.width;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvc2tpbGxzL1NraWxsLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiUHJvcFR5cGVzIiwibWVkaWFRdWVyaWVzIiwiTWVkaWFRdWVyeSIsIlNraWxsIiwibGlzdEl0ZW1TdHlsZSIsIm1vYmlsZUFuZERlc2t0b3AiLCJtb2JpbGUiLCJpbWdTcmMiLCJza2lsbEltZ1N0eWxlIiwid2lkdGgiLCJwcm9wcyIsImRlc2t0b3AiLCJza2lsbFRpdGxlU3R5bGUiLCJuYW1lIiwiZmlsZW5hbWUiLCJpbmNsdWRlcyIsInNwbGl0IiwidG9Mb3dlckNhc2UiLCJqb2luIiwicHJvcFR5cGVzIiwic3RyaW5nIiwiaXNSZXF1aXJlZCIsInBhZGRpbmciLCJib3JkZXJSYWRpdXMiLCJtYXJnaW4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFROzs7O0FBQ2YsQUFBTzs7OztBQUNQLEFBQVEsQUFBbUI7O0FBRzNCLEFBQU87Ozs7Ozs7O0FBRFA7OztJQUdxQixBOzs7Ozs7Ozs7Ozs2QkFtQlYsQUFDUDs2QkFDRSxjQUFBLFNBQUssT0FBTCxBQUFZO29CQUFaO3NCQUFBLEFBQ0U7QUFERjtPQUFBLGtCQUNFLEFBQUMsMkNBQVcsT0FBTyxxQkFBQSxBQUFhLGlCQUFoQyxBQUFpRDtvQkFBakQ7c0JBQUEsQUFDQTtBQURBO2dEQUNLLEtBQUssS0FBVixBQUFlLEFBQ1Y7O2lCQUNTLEtBQUEsQUFBSyxNQUZuQixBQUNZLEFBQWMsQUFDRDtBQURDLEFBQ25CLFNBREs7b0JBRFo7c0JBRkYsQUFDRSxBQUNBLEFBS0E7QUFMQTsyQkFLQSxBQUFDLDJDQUFXLE9BQU8scUJBQUEsQUFBYSxpQkFBaEMsQUFBaUQ7b0JBQWpEO3NCQUFBLEFBQ0U7QUFERjtnREFDTyxLQUFLLEtBQVYsQUFBZSxBQUNWOztpQkFDUyxLQUFBLEFBQUssTUFGbkIsQUFDWSxBQUFjLEFBQ0Q7QUFEQyxBQUNuQixTQURLO29CQURaO3NCQVJKLEFBT0UsQUFDRSxBQUtGO0FBTEU7MkJBS0YsY0FBQSxTQUFLLE9BQUwsQUFBWTtvQkFBWjtzQkFBQTtBQUFBO1NBQStCLFVBQUEsQUFBSyxNQUFwQyxBQUEwQyxNQWQ5QyxBQUNFLEFBYUUsQUFHTDs7Ozt3QkE3QlksQUFDWDtVQUFJLGdCQUFKLEFBQ0E7VUFBSSxLQUFBLEFBQUssTUFBTCxBQUFXLEtBQVgsQUFBZ0IsU0FBcEIsQUFBSSxBQUF5QixNQUFNLEFBQ2pDO21CQUFXLEtBQUEsQUFBSyxNQUFMLEFBQVcsS0FBWCxBQUFnQixNQUFoQixBQUFzQixLQUF0QixBQUEyQixHQUF0QyxBQUFXLEFBQThCLEFBQzFDO0FBRkQsYUFFTyxBQUNMO21CQUFXLEtBQUEsQUFBSyxNQUFMLEFBQVcsS0FBWCxBQUFnQixNQUFoQixBQUFzQixLQUF0QixBQUEyQixLQUEzQixBQUFnQyxJQUEzQyxBQUFXLEFBQW9DLEFBQ2hEO0FBRUQ7O29DQUFBLEFBQTRCLFdBQzdCOzs7OztBQWpCZ0MsQTs7QSxBQUFkLE1BRVosQTtRQUNDLG9CQUFBLEFBQVUsT0FEQyxBQUNNLEFBQ3ZCO1dBQVMsb0JBQUEsQUFBVSxPQUZGLEFBRVMsQUFDMUI7VUFBUSxvQkFBQSxBQUFVLE9BSEQsQUFHUSxBO0FBSFIsQUFDakI7a0JBSGlCLEE7OztBQXdDckIsSUFBTTtXQUFnQixBQUNYLEFBQ1Q7Z0JBRkYsQUFBc0IsQUFFTjtBQUZNLEFBQ3BCOztBQUlGLElBQU07VUFBTixBQUF3QixBQUNkO0FBRGMsQUFDdEI7O0FBR0YsSUFBTSxnQkFBZ0IsU0FBaEIsQUFBZ0IsY0FBQSxBQUFDLE9BQVUsQUFDL0I7U0FBTyxNQUFBLEFBQU0sQUFDZDtBQUZEIiwiZmlsZSI6IlNraWxsLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9jb2xlaW5tYW4vUHJvZ3JhbXMvY29sZS1pbm1hbiJ9

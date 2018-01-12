@@ -4,10 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _taggedTemplateLiteral2 = require("babel-runtime/helpers/taggedTemplateLiteral");
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
 var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -32,10 +28,6 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = require("styled-components");
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
 var _Section = require("../generic/Section");
 
 var _Section2 = _interopRequireDefault(_Section);
@@ -44,7 +36,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _jsxFileName = "/Users/coleinman/Programs/cole-inman/components/sections/Education.js";
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  width: 50px;\n  height: auto;\n"], ["\n  width: 50px;\n  height: auto;\n"]);
 // Components
 
 
@@ -69,43 +60,47 @@ var Education = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 11
         }
-      }, _react2.default.createElement(JmuLogo, { src: "/static/img/logos/jmu.png", __source: {
+      }, _react2.default.createElement("img", { src: "/static/img/logos/jmu.png",
+        alt: "James Madison University",
+        style: jmuStyle, __source: {
           fileName: _jsxFileName,
           lineNumber: 12
         }
       }), _react2.default.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 15
         }
       }, _react2.default.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 16
         }
       }, "B.S. Computer Science"), _react2.default.createElement("h6", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
-        }
-      }, "Graduation: May 2016")), _react2.default.createElement(CnssLogo, { src: "/static/img/logos/cnss.png", __source: {
-          fileName: _jsxFileName,
           lineNumber: 17
+        }
+      }, "Graduation: May 2016")), _react2.default.createElement("img", { src: "/static/img/logos/cnss.png",
+        alt: "Committee on National Security Systems",
+        style: cnssStyle, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
         }
       }), _react2.default.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 22
         }
       }, _react2.default.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 23
         }
       }, "Committee on National Security Systems No. 4011 Certificate"), _react2.default.createElement("h6", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 24
         }
       }, "Awarded: May 2016"))));
     }
@@ -119,7 +114,13 @@ var Education = function (_Component) {
 
 exports.default = Education;
 
-var JmuLogo = _styledComponents2.default.img(_templateObject);
+var jmuStyle = {
+  width: "50px",
+  height: "auto"
+};
 
-var CnssLogo = _styledComponents2.default.img(_templateObject);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvRWR1Y2F0aW9uLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50Iiwic3R5bGVkIiwiU2VjdGlvbiIsIkVkdWNhdGlvbiIsIkptdUxvZ28iLCJpbWciLCJDbnNzTG9nbyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFROzs7O0FBQ2YsQUFBTzs7OztBQUVQLEFBQU8sQUFBYTs7Ozs7Ozs7O0FBRHBCOzs7SUFHcUIsQTs7Ozs7Ozs7Ozs7NkJBRVYsQUFDUDs2QkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLEFBQUMsbUNBQVEsT0FBVCxBQUFlO29CQUFmO3NCQUFBLEFBQ0U7QUFERjt1Q0FDRSxBQUFDLFdBQVEsS0FBVCxBQUFhO29CQUFiO3NCQURGLEFBQ0UsQUFDQTtBQURBOzBCQUNBLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQURGLEFBQ0UsQUFDQSwwQ0FBQSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FKSixBQUVFLEFBRUUsQUFFRix3REFBQSxBQUFDLFlBQVMsS0FBVixBQUFjO29CQUFkO3NCQU5GLEFBTUUsQUFDQTtBQURBOzBCQUNBLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQURGLEFBQ0UsQUFDQSxnRkFBQSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FYUixBQUNFLEFBQ0UsQUFPRSxBQUVFLEFBS1Q7Ozs7O0EsQUFuQm9DOztBQXNCdkM7OztrQixBQXRCcUI7O0FBdUJyQixJQUFNLFVBQVUsMkJBQVYsQUFBaUIsSUFBdkI7O0FBS0EsSUFBTSxXQUFXLDJCQUFYLEFBQWtCLElBQXhCIiwiZmlsZSI6IkVkdWNhdGlvbi5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY29sZWlubWFuL1Byb2dyYW1zL2NvbGUtaW5tYW4ifQ==
+var cnssStyle = {
+  width: "50px",
+  height: "auto"
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvc2VjdGlvbnMvRWR1Y2F0aW9uLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiU2VjdGlvbiIsIkVkdWNhdGlvbiIsImptdVN0eWxlIiwiY25zc1N0eWxlIiwid2lkdGgiLCJoZWlnaHQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFROzs7O0FBR2YsQUFBTyxBQUFhOzs7Ozs7OztBQURwQjs7O0ksQUFHcUI7Ozs7Ozs7Ozs7OzZCQUVWLEFBQ1A7NkJBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRTtBQURGO0FBQUEsT0FBQSxrQkFDRSxBQUFDLG1DQUFRLE9BQVQsQUFBZTtvQkFBZjtzQkFBQSxBQUNFO0FBREY7Z0RBQ08sS0FBTCxBQUFTLEFBQ0o7YUFETCxBQUNTLEFBQ0o7ZUFGTCxBQUVZO29CQUZaO3NCQURGLEFBQ0UsQUFHQTtBQUhBOzBCQUdBLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQURGLEFBQ0UsQUFDQSwwQ0FBQSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FOSixBQUlFLEFBRUUsQUFFRixpRUFBSyxLQUFMLEFBQVMsQUFDSjthQURMLEFBQ1MsQUFDSjtlQUZMLEFBRVk7b0JBRlo7c0JBUkYsQUFRRSxBQUdBO0FBSEE7MEJBR0EsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRTtBQURGO0FBQUEseUJBQ0UsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBREYsQUFDRSxBQUNBLGdGQUFBLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQWZSLEFBQ0UsQUFDRSxBQVdFLEFBRUUsQUFLVDs7Ozs7QUF2Qm9DLEE7O0FBMEJ2Qzs7O2tCQTFCcUIsQTs7QUEyQnJCLElBQU07U0FBVyxBQUNSLEFBQ1A7VUFGRixBQUFpQixBQUVQO0FBRk8sQUFDZjs7QUFJRixJQUFNO1NBQVksQUFDVCxBQUNQO1VBRkYsQUFBa0IsQUFFUjtBQUZRLEFBQ2hCIiwiZmlsZSI6IkVkdWNhdGlvbi5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvY29sZWlubWFuL1Byb2dyYW1zL2NvbGUtaW5tYW4ifQ==

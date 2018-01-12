@@ -1,16 +1,7 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
 
 export default class ColeDocument extends Document {
-
-  static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(
-      App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
-  }
 
   render() {
     return (
@@ -26,11 +17,9 @@ export default class ColeDocument extends Document {
                 content="Cole Inman Full Stack Software Developer Resume and Project showcase"/>
           <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet"/>
 
-          {this.props.styleTags}
-
         </Head>
 
-        <body style={{ margin: 0 }}>
+        <body style={bodyStyle}>
           <Main/>
           <NextScript/>
         </body>
@@ -38,4 +27,9 @@ export default class ColeDocument extends Document {
       </html>
     )
   }
+}
+
+// Styles
+const bodyStyle = {
+  margin: "0"
 }

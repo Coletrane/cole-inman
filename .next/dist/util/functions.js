@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getComponent = exports.isMobile = undefined;
 
-var _functions = require('./functions');
+var _styles = require('./styles');
 
 var isMobile = exports.isMobile = function isMobile() {
   // Normally this would be done using @media queries
@@ -14,7 +14,7 @@ var isMobile = exports.isMobile = function isMobile() {
   // Additionally, this shows the split between client and server side
   // code by checking if we are in the browser or server
   if (process.browser) {
-    return document.documentElement.clientWidth < _functions.mobileWidth;
+    return document.documentElement.clientWidth < _styles.mobileWidth;
   } else {
     return false;
   }

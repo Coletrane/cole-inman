@@ -8,7 +8,14 @@ export const colors = {
 
 export const boxShadow = "0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)"
 
-export const skillMediaQueries = {
-  minWidth: (mobileWidth - 1) + 'px',
-  maxWidth: mobileWidth + 'px'
+export const mediaQueries = {
+  all: {
+    mobile: `(max-width: ${mobileWidth})`,
+    tablet: `(min-width: ${mobileWidth + 1}) and (max-width: ${tabletWidth})`,
+    desktop: `(min-width: ${tabletWidth + 1})`
+  },
+  mobileAndDesktop: {
+    mobile: `(max-width: ${mobileWidth})`,
+    desktop: `(min-width: ${mobileWidth + 1})`
+  }
 }
