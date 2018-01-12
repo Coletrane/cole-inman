@@ -63,3 +63,5 @@ typings/
 !.idea/codeStyles/
 !.idea/cole-inman.iml
 !.idea/inspectionProfiles/
+
+.next
