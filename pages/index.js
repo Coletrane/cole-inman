@@ -8,6 +8,7 @@ import Skills from "../components/sections/Skills"
 import Projects from "../components/sections/Projects"
 import Education from "../components/sections/Education"
 import MediaQuery from "react-responsive"
+import Experience from "../components/sections/Experience"
 
 export default class Index extends Component {
 
@@ -30,6 +31,7 @@ export default class Index extends Component {
           <MediaQuery query={mediaQueries.mobileAndDesktop.desktop}>
             {this.educationAndSkills(twoColumns)}
           </MediaQuery>
+          <Experience/>
           <Projects/>
         </Layout>
       </AppWrapper>
