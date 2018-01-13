@@ -1,40 +1,51 @@
-import React, { Component } from "react"
+import React, {Component} from "react"
 import styled from "styled-components"
+import {mediaQueries} from "../util/styles"
+
 // Components
 import Layout from "../components/Layout"
 import Skills from "../components/sections/Skills"
 import Projects from "../components/sections/Projects"
 import Education from "../components/sections/Education"
+import MediaQuery from "react-responsive"
 
 export default class Index extends Component {
 
+  educationAndSkills(style) {
+    return (
+      <div style={{...style}}>
+        <Education/>
+        <Skills/>
+      </div>
+    )
+  }
+
   render() {
     return (
-      <GlobalStyles>
+      <AppWrapper>
         <Layout>
-
-          <TwoColumnWrapper>
-            <Education/>
-
-            <Skills/>
-          </TwoColumnWrapper>
-
+          <MediaQuery query={mediaQueries.mobileAndDesktop.mobile}>
+            {this.educationAndSkills({})}
+          </MediaQuery>
+          <MediaQuery query={mediaQueries.mobileAndDesktop.desktop}>
+            {this.educationAndSkills(twoColumns)}
+          </MediaQuery>
           <Projects/>
-
         </Layout>
-      </GlobalStyles>
+      </AppWrapper>
     )
   }
 };
 
 // Styles
-const GlobalStyles = styled.div`
+// Use styled components for un-scoped styles, inline styles for scoped 
+const AppWrapper = styled.div`
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display SC', serif;
-    font-weight: 400;
   }
 `
-const TwoColumnWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 50% 50%;
-`
+
+const twoColumns = {
+  display: "grid",
+  gridTemplateColumns: "50% 50%"
+}

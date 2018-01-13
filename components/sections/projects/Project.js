@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import Button from "material-ui/Button"
 import Card from "../../generic/Card"
 
-export default class AbstractProject extends Component {
+export default class Project extends Component {
 
   static propTypes = {
     title: PropTypes.string.isRequired,
@@ -50,6 +50,6 @@ function ProjectButton(props) {
 
 // Styles
 const projectImgStyle = {
-  width: "50%",
+  width: "100%",
   height: "auto"
 }

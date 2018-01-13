@@ -1,19 +1,19 @@
 import React, {Component} from "react"
-// Components
 
+// Components
 import Mtbva from "./projects/Mtbva"
 import Handsmith from "./projects/Handsmith"
-import Section from "../generic/Section"
+import Section, {SectionHeader} from "../generic/Section"
+import Card from "../generic/Card"
 
 export default class Projects extends Component {
 
   render() {
     return (
       <div>
-        <Section title="Projects">
-          <Mtbva/>
-          <Handsmith/>
-        </Section>
+        <SectionHeader title="Projects"/>
+        <Mtbva/>
+        <Handsmith/>
       </div>
     )
   }

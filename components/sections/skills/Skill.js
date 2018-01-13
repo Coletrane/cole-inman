@@ -55,5 +55,9 @@ const skillTitleStyle = {
 }
 
 const skillImgStyle = (props) => {
-  width: props.width
+  return {
+    width: props.width
+  }
 }
+
+

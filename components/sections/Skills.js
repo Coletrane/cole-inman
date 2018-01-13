@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import styled from 'styled-components'
 
 // Components
 import Section from "../generic/Section"
@@ -12,20 +13,20 @@ export default class Skills extends Component {
     return (
       <div>
         <Section title="Skills">
-          <div style={skillsStyle}>
+          <GlobalSkillStyles>
             <GeneralSkills/>
             <FrontEndSkills/>
             <BackEndSkills/>
-          </div>
+          </GlobalSkillStyles>
         </Section>
       </div>
     )
   }
 }
 
-const skillsStyle = {
-  img: {
-    height: "auto"
+const GlobalSkillStyles = styled.div`
+  img {
+    height: auto;
   }
-}
+`
 

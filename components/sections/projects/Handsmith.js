@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import webshots from "../../../util/webshots"
 // Components
-import AbstractProject from "./AbstractProject"
+import AbstractProject from "./Project"
 
 export default class Handsmith extends Component {
 

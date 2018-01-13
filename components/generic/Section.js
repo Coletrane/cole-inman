@@ -1,6 +1,6 @@
 import React, {Component} from "react"
-import styled from "styled-components"
 import PropTypes from "prop-types"
+
 // Components
 import Card from "./Card"
 
@@ -14,10 +14,8 @@ export default class Section extends Component {
   render() {
     return (
       <div>
-        <Title>
-          {this.props.title}
-        </Title>
-        <Card>
+        <SectionHeader title={this.props.title}/>
+          <Card>
           {this.props.children}
         </Card>
       </div>
@@ -25,7 +23,17 @@ export default class Section extends Component {
   }
 }
 
-// Styles
-const Title = styled.h1`
+export class SectionHeader extends Component {
+  render() {
+    return(
+      <h1 style={headingStyle}>
+        {this.props.title}
+      </h1>
+    )
+  }
+}
 
-`
+// Styles
+const headingStyle = {
+  textAlign: "center"
+}

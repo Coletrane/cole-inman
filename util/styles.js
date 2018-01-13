@@ -10,12 +10,12 @@ export const boxShadow = "0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px 
 
 export const mediaQueries = {
   all: {
-    mobile: `(max-width: ${mobileWidth})`,
-    tablet: `(min-width: ${mobileWidth + 1}) and (max-width: ${tabletWidth})`,
-    desktop: `(min-width: ${tabletWidth + 1})`
+    mobile: `(max-width: ${mobileWidth}px)`,
+    tablet: `(min-width: ${mobileWidth + 1}px) and (max-width: ${tabletWidth}px)`,
+    desktop: `(min-width: ${tabletWidth + 1}px)`
   },
   mobileAndDesktop: {
-    mobile: `(max-width: ${mobileWidth})`,
-    desktop: `(min-width: ${mobileWidth + 1})`
+    mobile: `(max-width: ${mobileWidth}px)`,
+    desktop: `(min-width: ${mobileWidth + 1}px)`
   }
 }

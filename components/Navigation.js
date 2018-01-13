@@ -1,12 +1,13 @@
 import React, {Component} from "react"
 import PropTypes from "prop-types"
+import styled from 'styled-components'
 
 import {boxShadow, colors, mediaQueries} from "../util/styles.js"
 import {isMobile} from "../util/functions.js"
 
 // Components
 import IconButton from "material-ui/IconButton"
-import MediaQuery from 'react-responsive'
+import MediaQuery from "react-responsive"
 import {
   FaEnvelopeSquare,
   FaFacebookSquare,
@@ -25,26 +26,24 @@ export default class Navigation extends Component {
     bottom: PropTypes.bool.isRequired
   }
 
-  get iconColor() {
-
-  }
-
   render() {
-    <div style={svgStyle}>
-      <MediaQuery query={mediaQueries.mobileAndDesktop.mobile}>
-        <NavLinks style={bottomNav}/>
-      </MediaQuery>
-      <MediaQuery query={mediaQueries.mobileAndDesktop.desktop}>
-        <NavLinks style={topNav}/>
-      </MediaQuery>
-    </div>
+    return (
+      <div>
+        <MediaQuery query={mediaQueries.mobileAndDesktop.mobile}>
+          <NavLinks style={bottomNav}/>
+        </MediaQuery>
+        <MediaQuery query={mediaQueries.mobileAndDesktop.desktop}>
+          <NavLinks style={topNav}/>
+        </MediaQuery>
+      </div>
+    )
   }
 }
 
 class NavLinks extends Component {
   render() {
-    return(
-      <div>
+    return (
+      <SvgStyle style={this.props.style}>
         <a href={linkedIn}>
           <IconButton aria-label="LinkedIn">
             <FaLinkedinSquare/>
@@ -65,21 +64,20 @@ class NavLinks extends Component {
             <FaEnvelopeSquare/>
           </IconButton>
         </a>
-      </div>
+      </SvgStyle>
     )
   }
 }
 
 // Styles
-const svgStyle = {
-  width: "1.5rem",
-    height: "1.5rem",
-    fill: "white"
-}
-
-const topNav = {
-
-}
+const SvgStyle = styled.div`
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: white;
+  }
+`
+const topNav = {}
 
 const bottomNav = {
   display: "flex",
@@ -90,6 +88,6 @@ const bottomNav = {
   left: "0px",
   bottom: "0px",
   backgroundColor: colors.barColor,
-  boxShadow: boxShadow,
-
+  boxShadow: boxShadow
 }
+

@@ -1,20 +1,19 @@
 import React, {Component} from "react"
-import styled from "styled-components"
 import {boxShadow} from "../../util/styles"
 
 export default class Card extends Component {
 
   render() {
     return (
-      <CardContainer>
+      <div style={cardStyle}>
         {this.props.children}
-      </CardContainer>
+      </div>
     )
   }
 }
 
-const CardContainer = styled.div`
-  box-shadow: ${boxShadow};
-  padding: 1rem;
-  margin: 1rem;
-`
+const cardStyle = {
+  boxShadow: boxShadow,
+  padding: "1rem",
+  margin: "1rem"
+}
