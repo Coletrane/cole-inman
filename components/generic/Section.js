@@ -35,5 +35,7 @@ export class SectionHeader extends Component {
 
 // Styles
 const headingStyle = {
-  textAlign: "center"
+  textAlign: "center",
+  color: "white"
 }
+

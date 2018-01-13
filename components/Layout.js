@@ -44,7 +44,7 @@ const titleStyle = {
 
 const mainContentStyle = {
   desktop: {
-    marginTop: "100px",
+    marginTop: "80px",
     marginBottom: "60px"
   },
   mobile: {

@@ -13,6 +13,7 @@ export default class Card extends Component {
 }
 
 const cardStyle = {
+  backgroundColor: "white",
   boxShadow: boxShadow,
   padding: "1rem",
   margin: "1rem"

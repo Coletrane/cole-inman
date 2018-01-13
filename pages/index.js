@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import styled from "styled-components"
 import {mediaQueries} from "../util/styles"
+import {imgPath} from "../util/enums"
 
 // Components
 import Layout from "../components/Layout"
@@ -45,9 +46,13 @@ const AppWrapper = styled.div`
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display SC', serif;
   }
+  background-color: #331501;
+  background-image: url(${imgPath}/dark-wood.png);
 `
 
 const twoColumns = {
   display: "grid",
   gridTemplateColumns: "50% 50%"
 }
+
+
