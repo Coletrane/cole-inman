@@ -2,12 +2,11 @@ import React, {Component} from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 
-import {boxShadow, colors, mediaQueries} from "../util/styles.js"
+import {boxShadow, colors, mediaQuery} from "../util/styles.js"
 import {isMobile} from "../util/functions.js"
 
 // Components
 import IconButton from "material-ui/IconButton"
-import MediaQuery from "react-responsive"
 import {
   FaEnvelopeSquare,
   FaFacebookSquare,
@@ -28,22 +27,8 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <div>
-        <MediaQuery query={mediaQueries.mobileAndDesktop.mobile}>
-          <NavLinks style={bottomNav}/>
-        </MediaQuery>
-        <MediaQuery query={mediaQueries.mobileAndDesktop.desktop}>
-          <NavLinks style={topNav}/>
-        </MediaQuery>
-      </div>
-    )
-  }
-}
-
-class NavLinks extends Component {
-  render() {
-    return (
-      <SvgStyle style={this.props.style}>
+      <Nav>
+        <SvgStyle>
         <a href={linkedIn}>
           <IconButton aria-label="LinkedIn">
             <FaLinkedinSquare/>
@@ -64,30 +49,36 @@ class NavLinks extends Component {
             <FaEnvelopeSquare/>
           </IconButton>
         </a>
-      </SvgStyle>
+        </SvgStyle>
+      </Nav>
     )
   }
 }
 
 // Styles
-const SvgStyle = styled.div`
+const SvgStyle = styled.div` // Not sure why this doesn't work in Nav
   svg {
     width: 1.5rem;
     height: 1.5rem;
     fill: white;
-  }
+  } 
 `
-const topNav = {}
-
-const bottomNav = {
-  display: "flex",
-  flexShrink: "0",
-  justifyContent: "center",
-  width: "100%",
-  position: "fixed",
-  left: "0px",
-  bottom: "0px",
-  backgroundColor: colors.barColor,
-  boxShadow: boxShadow
-}
+const Nav = styled.div`
+  ${mediaQuery.desktop`
+    display: block;
+  `}
+  ${mediaQuery.tablet`
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+  `}
+  background-color: ${colors.barColor};
+  box-shadow: ${boxShadow};
+  
+  
+`
 

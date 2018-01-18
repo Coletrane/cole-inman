@@ -9,7 +9,8 @@ const pages = {
     options: {
       crop: true,
       filename: bikeva,
-      scale: .5
+      scale: .5,
+      timeout: 120
     }
   },
   handsmith: {
@@ -17,7 +18,8 @@ const pages = {
     options: {
       crop: true,
       filename: handsmith,
-      scale: .5
+      scale: .5,
+      timeout: 120
     }
   }
 }

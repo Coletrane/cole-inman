@@ -1,9 +1,9 @@
 import React, {Component} from "react"
 import PropTypes from "prop-types"
-import {mediaQueries} from "../../../util/styles"
+import styled from "styled-components"
+import {mediaQuery} from "../../../util/styles"
 
 // Components
-import MediaQuery from 'react-responsive'
 
 export default class Skill extends Component {
 
@@ -27,37 +27,33 @@ export default class Skill extends Component {
   render() {
     return (
       <div style={listItemStyle}>
-        <MediaQuery query={mediaQueries.mobileAndDesktop.mobile}>
-        <img src={this.imgSrc}
-             style={skillImgStyle({
-               width: this.props.mobile
-             })}/>
-        </MediaQuery>
-        <MediaQuery query={mediaQueries.mobileAndDesktop.desktop}>
-          <img src={this.imgSrc}
-               style={skillImgStyle({
-                 width: this.props.desktop
-               })}/>
-        </MediaQuery>
+        <LogoImg src={this.imgSrc}
+                 desktop={this.props.desktop}
+                 mobile={this.props.mobile}/>
         <div style={skillTitleStyle}> {this.props.name} </div>
       </div>
     )
   }
 }
 
+// Styles
 const listItemStyle = {
   padding: "5px",
   borderRadius: "5px"
 }
 
+const LogoImg = styled.img`
+  ${mediaQuery.ceiling`
+    width: ${props => props.desktop};
+  `}
+  ${mediaQuery.tablet`
+    width: ${props => props.mobile};
+  `}
+`
 const skillTitleStyle = {
   margin: "0"
 }
 
-const skillImgStyle = (props) => {
-  return {
-    width: props.width
-  }
-}
+
 
 

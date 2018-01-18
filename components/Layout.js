@@ -1,6 +1,6 @@
 import React, {Component} from "react"
-import MediaQuery from "react-responsive"
-import {colors, mediaQueries} from "../util/styles.js"
+import styled from 'styled-components'
+import {colors, mediaQuery} from "../util/styles.js"
 import {isMobile} from "../util/functions"
 
 // Components
@@ -12,18 +12,11 @@ export default class Layout extends Component {
 
   render() {
     return (
-      <div style={appStyle}>
+      <div>
         <Header/>
-        <MediaQuery query={mediaQueries.mobileAndDesktop.mobile}>
-          <div style={mainContentStyle.mobile}>
-            {this.props.children}
-          </div>
-        </MediaQuery>
-        <MediaQuery query={mediaQueries.mobileAndDesktop.desktop}>
-          <div style={mainContentStyle.desktop}>
-            {this.props.children}
-          </div>
-        </MediaQuery>
+        <MainContent>
+          {this.props.children}
+        </MainContent>
         <Navigation bottom={true}/>
       </div>
     )
@@ -31,25 +24,18 @@ export default class Layout extends Component {
 };
 
 // Styles
-const appStyle = {
-  header: {
-    backgroundColor: colors.barColor
-  }
-}
-
 const titleStyle = {
   color: "white",
   textAlign: "center"
 }
 
-const mainContentStyle = {
-  desktop: {
-    marginTop: "80px",
-    marginBottom: "60px"
-  },
-  mobile: {
-    marginTop: "60px",
-    marginBottom: "60px"
-  }
-}
+const MainContent = styled.div`
+  ${mediaQuery.ceiling`
+    padding-top: 80px;
+  `}
+  ${mediaQuery.tablet`
+    padding-top: 30px;
+  `}
+  margin-bottom: 60px;
+`
 

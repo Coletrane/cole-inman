@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next",
     "dev8080": "next -p 8080",
+    "clean": "rimraf .next out/",
     "webshots": "rimraf .next static/img/webshots && mkdir static/img/webshots && node ./webshots.js",
     "build": "npm run webshots && next build && next export && zip -r coleinman.zip ./out",
     "start": "rimraf static/img/webshots && mkdir static/img/webshots &&NODE_ENV=production node ./server.js"
