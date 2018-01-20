@@ -1,9 +1,8 @@
 import React, {Component} from "react"
 import PropTypes from "prop-types"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 import {boxShadow, colors, mediaQuery} from "../util/styles.js"
-import {isMobile} from "../util/functions.js"
 
 // Components
 import IconButton from "material-ui/IconButton"
@@ -19,16 +18,61 @@ export const gitHub = "https://github.com/coletrane/" // exporting this for cons
 const facebook = "https://www.facebook.com/uhmcole"
 const email = "eloc49@gmail.com"
 
-export default class Navigation extends Component {
-
-  static propTypes = {
-    bottom: PropTypes.bool.isRequired
-  }
+export class TopNav extends Component {
 
   render() {
     return (
-      <Nav>
-        <SvgStyle>
+      <TopNavStyle>
+        <Icons/>
+      </TopNavStyle>
+    )
+  }
+}
+
+const TopNavStyle = styled.div`
+  ${mediaQuery.desktop`
+    display: block;
+    box-shadow: ${boxShadow};
+
+  `}
+  ${mediaQuery.tablet`
+    display: none;
+  `}
+`
+
+export class BottomNav extends Component {
+
+  render() {
+    return (
+      <BottomNavStyle>
+        <Icons/>
+      </BottomNavStyle>
+    )
+  }
+}
+
+const BottomNavStyle = styled.div`
+  ${mediaQuery.desktop`
+    display: none;
+  `}
+  ${mediaQuery.tablet`
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background-color: ${colors.barColor};
+    box-shadow: ${boxShadow};
+  `}
+`
+
+class Icons extends Component {
+
+  render() {
+    return (
+      <SvgStyle>
         <a href={linkedIn}>
           <IconButton aria-label="LinkedIn">
             <FaLinkedinSquare/>
@@ -49,8 +93,7 @@ export default class Navigation extends Component {
             <FaEnvelopeSquare/>
           </IconButton>
         </a>
-        </SvgStyle>
-      </Nav>
+      </SvgStyle>
     )
   }
 }
@@ -62,23 +105,5 @@ const SvgStyle = styled.div` // Not sure why this doesn't work in Nav
     height: 1.5rem;
     fill: white;
   } 
-`
-const Nav = styled.div`
-  ${mediaQuery.desktop`
-    display: block;
-  `}
-  ${mediaQuery.tablet`
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    width: 100%;
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-  `}
-  background-color: ${colors.barColor};
-  box-shadow: ${boxShadow};
-  
-  
 `
 

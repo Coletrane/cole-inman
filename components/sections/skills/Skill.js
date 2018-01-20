@@ -46,12 +46,13 @@ const LogoImg = styled.img`
   ${mediaQuery.ceiling`
     width: ${props => props.desktop};
   `}
-  ${mediaQuery.tablet`
+  ${mediaQuery.phone`
     width: ${props => props.mobile};
   `}
 `
 const skillTitleStyle = {
-  margin: "0"
+  margin: "0",
+  fontSize: ".8rem"
 }
 
 

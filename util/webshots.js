@@ -1,7 +1,16 @@
+// This file exists to expose webshots urls and src's to both the
+// app and the build system
+
 const bikeva = "bikeva.com"
 const handsmith = "handsmith.org"
+const paddlemax = "github.com/coletrane/paddlemax-api"
 const coledrums = "coledrums.com"
 const webjam = "web-jam.com"
+
+const paddlemaxFilename = () => {
+  const max = paddlemax.split("/")
+  return max[max.length - 1]
+}
 
 const pages = {
   mtbva: {
@@ -10,7 +19,7 @@ const pages = {
       crop: true,
       filename: bikeva,
       scale: .5,
-      timeout: 120
+      timeout: 9999
     }
   },
   handsmith: {
@@ -19,7 +28,16 @@ const pages = {
       crop: true,
       filename: handsmith,
       scale: .5,
-      timeout: 120
+      timeout: 9999
+    }
+  },
+  paddlemax: {
+    url: paddlemax,
+    options: {
+      crop: true,
+      filename: paddlemaxFilename(),
+      scale: .5,
+      timeout: 9999
     }
   }
 }

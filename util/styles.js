@@ -2,9 +2,11 @@ import {css} from "styled-components"
 
 export const sizes = {
   ceiling: 99999,
-  desktop: 900,
-  tablet: 600,
-  phone: 350
+  desktop: 1200,
+  dablet: 1000,
+  tablet: 700,
+  phablet: 550,
+  phone: 400
 }
 
 // @formatter:off

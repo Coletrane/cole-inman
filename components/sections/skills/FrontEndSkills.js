@@ -112,8 +112,8 @@ function Node() {
 function Webpack() {
   return (
     <Skill name="Webpack"
-           desktop="55px"
-           mobile="35px"/>
+           desktop="65px"
+           mobile="45px"/>
   )
 }
 
@@ -128,8 +128,8 @@ function Redux() {
 function Express() {
   return (
     <Skill name="Express.js"
-           desktop="52px"
-           mobile="33px"/>
+           desktop="60px"
+           mobile="40px"/>
   )
 }
 

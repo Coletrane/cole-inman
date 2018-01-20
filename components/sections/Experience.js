@@ -77,17 +77,21 @@ const imgStyle = {
 }
 
 const drStyle = {
-  width: "75%"
+  width: "75%",
+  maxWidth: "500px"
 }
 
 const handsmithStyle = {
-  width: "60%"
+  width: "60%",
+  maxWidth: "420px"
 }
 
 const luStyle = {
-  width: "70%"
+  width: "70%",
+  maxWidth: "400px"
 }
 
 const webJamStyle = {
-  width: "50%"
+  width: "50%",
+  maxWidth: "330px"
 }

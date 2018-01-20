@@ -33,9 +33,12 @@ const SkillsListColumns = styled.div`
     grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
   `}
   ${mediaQuery.desktop`
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  `}
+  ${mediaQuery.dablet`
     grid-template-columns: 25% 25% 25% 25%; 
   `}
-  ${mediaQuery.phone`
-    grid-template-columns: 33.3% 33.3% 33.3%
+  ${mediaQuery.phablet`
+    grid-template-columns: 33.3% 33.3% 33.3%;
   `}
 `

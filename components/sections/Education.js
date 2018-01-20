@@ -42,10 +42,12 @@ const imgStyle = {
 }
 
 const jmuStyle = {
-  width: "100%"
+  width: "100%",
+  maxWidth: "450px"
 }
 
 const cnssStyle = {
-  width: "50%"
+  width: "50%",
+  maxWidth: "220px"
 }
 

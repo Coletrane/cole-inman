@@ -1,8 +1,8 @@
 import React, {Component} from "react"
-
 import {boxShadow, colors} from "../util/styles.js"
+
 // Components
-import Navigation from "./Navigation"
+import {TopNav} from "./Navigation"
 
 const title = "COLE INMAN"
 
@@ -14,7 +14,7 @@ export default class Header extends Component {
           <h1 style={titleStyle}>
             {title}
           </h1>
-          <Navigation bottom={false}/>
+          <TopNav/>
         </header>
     )
   }
@@ -29,7 +29,8 @@ const headerStyle = {
   position: "fixed",
   left: "0px",
   top: "0px",
-  width: "100%"
+  width: "100%",
+  zIndex: "2"
 }
 
 const titleStyle = {

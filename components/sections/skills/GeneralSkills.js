@@ -31,23 +31,23 @@ function Git() {
 function Scrum() {
   return (
     <Skill name="Scrum"
-           desktop="50px"
-           mobile="35px"/>
+           desktop="70px"
+           mobile="55px"/>
   )
 }
 
 function AWS() {
   return (
     <Skill name="Amazon Web Services"
-           desktop="50px"
-           mobile="35px"/>
+           desktop="80px"
+           mobile="65px"/>
   )
 }
 
 function TDD() {
   return (
     <Skill name="Test Driven Development"
-           desktop="50px"
+           desktop="60px"
            mobile="35px"/>
   )
 }

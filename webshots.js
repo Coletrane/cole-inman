@@ -19,6 +19,10 @@ const pageresInstance = new Pageres({delay: 10})
     webshots.pages.handsmith.url,
     webshots.resolutions,
     webshots.pages.handsmith.options)
+  .src(
+    webshots.pages.paddlemax.url,
+    webshots.resolutions,
+    webshots.pages.paddlemax.options)
   // .src(pages.coledrums)
   // .src(pages.webjam)
   .dest(__dirname + '/static/img/webshots')

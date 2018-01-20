@@ -54,16 +54,16 @@ function Swift() {
 function C() {
   return (
     <Skill name="C"
-           desktop="50px"
-           mobile="35px"/>
+           desktop="70px"
+           mobile="55px"/>
   )
 }
 
 function Groovy() {
   return (
     <Skill name="Groovy"
-           desktop="50px"
-           mobile="35px"/>
+           desktop="80px"
+           mobile="65px"/>
   )
 }
 
@@ -78,8 +78,8 @@ function Spring() {
 function JaxRs() {
   return (
     <Skill name="JAX-RS"
-           desktop="50px"
-           mobile="35px"/>
+           desktop="70px"
+           mobile="55px"/>
   )
 }
 
@@ -102,7 +102,7 @@ function Postgresql() {
 function MongoDB() {
   return (
     <Skill name="MongoDB"
-           desktop="50px"
+           desktop="70px"
            mobile="35px"/>
   )
 }

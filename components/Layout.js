@@ -4,7 +4,7 @@ import {colors, mediaQuery} from "../util/styles.js"
 import {isMobile} from "../util/functions"
 
 // Components
-import Navigation from "./Navigation.js"
+import {BottomNav} from "./Navigation.js"
 import Header from "./Header"
 
 
@@ -17,7 +17,7 @@ export default class Layout extends Component {
         <MainContent>
           {this.props.children}
         </MainContent>
-        <Navigation bottom={true}/>
+        <BottomNav/>
       </div>
     )
   }
