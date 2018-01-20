@@ -2,7 +2,12 @@ import React, {Component} from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import {boxShadow, topBarStyle, mediaQuery} from "../util/styles.js"
+import {
+  boxShadow,
+  topBarStyle,
+  mediaQuery,
+  titleStyle
+} from "../util/styles.js"
 
 // Components
 import IconButton from "material-ui/IconButton"
@@ -52,7 +57,8 @@ export class TopNav extends Component {
           previousScrollY: window.scrollY
         }
 
-        const iconAnimationFactor = 5
+        // TODO: make this proptional to window.scrollY
+        const iconAnimationFactor = 8
         const minLogoWidth = 24
         const maxLogoWidth = 100
         let iconChange = parseInt(prev.navStyle.width)
@@ -61,6 +67,7 @@ export class TopNav extends Component {
         const minBarWidth = 72
         const maxBarWidth = 150
         let barChange = parseInt(prev.barStyle.height)
+
 
         if (prev.previousScrollY < window.scrollY) {
           iconChange -= iconAnimationFactor
@@ -123,13 +130,6 @@ const TopNavStyle = styled.div`
   `}
 `
 
-const titleStyle = {
-  margin: 0,
-  fontSize: "3rem",
-  color: "white",
-  textShadow: "5px 5px 1px #000000"
-}
-
 export class BottomNav extends Component {
 
   render() {
@@ -153,7 +153,7 @@ const BottomNavStyle = styled.div`
     bottom: 0px;
     text-align: center;
     background-color: ${topBarStyle.backgroundColor};
-    background-image: ${topBarStyle.backgroundImage}
+    background-image: ${topBarStyle.backgroundImage};
     box-shadow: ${boxShadow};
   `}
 `

@@ -1,5 +1,11 @@
 import React, {Component} from "react"
-import {boxShadow, topBarStyle} from "../util/styles.js"
+import styled from 'styled-components'
+import {
+  boxShadow,
+  topBarStyle,
+  mediaQuery,
+  titleStyle
+} from "../util/styles.js"
 
 // Components
 import {TopNav} from "./Navigation"
@@ -13,6 +19,11 @@ export default class Header extends Component {
           ...headerStyle,
           ...topBarStyle
         }}>
+          <MobileTitle style={{
+            ...titleStyle
+          }}>
+            Cole Inman
+          </MobileTitle>
           <TopNav/>
         </header>
     )
@@ -33,3 +44,12 @@ const headerStyle = {
 const profilePicStyle = {
   width: "10%"
 }
+
+const MobileTitle = styled.h1`
+  ${mediaQuery.desktop`
+    display: none;
+  `}
+  ${mediaQuery.tablet`
+    display: block;
+  `}
+`
