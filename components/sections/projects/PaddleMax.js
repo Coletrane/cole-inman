@@ -19,7 +19,7 @@ export default class PaddleMax extends Component {
                                   text="API Repo"/>
                    <ProjectButton url={gitHub + "paddlemax"}
                                   text="Mobile App Repo"/>
-                   <ProjectButton url={gitHub + "paddlemax-webapp"}
+                   <ProjectButton url={gitHub + "paddlemax-web"}
                                   text="Web App Repo"/>
                  </div>
                }>

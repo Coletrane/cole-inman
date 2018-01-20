@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import styled from "styled-components"
-import {mediaQuery, colors} from "../util/styles"
+import {mediaQuery} from "../util/styles"
 import {imgPath} from "../util/enums"
 
 // Components
@@ -46,9 +46,6 @@ const AppWrapper = styled.div`
   background-color: #331501;
   background-image: url(${imgPath}/dark-wood.png);
   
-  header {
-    background-color: ${colors.barColor};
-  }
 `
 
 const EduSkills = styled.div`

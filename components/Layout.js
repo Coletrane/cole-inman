@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import styled from 'styled-components'
-import {colors, mediaQuery} from "../util/styles.js"
+import {mediaQuery} from "../util/styles.js"
 import {isMobile} from "../util/functions"
 
 // Components
@@ -24,17 +24,12 @@ export default class Layout extends Component {
 };
 
 // Styles
-const titleStyle = {
-  color: "white",
-  textAlign: "center"
-}
-
 const MainContent = styled.div`
   ${mediaQuery.ceiling`
-    padding-top: 100px;
+    padding-top: 160px;
   `}
   ${mediaQuery.tablet`
-    padding-top: 60px;
+    padding-top: 100px;
   `}
   margin-bottom: 60px;
 `

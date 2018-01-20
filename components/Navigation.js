@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import {boxShadow, colors, mediaQuery} from "../util/styles.js"
+import {boxShadow, topBarStyle, mediaQuery} from "../util/styles.js"
 
 // Components
 import IconButton from "material-ui/IconButton"
@@ -22,45 +22,92 @@ export class TopNav extends Component {
 
   constructor(props) {
     super(props)
-    // this.handleScroll.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
     this.state = {
+      barStyle: {
+        height: "150px"
+      },
       navStyle: {
-        width: "100%"
-      }
+        width: "100%",
+        display: "block",
+        margin: "auto"
+      },
+      previousScrollY: 0
     }
   }
 
-  // TODO: do a cool scroll animation
-  // handleScroll() {
-  //   const animationDone = 50
-  //   console.log(this.navStyle)
-  //   if (window.scrollY < animationDone) {
-  //     this.setState(prev => {
-  //       return {
-  //         navStyle: {
-  //           width: `${parseInt(prev.navStyle) / animationDone}%`
-  //         }
-  //       }
-  //     })
-  //   }
-  // }
-  //
-  // componentDidMount() {
-  //   if (process.browser) {
-  //     window.addEventListener("scroll", this.handleScroll)
-  //   }
-  // }
-  //
-  // componentWillUnmount() {
-  //   if (process.browser) {
-  //     window.removeEventListener("scroll", this.handleScroll)
-  //   }
-  // }
+  handleScroll(event) {
+    const animationDone = 100
+
+    if (window.scrollY < animationDone)
+      this.setState(prev => {
+
+        let newState = {
+          navStyle: {
+            ...prev.navStyle
+          },
+          barStyle: {
+            ...prev.barStyle
+          },
+          previousScrollY: window.scrollY
+        }
+
+        const iconAnimationFactor = 5
+        const minLogoWidth = 24
+        const maxLogoWidth = 100
+        let iconChange = parseInt(prev.navStyle.width)
+
+        const barAnimationFactor = 6
+        const minBarWidth = 72
+        const maxBarWidth = 150
+        let barChange = parseInt(prev.barStyle.height)
+
+        if (prev.previousScrollY < window.scrollY) {
+          iconChange -= iconAnimationFactor
+          barChange -= barAnimationFactor
+        } else if (prev.previousScrollY > window.scrollY) {
+          iconChange += iconAnimationFactor
+          barChange += barAnimationFactor
+        }
+
+        if (iconChange > minLogoWidth && iconChange < maxLogoWidth) {
+          newState.navStyle.width = `${iconChange}%`
+        }
+        // if (barChange > minBarWidth && barChange < maxBarWidth) {
+        //   newState.barStyle.height = `${barChange}px`
+        // }
+
+        return newState
+      })
+  }
+
+  componentDidMount() {
+    if (process.browser) {
+      window.addEventListener("scroll", this.handleScroll)
+    }
+  }
+
+  componentWillUnmount() {
+    if (process.browser) {
+      window.removeEventListener("scroll", this.handleScroll)
+    }
+  }
 
   render() {
     return (
-      <TopNavStyle style={this.state.navStyle}>
-        <Icons/>
+      <TopNavStyle>
+        <div style={{
+          ...this.state.barStyle
+        }}>
+          <h1 style={titleStyle}>
+            Cole Inman
+          </h1>
+          <div style={{
+            ...this.state.navStyle
+          }}>
+            <Icons/>
+          </div>
+        </div>
       </TopNavStyle>
     )
   }
@@ -69,13 +116,19 @@ export class TopNav extends Component {
 const TopNavStyle = styled.div`
   ${mediaQuery.desktop`
     display: block;
-    box-shadow: ${boxShadow};
     margin: auto;
   `}
   ${mediaQuery.tablet`
     display: none;
   `}
 `
+
+const titleStyle = {
+  margin: 0,
+  fontSize: "3rem",
+  color: "white",
+  textShadow: "5px 5px 1px #000000"
+}
 
 export class BottomNav extends Component {
 
@@ -99,7 +152,8 @@ const BottomNavStyle = styled.div`
     left: 0px;
     bottom: 0px;
     text-align: center;
-    background-color: ${colors.barColor};
+    background-color: ${topBarStyle.backgroundColor};
+    background-image: ${topBarStyle.backgroundImage}
     box-shadow: ${boxShadow};
   `}
 `
@@ -111,30 +165,22 @@ class Icons extends Component {
       <IconsStyle>
         <span>
           <a href={linkedIn}>
-            <IconButton aria-label="LinkedIn">
-              <FaLinkedinSquare/>
-            </IconButton>
+            <FaLinkedinSquare/>
           </a>
         </span>
         <span>
           <a href={gitHub}>
-            <IconButton aria-label="Github">
-              <FaGithubSquare/>
-            </IconButton>
+            <FaGithubSquare/>
           </a>
         </span>
         <span>
           <a href={facebook}>
-            <IconButton aria-label="Facebook">
-              <FaFacebookSquare/>
-            </IconButton>
+            <FaFacebookSquare/>
           </a>
         </span>
         <span>
           <a href={"mailto:" + email}>
-            <IconButton aria-label="Email">
-              <FaEnvelopeSquare/>
-            </IconButton>
+            <FaEnvelopeSquare/>
           </a>
         </span>
       </IconsStyle>
