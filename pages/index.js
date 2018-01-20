@@ -32,8 +32,17 @@ export default class Index extends Component {
 // Use styled components for un-scoped styles, inline styles for scoped 
 const AppWrapper = styled.div`
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display SC', serif;
+    font-family: 'Abril Fatface', serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
   }
+  
+  p, span, div {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+  }
+  
   background-color: #331501;
   background-image: url(${imgPath}/dark-wood.png);
   

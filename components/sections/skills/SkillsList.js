@@ -9,9 +9,9 @@ export default class SkillsList extends Component {
   render() {
     return (
       <div>
-        <h3 style={skillsListTitle}>
+        <h2 style={skillsListTitle}>
           {this.props.title}
-        </h3>
+        </h2>
         <SkillsListColumns>
           {this.props.children}
         </SkillsListColumns>

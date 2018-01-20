@@ -31,10 +31,10 @@ const titleStyle = {
 
 const MainContent = styled.div`
   ${mediaQuery.ceiling`
-    padding-top: 80px;
+    padding-top: 100px;
   `}
   ${mediaQuery.tablet`
-    padding-top: 30px;
+    padding-top: 60px;
   `}
   margin-bottom: 60px;
 `

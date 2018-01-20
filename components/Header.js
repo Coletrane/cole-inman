@@ -4,7 +4,7 @@ import {boxShadow, colors} from "../util/styles.js"
 // Components
 import {TopNav} from "./Navigation"
 
-const title = "COLE INMAN"
+const title = "Cole Inman"
 
 export default class Header extends Component {
 
@@ -14,6 +14,8 @@ export default class Header extends Component {
           <h1 style={titleStyle}>
             {title}
           </h1>
+          {/*<img src="/static/img/linkedin.jpg"*/}
+               {/*style={profilePicStyle}/>*/}
           <TopNav/>
         </header>
     )
@@ -37,3 +39,6 @@ const titleStyle = {
   margin: 0
 }
 
+const profilePicStyle = {
+  width: "10%"
+}

@@ -10,15 +10,16 @@ for (page in webshots.pages) {
 }
 console.log("\n")
 
+// TODO: make this take arguments
 const pageresInstance = new Pageres({delay: 10})
-  .src(
-    webshots.pages.mtbva.url,
-    webshots.resolutions,
-    webshots.pages.mtbva.options)
-  .src(
-    webshots.pages.handsmith.url,
-    webshots.resolutions,
-    webshots.pages.handsmith.options)
+  // .src(
+  //   webshots.pages.mtbva.url,
+  //   webshots.resolutions,
+  //   webshots.pages.mtbva.options)
+  // .src(
+  //   webshots.pages.handsmith.url,
+  //   webshots.resolutions,
+  //   webshots.pages.handsmith.options)
   .src(
     webshots.pages.paddlemax.url,
     webshots.resolutions,

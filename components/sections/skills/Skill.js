@@ -29,7 +29,8 @@ export default class Skill extends Component {
       <div style={listItemStyle}>
         <LogoImg src={this.imgSrc}
                  desktop={this.props.desktop}
-                 mobile={this.props.mobile}/>
+                 mobile={this.props.mobile}
+                 style={this.props.imgStyle}/>
         <div style={skillTitleStyle}> {this.props.name} </div>
       </div>
     )

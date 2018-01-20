@@ -10,17 +10,17 @@ export default class FrontEndSkills extends Component {
       <SkillsList title="Front End">
         <Html/>
         <Css/>
-        <Jquery/>
         <Javascript/>
         <Typescript/>
-        <Aurelia/>
+        <Jquery/>
         <ReactLolNameCollision/>
         <Redux/>
         <Angular/>
         <Vue/>
         <Node/>
-        <Webpack/>
         <Express/>
+        <Webpack/>
+        <Aurelia/>
         <Rails/>
       </SkillsList>
     )
@@ -33,7 +33,10 @@ function Html() {
   return (
     <Skill name="HTML"
            desktop="56px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "4px"
+           }}/>
   )
 }
 
@@ -49,7 +52,10 @@ function Jquery() {
   return (
     <Skill name="jQuery"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingBottom: "12px"
+           }}/>
   )
 }
 
@@ -57,7 +63,11 @@ function Javascript() {
   return (
     <Skill name="Javascript"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "10px",
+             paddingBottom: "10px"
+           }}/>
   )
 }
 
@@ -65,14 +75,18 @@ function Typescript() {
   return (
     <Skill name="Typescript"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "10px",
+             paddingBottom: "10px"
+           }}/>
   )
 }
 
 function ReactLolNameCollision() {
   return (
     <Skill name="React (What this site is written in)"
-           desktop="50px"
+           desktop="60px"
            mobile="35px"/>
   )
 }
@@ -81,7 +95,8 @@ function Angular() {
   return (
     <Skill name="Angular"
            desktop="59px"
-           mobile="35px"/>
+           mobile="35px"
+    />
   )
 }
 
@@ -89,7 +104,11 @@ function Vue() {
   return (
     <Skill name="Vue"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "4px",
+             paddingBottom: "4px"
+           }}/>
   )
 }
 
@@ -105,7 +124,11 @@ function Node() {
   return (
     <Skill name="Node.js"
            desktop="55px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "2px",
+             paddingBottom: "2px"
+           }}/>
   )
 }
 
@@ -121,7 +144,11 @@ function Redux() {
   return (
     <Skill name="Redux"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "6px",
+             paddingBottom: "8px"
+           }}/>
   )
 }
 

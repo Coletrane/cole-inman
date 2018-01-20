@@ -17,5 +17,6 @@ const cardStyle = {
   boxShadow: boxShadow,
   padding: "1rem",
   margin: "1rem",
-  opacity: ".95"
+  opacity: ".95",
+  textAlign: "center"
 }

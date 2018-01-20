@@ -32,7 +32,10 @@ function Scrum() {
   return (
     <Skill name="Scrum"
            desktop="70px"
-           mobile="55px"/>
+           mobile="55px"
+           imgStyle={{
+             paddingTop: "3px"
+           }}/>
   )
 }
 
@@ -40,7 +43,11 @@ function AWS() {
   return (
     <Skill name="Amazon Web Services"
            desktop="80px"
-           mobile="65px"/>
+           mobile="65px"
+           imgStyle={{
+            paddingTop: "8px",
+            paddingBottom: "10px"
+           }}/>
   )
 }
 
@@ -56,7 +63,11 @@ function Bash() {
   return (
     <Skill name="Bash"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+          imgStyle={{
+            paddingTop: "6px",
+            paddingBottom: "10px"
+          }}/>
   )
 }
 

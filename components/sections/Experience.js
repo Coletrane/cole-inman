@@ -18,7 +18,7 @@ export default class Experience extends Component {
              }}/>
         </a>
         <div>
-          <h6>May 2017 - Present</h6>
+          <div style={timeStyle}>May 2017 - Present</div>
           <p>
           Front end developer working on the Monitoring application, utilized by large banking clients. Stack is: Hadoop, Elasticsearch, Java(Jetty/JAXRS), Ruby on Rails, KnockoutJs, jQuery, Bootstrap.
           </p>
@@ -32,7 +32,7 @@ export default class Experience extends Component {
              }}/>
         </a>
         <div>
-          <h6>October 2017 - Present</h6>
+          <div style={timeStyle}>October 2017 - Present</div>
           <p>
             Handsmith is a non-profit company seeking to develop a bionic hand at a fraction of the current cost in the medical devices industry. Wordpress platform, responsible for SEO, Updates, and custom HTML,CSS, and JS
           </p>
@@ -46,7 +46,7 @@ export default class Experience extends Component {
                }}/>
         </a>
         <div>
-          <h6>October 2016 - May 2017</h6>
+          <div style={timeStyle}>October 2016 - May 2017</div>
           <p>
             Student Financial Services team with 3 other senior developers. Main project was Financial Check In, an app that provides a way for students to pick payment plans, housing, parking pass, ect. 100,000+ users. RESTful web service using with the technology stack: Oracle DB, Hibernate, Spring, Java 8, Aurelia Javascript Framework, ECMAScript 6 in a strict Test Driven Development environment.
           </p>
@@ -60,7 +60,7 @@ export default class Experience extends Component {
                }}/>
         </a>
         <div>
-          <h6>November 2016 - May 2017</h6>
+          <div style={timeStyle}>November 2016 - May 2017</div>
           <p>
             Web development startup in Roanoke, VA. Stack: Webpack, Aurelia, Node, Express, MongoDB/Mongoose. Main market is local businesses with non-mobile optimized websites.
           </p>
@@ -74,6 +74,10 @@ export default class Experience extends Component {
 const imgStyle = {
   display: "block",
   margin: "auto"
+}
+
+const timeStyle = {
+  fontSize: "1.5rem"
 }
 
 const drStyle = {

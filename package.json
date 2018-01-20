@@ -6,7 +6,7 @@
     "dev": "next",
     "dev8080": "next -p 8080",
     "clean": "rimraf .next out/",
-    "webshots": "rimraf .next static/img/webshots && mkdir static/img/webshots && node ./webshots.js",
+    "webshots": "node ./webshots.js",
     "build": "next build && next export",
     "static": "node ./static.js",
     "start": "rimraf static/img/webshots && mkdir static/img/webshots &&NODE_ENV=production node ./server.js"

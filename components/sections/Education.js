@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import styled from 'styled-components'
 import {imgPath} from "../../util/enums"
 
 // Components
@@ -9,26 +10,24 @@ export default class Education extends Component {
   render() {
     return (
       <Section title="Education">
-        <img src={`${imgPath}/logos/jmu.png`}
-             alt="James Madison University"
-             style={{
-               ...imgStyle,
-               ...jmuStyle
-             }}/>
-        <div>
-          <h4>B.S. Computer Science</h4>
-          <h6>Graduation: May 2016</h6>
-        </div>
-        <img src={`${imgPath}/logos/cnss.png`}
-             alt="Committee on National Security Systems"
-             style={{
-               ...imgStyle,
-               ...cnssStyle
-             }}/>
-        <div>
-          <h4>Committee on National Security Systems No. 4011 Certificate</h4>
-          <h6>Awarded: May 2016</h6>
-        </div>
+        <JMU>
+          <img src={`${imgPath}/logos/jmu.png`}
+               alt="James Madison University"
+               style={imgStyle}/>
+          <div>
+            <div style={titleStyle}>B.S. Computer Science</div>
+            <div style={subtitleStyle}>Graduation: May 2016</div>
+          </div>
+        </JMU>
+        <CNSS>
+          <img src={`${imgPath}/logos/cnss.png`}
+               alt="Committee on National Security Systems"
+               style={imgStyle}/>
+          <div>
+            <div style={titleStyle}>Committee on National Security Systems No. 4011 Certificate</div>
+            <div style={subtitleStyle}>Awarded: May 2016</div>
+          </div>
+        </CNSS>
       </Section>
     )
   }
@@ -41,13 +40,27 @@ const imgStyle = {
   height: "auto"
 }
 
-const jmuStyle = {
-  width: "100%",
-  maxWidth: "450px"
-}
+const JMU = styled.div`
+  padding-bottom: 2rem;
+  
+  img {
+    width: 100%;
+    maxWidth: "450px"
+  }
+`
 
-const cnssStyle = {
-  width: "50%",
-  maxWidth: "220px"
-}
+const CNSS = styled.div`
+  padding-bottom: 2rem;
+  
+  img {
+    width: 50%;
+    max-width: 220px;
+  }
+`
 
+const titleStyle = {
+  fontSize: "1.5rem"
+}
+const subtitleStyle = {
+  fontSize: "1rem"
+}

@@ -7,9 +7,9 @@ const paddlemax = "github.com/coletrane/paddlemax-api"
 const coledrums = "coledrums.com"
 const webjam = "web-jam.com"
 
-const paddlemaxFilename = () => {
-  const max = paddlemax.split("/")
-  return max[max.length - 1]
+const noSlashes = (str) => {
+  const split = str.split("/")
+  return split[split.length - 1]
 }
 
 const pages = {
@@ -19,7 +19,7 @@ const pages = {
       crop: true,
       filename: bikeva,
       scale: .5,
-      timeout: 9999
+      timeout: 120
     }
   },
   handsmith: {
@@ -28,16 +28,16 @@ const pages = {
       crop: true,
       filename: handsmith,
       scale: .5,
-      timeout: 9999
+      timeout: 120
     }
   },
   paddlemax: {
     url: paddlemax,
     options: {
       crop: true,
-      filename: paddlemaxFilename(),
-      scale: .5,
-      timeout: 9999
+      filename: noSlashes(paddlemax),
+      scale: 1,
+      timeout: 120
     }
   }
 }
@@ -47,7 +47,7 @@ const resolutions = [
 ]
 
 const localSrc = (page) => {
-  return "/static/img/webshots/" + page.url + ".png"
+  return "/static/img/webshots/" + noSlashes(page.url) + ".png"
 }
 
 module.exports = {
