@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import styled from 'styled-components'
 import PropTypes from "prop-types"
 
 // Components
@@ -14,7 +15,9 @@ export default class Section extends Component {
   render() {
     return (
       <div>
-        <SectionHeader title={this.props.title}/>
+        <Title>
+          {this.props.title}
+        </Title>
           <Card>
           {this.props.children}
         </Card>
@@ -23,20 +26,10 @@ export default class Section extends Component {
   }
 }
 
-export class SectionHeader extends Component {
-  render() {
-    return(
-      <h1 style={headingStyle}>
-        {this.props.title}
-      </h1>
-    )
-  }
-}
-
-// Styles
-const headingStyle = {
-  textAlign: "center",
-  color: "white",
-  textShadow: "0px 3px 1px #000000"
-}
+const Title = styled.h1`
+  text-align: center;
+  color: white;
+  text-shadow: 0px 3px 1px #000000;
+  font-size: 3rem;
+`
 

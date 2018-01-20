@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
 export default class CardHeader extends Component {
 
@@ -11,7 +12,7 @@ export default class CardHeader extends Component {
   render() {
     return (
       <div>
-        <h2>{this.props.title}</h2>
+        <Title>{this.props.title}</Title>
         <Subtitle text={this.props.subtitle}/>
       </div>
     )
@@ -27,3 +28,9 @@ function Subtitle(props) {
     return (null)
   }
 }
+
+// Styles
+const Title = styled.span`
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+`

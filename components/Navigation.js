@@ -10,7 +10,6 @@ import {
 } from "../util/styles.js"
 
 // Components
-import IconButton from "material-ui/IconButton"
 import {
   FaEnvelopeSquare,
   FaFacebookSquare,
@@ -22,6 +21,8 @@ const linkedIn = "https://www.linkedin.com/in/cole-inman-61738565/"
 export const gitHub = "https://github.com/coletrane/" // exporting this for constructing github links in components
 const facebook = "https://www.facebook.com/uhmcole"
 const email = "eloc49@gmail.com"
+
+export const svgDimensions = "3rem"
 
 export class TopNav extends Component {
 
@@ -190,8 +191,8 @@ class Icons extends Component {
 
 const IconsStyle = styled.div` 
   svg {
-    width: 3rem;
-    height: 3rem;
+    width: ${svgDimensions};
+    height: ${svgDimensions};
     fill: white;
   } 
   

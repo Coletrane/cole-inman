@@ -26,7 +26,7 @@ export default class Project extends Component {
   render() {
 
     return (
-      <Card>
+      <div>
         <CardHeader title={this.props.title}
                     subheader={this.props.subheader}/>
         <img src={this.props.imgSrc}
@@ -38,7 +38,7 @@ export default class Project extends Component {
         <ProjectButton url={this.props.gitHub}
                        text="Github Repo"/>
         {this.props.customButtons}
-      </Card>
+      </div>
     )
   }
 }
@@ -47,4 +47,8 @@ export default class Project extends Component {
 const projectImgStyle = {
   width: "100%",
   height: "auto"
+}
+
+const cardStyle = {
+  backgroundColor: "black"
 }

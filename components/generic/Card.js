@@ -1,22 +1,34 @@
 import React, {Component} from "react"
+import styled from "styled-components"
 import {boxShadow} from "../../util/styles"
 
 export default class Card extends Component {
 
   render() {
     return (
-      <div style={cardStyle}>
-        {this.props.children}
-      </div>
+      <CardContainer>
+        <CardStyle className="card-style">
+          {this.props.children}
+        </CardStyle>
+      </CardContainer>
     )
   }
 }
 
-const cardStyle = {
-  backgroundColor: "white",
-  boxShadow: boxShadow,
-  padding: "1rem",
-  margin: "1rem",
-  opacity: ".95",
-  textAlign: "center"
-}
+// Styles
+const CardContainer = styled.div`
+   .card-style {
+    margin: 1rem;
+   }
+   .card-style:last-child {
+    margin: 1rem 1rem 0 1rem;
+   }
+`
+const CardStyle = styled.div`
+  background-color: white;
+  box-shadow: ${boxShadow};
+  padding: 1rem;
+  opacity: .95;
+  text-align: center;
+`
+

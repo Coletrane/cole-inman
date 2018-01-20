@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import styled from 'styled-components'
 import {mediaQuery} from "../util/styles.js"
-import {isMobile} from "../util/functions"
+import {svgDimensions} from "./Navigation"
 
 // Components
 import {BottomNav} from "./Navigation.js"
@@ -29,8 +29,8 @@ const MainContent = styled.div`
     padding-top: 160px;
   `}
   ${mediaQuery.tablet`
-    padding-top: 100px;
+    padding-top: 70px;
   `}
-  margin-bottom: 60px;
+  margin-bottom: ${svgDimensions}
 `
 

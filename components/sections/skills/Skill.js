@@ -39,8 +39,8 @@ export default class Skill extends Component {
 
 // Styles
 const listItemStyle = {
-  padding: "5px",
-  borderRadius: "5px"
+  // padding: "5px",
+  // borderRadius: "5px"
 }
 
 const LogoImg = styled.img`
