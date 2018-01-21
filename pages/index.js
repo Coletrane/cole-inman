@@ -28,13 +28,21 @@ export default class Index extends Component {
   // Helpers
   handleScroll() {
     if (document.body.clientWidth <= sizes.tablet) {
-      this.attachSections(1000, 2000)
+      this.attachSections(1000, 2000, 300)
     } else {
       this.attachSections(300,1500)
     }
   }
 
-  attachSections(exp, proj) {
+  attachSections(exp, proj, skills) {
+
+    if (skills && window.scrollY > skills) {
+      this.setState({
+        ...this.state,
+        skillsMobile: true
+      })
+    }
+
     if (window.scrollY > exp) {
       this.setState({
         ...this.state,
@@ -70,6 +78,25 @@ export default class Index extends Component {
     }
   }
 
+  get skills() {
+    if (process.browser) {
+      if (document.body.clientWidth <= sizes.tablet &&
+          this.state.skillsMobile) {
+        return(
+          <FastFade>
+            <Skills/>
+          </FastFade>
+        )
+      } else if (document.body.clientWidth > sizes.tablet){
+        return (
+          <DelayedFade>
+            <Skills/>
+          </DelayedFade>
+        )
+      }
+    }
+  }
+
   // Lifecycle
   componentDidMount() {
     if (process.browser) {
@@ -91,9 +118,7 @@ export default class Index extends Component {
             <Fade>
               <Education/>
             </Fade>
-            <DelayedFade>
-              <Skills/>
-            </DelayedFade>
+            {this.skills}
           </EduSkills>
             {this.experience}
             {this.projects}
@@ -164,7 +189,7 @@ const DelayedFade = styled.div`
       opacity: 1;
     }
   }
-  animation: fadeInUp 2.5s ease;
+  animation: fadeInUp 2s ease;
 `
 const FastFade = styled.div`
   @keyframes fadeInLeft {
