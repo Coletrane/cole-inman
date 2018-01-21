@@ -143,7 +143,7 @@ export class BottomNav extends Component {
 }
 
 const BottomNavStyle = styled.div`
-  ${mediaQuery.desktop`
+  ${mediaQuery.ceiling`
     display: none;
   `}
   ${mediaQuery.tablet`

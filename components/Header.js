@@ -46,7 +46,7 @@ const profilePicStyle = {
 }
 
 const MobileTitle = styled.h1`
-  ${mediaQuery.desktop`
+  ${mediaQuery.ceiling`
     display: none;
   `}
   ${mediaQuery.tablet`

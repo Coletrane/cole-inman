@@ -9,9 +9,9 @@ export default class SkillsList extends Component {
   render() {
     return (
       <div>
-        <h2 style={skillsListTitle}>
+        <span style={skillsListTitle}>
           {this.props.title}
-        </h2>
+        </span>
         <SkillsListColumns>
           {this.props.children}
         </SkillsListColumns>
@@ -22,7 +22,8 @@ export default class SkillsList extends Component {
 
 // Styles
 const skillsListTitle = {
-  margin: "0"
+  margin: "0",
+  fontSize: "2rem"
 }
 
 // TODO: make this flexbox?
