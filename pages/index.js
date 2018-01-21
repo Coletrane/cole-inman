@@ -198,7 +198,6 @@ const FastFade = styled.div`
       opacity: 0;
     }
     100% {
-      transform: translateX(0);
       opacity: 1;
     }
   }

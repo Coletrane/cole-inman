@@ -1,12 +1,12 @@
 import React, {Component} from "react"
 import styled from 'styled-components'
 import {mediaQuery} from "../util/styles.js"
-import {svgDimensions} from "./generic/NavIcons"
+import {svgDimensions} from "./header/NavIcons"
 import {boxShadow, topBarStyle} from "../util/styles"
 
 // Components
-import Header from "./Header"
-import NavIcons from "./generic/NavIcons"
+import Header from "./header/Header"
+import NavIcons from "./header/NavIcons"
 
 export default class Layout extends Component {
 

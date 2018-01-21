@@ -5,19 +5,22 @@ import {
   topBarStyle,
   mediaQuery,
   titleStyle
-} from "../util/styles.js"
+} from "../../util/styles.js"
 
+// Components
+import Profile from "./Profile"
+import NavIcons from "./NavIcons"
+
+// Constants
 const minBarHeight = 72
-const maxBarHeight = 500
+const maxBarHeight = 300
 const animationDone = 350
+const profileAnimationStart = 150
 
 // This may be the first time I've used calculus/algebra since college
 const barHeightLinear = (scroll) => {
   return (minBarHeight-maxBarHeight)/animationDone * scroll + maxBarHeight
 }
-
-// Components
-import NavIcons from "./generic/NavIcons"
 
 export default class Header extends Component {
 
@@ -31,6 +34,8 @@ export default class Header extends Component {
       navStyleDynamic: {
         width: "100%",
       },
+      profileFade: false,
+      profileHasFaded: false,
       previousScrollY: 0
     }
   }
@@ -46,13 +51,15 @@ export default class Header extends Component {
       this.setState(prev => {
 
         let newState = {
-          navStyleDynamic: {
-            ...prev.navStyleDynamic
-          },
-          barStyleDynamic: {
-            ...prev.barStyleDynamic
-          },
+          ...this.state,
           previousScrollY: scroll
+        }
+
+        if (scroll > profileAnimationStart) {
+          newState.profileFade = true
+          if (!this.state.profileHasFaded) {
+            newState.profileHasFaded = true
+          }
         }
 
         let barChange = barHeightLinear(scroll)
@@ -69,6 +76,7 @@ export default class Header extends Component {
         return newState
       })
   }
+
   // Lifecycle
   componentDidMount() {
     if (process.browser) {
@@ -84,19 +92,17 @@ export default class Header extends Component {
 
   render() {
     return (
-        <header style={{
+        <div style={{
           ...headerStyle,
           ...topBarStyle}}>
-          <MobileTitle style={{
-            ...titleStyle}}>
+          <MobileTitle>
             {this.title}
           </MobileTitle>
           <TopNavMedia>
             <div style={{
               ...this.state.barStyleDynamic,
               ...barStyle}}>
-              <h1 style={{
-                ...titleStyle}}>
+              <h1 style={titleStyle}>
                 {this.title}
               </h1>
               <div style={{
@@ -104,8 +110,10 @@ export default class Header extends Component {
                 <NavIcons/>
               </div>
             </div>
+             <Profile fade={this.state.profileFade}
+                      hasFaded={this.state.profileHasFaded}/>
           </TopNavMedia>
-        </header>
+        </div>
     )
   }
 }
@@ -121,16 +129,13 @@ const headerStyle = {
   zIndex: "2"
 }
 
-const profilePicStyle = {
-  width: "10%"
-}
-
 const MobileTitle = styled.h1`
   ${mediaQuery.ceiling`
     display: none;
   `}
   ${mediaQuery.tablet`
     display: block;
+    text-align: center;
   `}
 `
 

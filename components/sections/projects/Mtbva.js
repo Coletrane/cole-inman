@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import webshots from "../../../util/webshots"
-import {gitHub} from "../../generic/NavIcons"
+import {gitHub} from "../../header/NavIcons"
 
 // Components
 import Project from "./Project"
