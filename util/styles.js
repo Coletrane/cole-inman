@@ -27,8 +27,7 @@ export const mediaQuery =
 // @formatter:on
 
 export const topBarStyle = {
-  backgroundColor: "rgba(23, 130, 183, .9)",
-  backgroundImage: "url('static/img/natural-paper.png')",
+  backgroundColor: "rgb(23, 130, 183)",
   fontColor: "white"
 }
 

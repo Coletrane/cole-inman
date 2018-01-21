@@ -1,12 +1,12 @@
 import React, {Component} from "react"
 import styled from 'styled-components'
 import {mediaQuery} from "../util/styles.js"
-import {svgDimensions} from "./Navigation"
+import {svgDimensions} from "./generic/NavIcons"
+import {boxShadow, topBarStyle} from "../util/styles"
 
 // Components
-import {BottomNav} from "./Navigation.js"
 import Header from "./Header"
-
+import NavIcons from "./generic/NavIcons"
 
 export default class Layout extends Component {
 
@@ -17,7 +17,9 @@ export default class Layout extends Component {
         <MainContent>
           {this.props.children}
         </MainContent>
-        <BottomNav/>
+        <BottomNavStyle className="bottom-nav">
+          <NavIcons/>
+        </BottomNavStyle>
       </div>
     )
   }
@@ -26,11 +28,27 @@ export default class Layout extends Component {
 // Styles
 const MainContent = styled.div`
   ${mediaQuery.ceiling`
-    padding-top: 160px;
+    padding-top: 300px;
   `}
   ${mediaQuery.tablet`
     padding-top: 70px;
   `}
   margin-bottom: ${svgDimensions}
+`
+
+const BottomNavStyle = styled.div`
+  ${mediaQuery.ceiling`
+    display: none;
+  `}
+  ${mediaQuery.tablet`
+    display: inline;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: ${topBarStyle.backgroundColor};
+    box-shadow: ${boxShadow};
+  `}
 `
 
