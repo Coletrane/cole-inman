@@ -31,7 +31,7 @@ export class TopNav extends Component {
     this.handleScroll = this.handleScroll.bind(this)
     this.state = {
       barStyle: {
-        height: "150px"
+        height: "120px"
       },
       navStyle: {
         width: "100%",

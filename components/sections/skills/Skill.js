@@ -47,7 +47,7 @@ const LogoImg = styled.img`
   ${mediaQuery.ceiling`
     width: ${props => props.desktop};
   `}
-  ${mediaQuery.phone`
+  ${mediaQuery.phablet`
     width: ${props => props.mobile};
   `}
 `

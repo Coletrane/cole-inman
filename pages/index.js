@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import {CSSTransition} from "react-transition-group"
 import styled from "styled-components"
-import {mediaQuery} from "../util/styles"
+import {mediaQuery, sizes} from "../util/styles"
 import {imgPath} from "../util/enums"
 
 // Components
@@ -11,7 +11,7 @@ import Projects from "../components/sections/Projects"
 import Education from "../components/sections/Education"
 import Experience from "../components/sections/Experience"
 
-let sections = 0
+
 export default class Index extends Component {
 
   constructor(props) {
@@ -20,19 +20,28 @@ export default class Index extends Component {
     this.state = {
       experience: false,
       projects: false,
+      skillsMobile: false,
       height: "20000px" // setting this to something huge for scroll, changed to auto dynamically
     }
   }
 
   // Helpers
   handleScroll() {
-    if (window.scrollY > 150) {
+    if (document.body.clientWidth <= sizes.tablet) {
+      this.attachSections(1000, 2000)
+    } else {
+      this.attachSections(300,1500)
+    }
+  }
+
+  attachSections(exp, proj) {
+    if (window.scrollY > exp) {
       this.setState({
         ...this.state,
         experience: true
       })
     }
-    if (window.scrollY > 700) {
+    if (window.scrollY > proj) {
       this.setState({
         ...this.state,
         projects: true,
