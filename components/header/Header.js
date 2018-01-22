@@ -24,7 +24,7 @@ const barHeightLinear = (scroll) => {
 
 export default class Header extends Component {
 
-  // TODO: change bar height to css transition
+  // TODO: change bar height to css transition?
   constructor(props) {
     super(props)
     this.handleScroll = this.handleScroll.bind(this)
@@ -32,12 +32,10 @@ export default class Header extends Component {
       barStyleDynamic: {
         height: `${maxBarHeight}px`
       },
-      navStyleDynamic: {
-        width: "100%"
-      },
       scrollDirection: "none",
       profileFadeOutIn: "none",
       profileHasFaded: false,
+      barIsCollapsed: false,
       previousScrollY: 0
     }
   }
@@ -45,6 +43,18 @@ export default class Header extends Component {
   // Helpers
   get title() {
     return "Cole Inman"
+  }
+
+  get subtitle() {
+    if (this.state.barIsCollapsed) {
+      return (null)
+    } else {
+      return (
+        <h4>
+          Full Stack Developer with a focus on Front End
+        </h4>
+      )
+    }
   }
 
   handleScroll(event) {
@@ -57,12 +67,21 @@ export default class Header extends Component {
         previousScrollY: scroll
       }
 
+      this.updateBarCollapsed(scroll, newState)
       this.updateScrollDirection(scroll, newState)
       this.updateProfile(scroll, newState)
-      this.updateTopBar(scroll, newState)
+      this.updateTopBar(newState)
 
       return newState
     })
+  }
+
+  updateBarCollapsed(scroll, newState) {
+    if (scroll >= animationDone - 20) {
+      newState.barIsCollapsed = true
+    } else {
+      newState.barIsCollapsed = false
+    }
   }
 
   updateScrollDirection(scroll, newState) {
@@ -88,15 +107,14 @@ export default class Header extends Component {
     }
   }
 
-  updateTopBar(scroll, newState) {
-    let barChange = barHeightLinear(scroll)
-
-    if (barChange > minBarHeight && barChange < maxBarHeight) {
-      newState.barStyleDynamic.height = `${barChange}px`
+  updateTopBar(newState) {
+    if (barHeightLinear(window.scrollY) > minBarHeight
+      && barHeightLinear(window.scrollY) < maxBarHeight) {
+      newState.barStyleDynamic.height = `${barHeightLinear(window.scrollY)}px`
     }
-    if (scroll > animationDone) {
+    if (window.scrollY > animationDone) {
       newState.barStyleDynamic.height = `${minBarHeight}px`
-    } else if (scroll === 0) {
+    } else if (window.scrollY === 0) {
       newState.barStyleDynamic.height = `${maxBarHeight}px`
     }
   }
@@ -116,10 +134,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div style={{
-        ...headerStyle,
-        ...topBarStyle
-      }}>
+      <HeaderStyle style={topBarStyle}>
         <MobileTitle>
           {this.title}
         </MobileTitle>
@@ -128,28 +143,44 @@ export default class Header extends Component {
             ...this.state.barStyleDynamic,
             ...barStyle
           }}>
-            <h1 style={titleStyle}>
-              {this.title}
-            </h1>
-            <div style={{
-              ...this.state.navStyleDynamic
-            }}>
+            <div className="desktop-title">
+              <h1 style={titleStyle}>
+                {this.title}
+              </h1>
+              {this.subtitle}
+            </div>
+            <div className="nav-icons">
               <NavIcons/>
             </div>
-            <h4>
-              Full Stack Developer with a focus on Front End
-            </h4>
           </div>
           <Profile fadeOutIn={this.state.profileFadeOutIn}
                    hasFaded={this.state.profileHasFaded}
                    scrollDirection={this.state.scrollDirection}/>
         </TopNavMedia>
-      </div>
+      </HeaderStyle>
     )
   }
 }
 
 // Styles
+const HeaderStyle = styled.div`
+  box-shadow ${boxShadow};
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+   
+  .desktop-title {
+    padding-left: 2rem;
+  }
+  .nav-icons {
+    padding-right: 2rem;
+    text-align: right;
+    margin-top: 22px;
+    margin-bottom: auto;
+  }
+`
 const headerStyle = {
   textAlign: "center",
   boxShadow: boxShadow,

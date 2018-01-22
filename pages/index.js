@@ -132,14 +132,13 @@ export default class Index extends Component {
 // Use styled components for un-scoped styles, inline styles for scoped 
 const AppWrapper = styled.div`
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Abril Fatface', serif;
-    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     margin: 0;
   }
   
   p, span, div {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
   }
   

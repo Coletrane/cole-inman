@@ -133,7 +133,7 @@ const FadeOut = styled.div`
     }
   }
   opacity: 0;
-  animation: fadeOutUp 1s ease;
+  animation: fadeOutUp .5s ease;
 `
 
 const FadeIn = styled.div`
@@ -146,5 +146,5 @@ const FadeIn = styled.div`
       }
    }
   opacity: 1;
-  animation: fadeInDown 1s ease;
+  animation: fadeInDown .5s ease;
 `
