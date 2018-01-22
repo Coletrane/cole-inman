@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 import {
   boxShadow,
   topBarStyle,
@@ -12,18 +12,19 @@ import Profile from "./Profile"
 import NavIcons from "./NavIcons"
 
 // Constants
-const minBarHeight = 72
+const minBarHeight = 80
 const maxBarHeight = 300
 const animationDone = 350
-const profileAnimationStart = 150
+const profileAnimationStart = 75
 
 // This may be the first time I've used calculus/algebra since college
 const barHeightLinear = (scroll) => {
-  return (minBarHeight-maxBarHeight)/animationDone * scroll + maxBarHeight
+  return (minBarHeight - maxBarHeight) / animationDone * scroll + maxBarHeight
 }
 
 export default class Header extends Component {
 
+  // TODO: change bar height to css transition
   constructor(props) {
     super(props)
     this.handleScroll = this.handleScroll.bind(this)
@@ -32,9 +33,10 @@ export default class Header extends Component {
         height: `${maxBarHeight}px`
       },
       navStyleDynamic: {
-        width: "100%",
+        width: "100%"
       },
-      profileFade: false,
+      scrollDirection: "none",
+      profileFadeOutIn: "none",
       profileHasFaded: false,
       previousScrollY: 0
     }
@@ -48,33 +50,55 @@ export default class Header extends Component {
   handleScroll(event) {
     // Defining this since window.scrollY can change during execution of this method
     const scroll = window.scrollY
-      this.setState(prev => {
+    this.setState(prev => {
 
-        let newState = {
-          ...this.state,
-          previousScrollY: scroll
-        }
+      let newState = {
+        ...this.state,
+        previousScrollY: scroll
+      }
 
-        if (scroll > profileAnimationStart) {
-          newState.profileFade = true
-          if (!this.state.profileHasFaded) {
-            newState.profileHasFaded = true
-          }
-        }
+      this.updateScrollDirection(scroll, newState)
+      this.updateProfile(scroll, newState)
+      this.updateTopBar(scroll, newState)
 
-        let barChange = barHeightLinear(scroll)
+      return newState
+    })
+  }
 
-        if (barChange > minBarHeight && barChange < maxBarHeight) {
-          newState.barStyleDynamic.height = `${barChange}px`
-        }
-        if (scroll > animationDone) {
-          newState.barStyleDynamic.height = `${minBarHeight}px`
-        } else if (scroll === 0) {
-          newState.barStyleDynamic.height = `${maxBarHeight}px`
-        }
+  updateScrollDirection(scroll, newState) {
+    if (scroll > this.state.previousScrollY) {
+      newState.scrollDirection = "down"
+    } else if (scroll < this.state.previousScrollY) {
+      newState.scrollDirection = "up"
+    } else {
+      newState.scrollDirection = "none"
+    }
+  }
 
-        return newState
-      })
+  updateProfile(scroll, newState) {
+    if (scroll >= profileAnimationStart
+      && newState.scrollDirection === "down") {
+      if (!this.state.profileHasFaded) {
+        newState.profileHasFaded = true
+      }
+      newState.profileFadeOutIn = "out"
+    } else if (scroll < profileAnimationStart
+      && newState.scrollDirection === "up") {
+      newState.profileFadeOutIn = "in"
+    }
+  }
+
+  updateTopBar(scroll, newState) {
+    let barChange = barHeightLinear(scroll)
+
+    if (barChange > minBarHeight && barChange < maxBarHeight) {
+      newState.barStyleDynamic.height = `${barChange}px`
+    }
+    if (scroll > animationDone) {
+      newState.barStyleDynamic.height = `${minBarHeight}px`
+    } else if (scroll === 0) {
+      newState.barStyleDynamic.height = `${maxBarHeight}px`
+    }
   }
 
   // Lifecycle
@@ -92,28 +116,35 @@ export default class Header extends Component {
 
   render() {
     return (
-        <div style={{
-          ...headerStyle,
-          ...topBarStyle}}>
-          <MobileTitle>
-            {this.title}
-          </MobileTitle>
-          <TopNavMedia>
+      <div style={{
+        ...headerStyle,
+        ...topBarStyle
+      }}>
+        <MobileTitle>
+          {this.title}
+        </MobileTitle>
+        <TopNavMedia>
+          <div style={{
+            ...this.state.barStyleDynamic,
+            ...barStyle
+          }}>
+            <h1 style={titleStyle}>
+              {this.title}
+            </h1>
             <div style={{
-              ...this.state.barStyleDynamic,
-              ...barStyle}}>
-              <h1 style={titleStyle}>
-                {this.title}
-              </h1>
-              <div style={{
-                ...this.state.navStyleDynamic}}>
-                <NavIcons/>
-              </div>
+              ...this.state.navStyleDynamic
+            }}>
+              <NavIcons/>
             </div>
-             <Profile fade={this.state.profileFade}
-                      hasFaded={this.state.profileHasFaded}/>
-          </TopNavMedia>
-        </div>
+            <h4>
+              Full Stack Developer with a focus on Front End
+            </h4>
+          </div>
+          <Profile fadeOutIn={this.state.profileFadeOutIn}
+                   hasFaded={this.state.profileHasFaded}
+                   scrollDirection={this.state.scrollDirection}/>
+        </TopNavMedia>
+      </div>
     )
   }
 }

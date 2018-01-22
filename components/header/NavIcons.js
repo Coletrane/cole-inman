@@ -12,7 +12,7 @@ import {
 const linkedIn = "https://www.linkedin.com/in/cole-inman-61738565/"
 export const gitHub = "https://github.com/coletrane/" // exporting this for constructing github links in components
 const facebook = "https://www.facebook.com/uhmcole"
-const email = "eloc49@gmail.com"
+export const email = "eloc49@gmail.com"
 
 export const svgDimensions = "3rem"
 

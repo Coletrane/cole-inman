@@ -27,16 +27,17 @@ export const mediaQuery =
 // @formatter:on
 
 export const topBarStyle = {
-  backgroundColor: "rgb(23, 130, 183)",
-  fontColor: "white"
+  background: "linear-gradient(rgb(9, 168, 204), rgb(0, 49, 90))",
+  color: "white"
 }
 
 export const titleStyle = {
   margin: 0,
-  fontSize: "3rem",
-  color: "white",
-  textShadow: "5px 5px 1px #000000"
+  fontSize: "5rem",
+  color: "white"
 }
 
 export const boxShadow = "0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)"
+
+export const gradient = "linear-gradient(90deg,#640487,#003087)"
 

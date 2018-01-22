@@ -28,7 +28,7 @@ export default class Layout extends Component {
 // Styles
 const MainContent = styled.div`
   ${mediaQuery.ceiling`
-    padding-top: 300px;
+    padding-top: 600px;
   `}
   ${mediaQuery.tablet`
     padding-top: 70px;
