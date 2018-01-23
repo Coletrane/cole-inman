@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import PropTypes from 'prop-types'
-
+import {topBarStyle} from "../../../util/styles"
 // Components
 
 export default class ProjectButton extends Component {
@@ -26,6 +26,7 @@ export default class ProjectButton extends Component {
 }
 
 const buttonStyle = {
-  marginLeft: ".5rem",
-  marginRight: ".5rem"
+  margin: ".5rem",
+  backgroundColor: topBarStyle.backgroundColor,
+  borderRadius: "0"
 }

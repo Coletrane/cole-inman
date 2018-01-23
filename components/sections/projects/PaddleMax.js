@@ -4,7 +4,7 @@ import {gitHub} from "../../header/NavIcons"
 
 // Components
 import Project from "./Project"
-import ProjectButton from "../../generic/ProjectButton"
+import ProjectButton from "./ProjectButton"
 
 export default class PaddleMax extends Component {
 

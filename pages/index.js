@@ -28,7 +28,7 @@ export default class Index extends Component {
   // Helpers
   handleScroll() {
     if (document.body.clientWidth <= sizes.tablet) {
-      this.attachSections(1000, 2000, 300)
+      this.attachSections(1300, 2900, 300)
     } else {
       this.attachSections(300,1500)
     }

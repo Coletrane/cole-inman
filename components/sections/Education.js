@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {imgPath} from "../../util/enums"
 
 // Components
-import Section from "../generic/Section"
+import Section from "./Section"
 
 export default class Education extends Component {
 

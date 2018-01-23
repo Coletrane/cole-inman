@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import styled from 'styled-components'
 
 // Components
-import Section from "../generic/Section"
+import Section from "./Section"
 import GeneralSkills from "./skills/GeneralSkills"
 import FrontEndSkills from "./skills/FrontEndSkills"
 import BackEndSkills from "./skills/BackEndSkills"

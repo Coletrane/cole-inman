@@ -4,8 +4,8 @@ import React, {Component} from "react"
 import Mtbva from "./projects/Mtbva"
 import Handsmith from "./projects/Handsmith"
 import PaddleMax from "./projects/PaddleMax"
-import Section from "../generic/Section"
-import Card from "../generic/Card"
+import Section from "./Section"
+import Card from "./Card"
 
 export default class Projects extends Component {
 

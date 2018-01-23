@@ -2,9 +2,9 @@ import React, {Component} from "react"
 import PropTypes from "prop-types"
 
 // Components
-import ProjectButton from "../../generic/ProjectButton"
-import Card from "../../generic/Card"
-import CardHeader from "../../generic/CardHeader"
+import ProjectButton from "./ProjectButton"
+import Card from "../Card"
+import CardHeader from "../CardHeader"
 
 export default class Project extends Component {
 

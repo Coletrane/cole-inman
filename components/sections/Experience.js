@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import {imgPath} from "../../util/enums"
 
 // Components
-import Section from "../generic/Section"
+import Section from "./Section"
 
 export default class Experience extends Component {
 
