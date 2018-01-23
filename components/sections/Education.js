@@ -45,7 +45,7 @@ const JMU = styled.div`
   
   img {
     width: 100%;
-    maxWidth: "450px"
+    max-width: 450px;
   }
 `
 
