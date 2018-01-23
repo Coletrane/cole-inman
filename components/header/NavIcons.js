@@ -14,7 +14,7 @@ export const gitHub = "https://github.com/coletrane/" // exporting this for cons
 const facebook = "https://www.facebook.com/uhmcole"
 export const email = "eloc49@gmail.com"
 
-export const svgDimensions = "3rem"
+export const svgDimensions = "4rem"
 
 export default class Icons extends Component {
   render() {

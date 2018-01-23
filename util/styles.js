@@ -27,7 +27,7 @@ export const mediaQuery =
 // @formatter:on
 
 export const topBarStyle = {
-  background: "linear-gradient(rgb(9, 168, 204), rgb(0, 49, 90))",
+  backgroundColor: "rgba(0,0,0,.75)",
   color: "white"
 }
 
@@ -39,5 +39,4 @@ export const titleStyle = {
 
 export const boxShadow = "0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)"
 
-export const gradient = "linear-gradient(90deg,#640487,#003087)"
 

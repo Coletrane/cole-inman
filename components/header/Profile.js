@@ -6,6 +6,8 @@ import {
   boxShadow
 } from "../../util/styles.js"
 
+const phone = "540-529-1426"
+
 export default class Profile extends Component {
 
   static propTypes = {
@@ -19,21 +21,27 @@ export default class Profile extends Component {
     return (
       <ProfileStyle>
         <div className="profile-container">
-          <img src="/static/img/linkedin.jpg"/>
-          <div className="info">
-            <div className="keys">
-              <div>Age</div>
-              <div>Address</div>
-              <div>Email</div>
-              <div>Phone</div>
-            </div>
-            <div className="values">
-              <div>23</div>
-              <div>535 Main St. Apt. 228, Nashville, TN 37206</div>
-              <div> <a href={"mailto:" + email}>eloc49@gmail.com</a></div>
-              <div>540.529.1426</div>
-            </div>
-          </div>
+          <img src="/static/img/cole.jpeg"/>
+          <table>
+            <tbody>
+              <tr>
+                <td className="key">Age</td>
+                <td className="value">23</td>
+              </tr>
+              <tr>
+                <td className="key">Address</td>
+                <td className="value">535 Main St. Apt. 228, Nashville, TN 37206</td>
+              </tr>
+              <tr>
+                <td className="key">Email</td>
+                <td className="value"><a href={"mailto:" + email}>eloc49@gmail.com</a></td>
+              </tr>
+              <tr>
+                <td className="key">Phone</td>
+                <td className="value"><a href={"tel:" + phone}>{phone.replace(/-/g, ".")}</a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </ProfileStyle>
     )
@@ -105,21 +113,25 @@ const ProfileStyle = styled.div`
   
   .info {
     text-align: left;
-    display: grid;
-    grid-template-columns: 50% 50%;
     width: ${imgWidth}px;
     padding: 1rem;
     font-size: 1.2rem;
     color: black;
   }
   
-  .keys {
-    flex: 1 1 auto;
-    padding-right: auto;
+  table {
+    margin-top: 12%;
+    color: black;
+    font-size: 1.3rem;
   }
   
-  .values {
-    flex: 1 1 auto;
+  td.key {
+    font-weight: 600;
+    padding: 1rem;
+  }
+  
+  td.value {
+    padding-left: auto;
   }
 `
 // TODO: add translates

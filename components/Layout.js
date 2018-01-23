@@ -17,7 +17,7 @@ export default class Layout extends Component {
         <MainContent>
           {this.props.children}
         </MainContent>
-        <BottomNavStyle className="bottom-nav">
+        <BottomNavStyle>
           <NavIcons/>
         </BottomNavStyle>
       </div>

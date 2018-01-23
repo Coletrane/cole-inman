@@ -95,13 +95,13 @@ export default class Header extends Component {
   }
 
   updateProfile(scroll, newState) {
-    if (scroll >= profileAnimationStart
+    if (window.scrollY >= profileAnimationStart
       && newState.scrollDirection === "down") {
       if (!this.state.profileHasFaded) {
         newState.profileHasFaded = true
       }
       newState.profileFadeOutIn = "out"
-    } else if (scroll < profileAnimationStart
+    } else if (window.scrollY < profileAnimationStart
       && newState.scrollDirection === "up") {
       newState.profileFadeOutIn = "in"
     }
@@ -177,7 +177,7 @@ const HeaderStyle = styled.div`
   .nav-icons {
     padding-right: 2rem;
     text-align: right;
-    margin-top: 22px;
+    margin-top: 9px;
     margin-bottom: auto;
   }
 `
