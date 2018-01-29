@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "next": "^4.2.1",
+    "next": "^4.2.3",
     "pageres": "^4.5.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",

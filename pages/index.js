@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import {CSSTransition} from "react-transition-group"
 import styled from "styled-components"
 import {mediaQuery, sizes} from "../util/styles"
 import {imgPath} from "../util/enums"
@@ -148,6 +147,7 @@ const AppWrapper = styled.div`
 `
 
 const EduSkills = styled.div`
+// TODO: remove all of these
   ${mediaQuery.ceiling`
     display: grid;
     grid-template-columns: 50% 50%;

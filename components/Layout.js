@@ -27,13 +27,11 @@ export default class Layout extends Component {
 
 // Styles
 const MainContent = styled.div`
-  ${mediaQuery.ceiling`
     padding-top: 600px;
-    margin-bottom: ${svgDimensions.desktop};
-  `}
+    padding-bottom: 4rem;
+    
   ${mediaQuery.tablet`
     padding-top: 50px;
-    margin-bottom: ${svgDimensions.mobile};
   `}
 `
 
