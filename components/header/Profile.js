@@ -17,6 +17,26 @@ export default class Profile extends Component {
   }
 
   // Helpers
+  get age() {
+    let birthday = new Date('April 13, 1994')
+    birthday = Date.UTC(
+      birthday.getFullYear(),
+      birthday.getMonth(),
+      birthday.getDay()
+    )
+    let today = new Date()
+    today = Date.UTC(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDay()
+    )
+
+    const millisecondsPerYear = 1000 * 60 * 60 * 24 * 365
+    return Math.floor(
+      (today - birthday) / millisecondsPerYear
+    )
+  }
+
   get profileContent() {
     return (
       <ProfileStyle>
@@ -26,7 +46,7 @@ export default class Profile extends Component {
             <tbody>
               <tr>
                 <td className="key">Age</td>
-                <td className="value">23</td>
+                <td className="value">{this.age}</td>
               </tr>
               <tr>
                 <td className="key">Address</td>
