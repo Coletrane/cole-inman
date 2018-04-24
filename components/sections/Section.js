@@ -30,6 +30,7 @@ const Title = styled.div`
   text-align: center;
   color: white;
   text-shadow: 0px 3px 1px #000000;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: 'Lobster', cursive !important;
 `
 

@@ -146,8 +146,10 @@ const ProfileStyle = styled.div`
   }
   
   td.key {
-    font-weight: 600;
+    font-weight: 400;
     padding: 1rem;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
   }
   
   td.value {

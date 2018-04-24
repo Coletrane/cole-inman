@@ -128,7 +128,7 @@ export default class Index extends Component {
 // Use styled components for un-scoped styles, inline styles for scoped
 const AppWrapper = styled.div`
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Vidaloka Sans', serif;
+    font-family: 'Lobster', cursive;
     margin: 0;
   }
   
@@ -139,7 +139,8 @@ const AppWrapper = styled.div`
   
   height: ${props => props.height};
   background-color: #331501;
-  background-image: url(${imgPath}/dark-wood.png);
+  background-image: url(${imgPath}/trees.jpg);
+  background-size: contain;
   
 `
 

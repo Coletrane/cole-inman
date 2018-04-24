@@ -1,15 +1,16 @@
-import React, {Component} from "react"
-import styled from "styled-components"
+import React, {Component} from 'react'
+import styled from 'styled-components'
 import {
   boxShadow,
   topBarStyle,
   mediaQuery,
-  titleStyle
-} from "../../util/styles.js"
+  titleStyle,
+  subtitleStyle
+} from '../../util/styles.js'
 
 // Components
-import Profile from "./Profile"
-import NavIcons from "./NavIcons"
+import Profile from './Profile'
+import NavIcons from './NavIcons'
 
 // Constants
 const minBarHeight = 80
@@ -23,17 +24,16 @@ const barHeightLinear = (scroll) => {
 }
 
 export default class Header extends Component {
-
   // TODO: change bar height to css transition?
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.handleScroll = this.handleScroll.bind(this)
     this.state = {
       barStyleDynamic: {
         height: `${maxBarHeight}px`
       },
-      scrollDirection: "none",
-      profileFadeOutIn: "none",
+      scrollDirection: 'none',
+      profileFadeOutIn: 'none',
       profileHasFaded: false,
       barIsCollapsed: false,
       previousScrollY: 0
@@ -41,27 +41,26 @@ export default class Header extends Component {
   }
 
   // Helpers
-  get title() {
-    return "Cole Inman"
+  get title () {
+    return 'Cole Inman'
   }
 
-  get subtitle() {
+  get subtitle () {
     if (this.state.barIsCollapsed) {
       return (null)
     } else {
       return (
-        <h4>
+        <h4 style={subtitleStyle}>
           Full Stack Software Developer
         </h4>
       )
     }
   }
 
-  handleScroll(event) {
+  handleScroll (event) {
     // Defining this since window.scrollY can change during execution of this method
     const scroll = window.scrollY
     this.setState(prev => {
-
       let newState = {
         ...this.state,
         previousScrollY: scroll
@@ -76,40 +75,40 @@ export default class Header extends Component {
     })
   }
 
-  updateBarCollapsed(scroll, newState) {
-    if (scroll >= animationDone - 20) {
+  updateBarCollapsed (scroll, newState) {
+    if (scroll >= animationDone - 60) {
       newState.barIsCollapsed = true
     } else {
       newState.barIsCollapsed = false
     }
   }
 
-  updateScrollDirection(scroll, newState) {
+  updateScrollDirection (scroll, newState) {
     if (scroll > this.state.previousScrollY) {
-      newState.scrollDirection = "down"
+      newState.scrollDirection = 'down'
     } else if (scroll < this.state.previousScrollY) {
-      newState.scrollDirection = "up"
+      newState.scrollDirection = 'up'
     } else {
-      newState.scrollDirection = "none"
+      newState.scrollDirection = 'none'
     }
   }
 
-  updateProfile(scroll, newState) {
-    if (window.scrollY >= profileAnimationStart
-      && newState.scrollDirection === "down") {
+  updateProfile (scroll, newState) {
+    if (window.scrollY >= profileAnimationStart &&
+      newState.scrollDirection === 'down') {
       if (!this.state.profileHasFaded) {
         newState.profileHasFaded = true
       }
-      newState.profileFadeOutIn = "out"
-    } else if (window.scrollY < profileAnimationStart
-      && newState.scrollDirection === "up") {
-      newState.profileFadeOutIn = "in"
+      newState.profileFadeOutIn = 'out'
+    } else if (window.scrollY < profileAnimationStart &&
+      newState.scrollDirection === 'up') {
+      newState.profileFadeOutIn = 'in'
     }
   }
 
-  updateTopBar(newState) {
-    if (barHeightLinear(window.scrollY) > minBarHeight
-      && barHeightLinear(window.scrollY) < maxBarHeight) {
+  updateTopBar (newState) {
+    if (barHeightLinear(window.scrollY) > minBarHeight &&
+      barHeightLinear(window.scrollY) < maxBarHeight) {
       newState.barStyleDynamic.height = `${barHeightLinear(window.scrollY)}px`
     }
     if (window.scrollY > animationDone) {
@@ -120,19 +119,19 @@ export default class Header extends Component {
   }
 
   // Lifecycle
-  componentDidMount() {
+  componentDidMount () {
     if (process.browser) {
-      window.addEventListener("scroll", this.handleScroll)
+      window.addEventListener('scroll', this.handleScroll)
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     if (process.browser) {
-      window.removeEventListener("scroll", this.handleScroll)
+      window.removeEventListener('scroll', this.handleScroll)
     }
   }
 
-  render() {
+  render () {
     return (
       <HeaderStyle style={topBarStyle}>
         <MobileTitle>
@@ -154,8 +153,8 @@ export default class Header extends Component {
             </div>
           </div>
           <Profile fadeOutIn={this.state.profileFadeOutIn}
-                   hasFaded={this.state.profileHasFaded}
-                   scrollDirection={this.state.scrollDirection}/>
+            hasFaded={this.state.profileHasFaded}
+            scrollDirection={this.state.scrollDirection}/>
         </TopNavMedia>
       </HeaderStyle>
     )
@@ -182,13 +181,13 @@ const HeaderStyle = styled.div`
   }
 `
 const headerStyle = {
-  textAlign: "center",
+  textAlign: 'center',
   boxShadow: boxShadow,
-  position: "fixed",
-  left: "0px",
-  top: "0px",
-  width: "100%",
-  zIndex: "2"
+  position: 'fixed',
+  left: '0px',
+  top: '0px',
+  width: '100%',
+  zIndex: '2'
 }
 
 const MobileTitle = styled.h1`
@@ -211,6 +210,6 @@ const TopNavMedia = styled.div`
 `
 
 const barStyle = {
-  display: "grid",
-  gridTemplateColumns: "50% 50%"
+  display: 'grid',
+  gridTemplateColumns: '50% 50%'
 }
