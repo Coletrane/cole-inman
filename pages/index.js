@@ -1,40 +1,37 @@
-import React, {Component} from "react"
-import styled from "styled-components"
-import {mediaQuery, sizes} from "../util/styles"
-import {imgPath} from "../util/enums"
+import React, {Component} from 'react'
+import styled from 'styled-components'
+import {mediaQuery, sizes} from '../util/styles'
+import {imgPath} from '../util/enums'
 
 // Components
-import Layout from "../components/Layout"
-import Skills from "../components/sections/Skills"
-import Projects from "../components/sections/Projects"
-import Education from "../components/sections/Education"
-import Experience from "../components/sections/Experience"
-
+import Layout from '../components/Layout'
+import Skills from '../components/sections/Skills'
+import Projects from '../components/sections/Projects'
+import Education from '../components/sections/Education'
+import Experience from '../components/sections/Experience'
 
 export default class Index extends Component {
-
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.handleScroll = this.handleScroll.bind(this)
     this.state = {
       experience: false,
       projects: false,
       skillsMobile: false,
-      height: "20000px" // setting this to something huge for scroll, changed to auto dynamically
+      height: '20000px' // setting this to something huge for scroll, changed to auto dynamically
     }
   }
 
   // Helpers
-  handleScroll() {
+  handleScroll () {
     if (document.body.clientWidth <= sizes.tablet) {
       this.attachSections(1300, 2900, 300)
     } else {
-      this.attachSections(300,1500)
+      this.attachSections(300, 1500)
     }
   }
 
-  attachSections(exp, proj, skills) {
-
+  attachSections (exp, proj, skills) {
     if (skills && window.scrollY > skills) {
       this.setState({
         ...this.state,
@@ -52,12 +49,12 @@ export default class Index extends Component {
       this.setState({
         ...this.state,
         projects: true,
-        height: "auto"
+        height: 'auto'
       })
     }
   }
 
-  get experience() {
+  get experience () {
     if (this.state.experience) {
       return (
         <FastFade>
@@ -67,7 +64,7 @@ export default class Index extends Component {
     }
   }
 
-  get projects() {
+  get projects () {
     if (this.state.projects) {
       return (
         <FastFade>
@@ -77,16 +74,16 @@ export default class Index extends Component {
     }
   }
 
-  get skills() {
+  get skills () {
     if (process.browser) {
       if (document.body.clientWidth <= sizes.tablet &&
           this.state.skillsMobile) {
-        return(
+        return (
           <FastFade>
             <Skills/>
           </FastFade>
         )
-      } else if (document.body.clientWidth > sizes.tablet){
+      } else if (document.body.clientWidth > sizes.tablet) {
         return (
           <DelayedFade>
             <Skills/>
@@ -97,19 +94,19 @@ export default class Index extends Component {
   }
 
   // Lifecycle
-  componentDidMount() {
+  componentDidMount () {
     if (process.browser) {
-      window.addEventListener("scroll", this.handleScroll)
+      window.addEventListener('scroll', this.handleScroll)
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     if (process.browser) {
-      window.removeEventListener("scroll", this.handleScroll)
+      window.removeEventListener('scroll', this.handleScroll)
     }
   }
 
-  render() {
+  render () {
     return (
       <AppWrapper height={this.state.height}>
         <Layout>
@@ -119,8 +116,8 @@ export default class Index extends Component {
             </Fade>
             {this.skills}
           </EduSkills>
-            {this.experience}
-            {this.projects}
+          {this.experience}
+          {this.projects}
         </Layout>
       </AppWrapper>
     )
@@ -128,7 +125,7 @@ export default class Index extends Component {
 };
 
 // Styles
-// Use styled components for un-scoped styles, inline styles for scoped 
+// Use styled components for un-scoped styles, inline styles for scoped
 const AppWrapper = styled.div`
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Vidaloka Sans', serif;
@@ -157,7 +154,7 @@ const EduSkills = styled.div`
   `}
 `
 
-const transform = "translateY(100px)"
+const transform = 'translateY(100px)'
 
 const Fade = styled.div`
   @keyframes fadeInUp {

@@ -13,9 +13,8 @@ export const isMobile = () => {
   }
 }
 
-
 export const getComponent = (props, slot) => {
-  return props.children.filter( (comp) => {
-    return comp.slot === slot;
-  });
+  return props.children.filter((comp) => {
+    return comp.slot === slot
+  })
 }

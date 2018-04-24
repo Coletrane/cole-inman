@@ -9,6 +9,7 @@ export default class BackEndSkills extends Component {
     return (
       <SkillsList title="Back End">
         <Java/>
+        <Python/>
         <Kotlin/>
         <Swift/>
         <C/>
@@ -29,8 +30,19 @@ export default class BackEndSkills extends Component {
 function Java() {
   return (
     <Skill name="Java"
-           desktop="50px"
-           mobile="35px"/>
+           desktop="60px"
+           mobile="45px"
+           imgStyle={{
+             paddingBottom: "4px"
+           }}/>
+  )
+}
+
+function Python() {
+  return (
+    <Skill name="Python"
+           desktop="70px"
+           mobile="55px"/>
   )
 }
 
@@ -38,7 +50,12 @@ function Kotlin() {
   return (
     <Skill name="Kotlin"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "12px",
+             paddingBottom: "10px"
+           }}/>
+
   )
 }
 
@@ -46,7 +63,11 @@ function Swift() {
   return (
     <Skill name="Swift"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "12px",
+             paddingBottom: "14px"
+           }}/>
   )
 }
 
@@ -63,15 +84,22 @@ function Groovy() {
   return (
     <Skill name="Groovy"
            desktop="80px"
-           mobile="65px"/>
+           mobile="65px"
+           imgStyle={{
+             paddingTop: "15px",
+             paddingBottom: "5px"
+           }}/>
   )
 }
 
 function Spring() {
   return (
-    <Skill name="Spring Framework"
+    <Skill name="Spring"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "10px"
+           }}/>
   )
 }
 
@@ -79,7 +107,11 @@ function JaxRs() {
   return (
     <Skill name="JAX-RS"
            desktop="70px"
-           mobile="55px"/>
+           mobile="55px"
+           imgStyle={{
+             paddingTop: "20px",
+             paddingBottom: "6px"
+           }}/>
   )
 }
 
@@ -87,7 +119,10 @@ function Hibernate() {
   return (
     <Skill name="Hibernate"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "10px"
+           }}/>
   )
 }
 
@@ -95,7 +130,11 @@ function Postgresql() {
   return (
     <Skill name="PostgreSQL"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "10px",
+             paddingBottom: "5px"
+           }}/>
   )
 }
 
@@ -103,7 +142,10 @@ function MongoDB() {
   return (
     <Skill name="MongoDB"
            desktop="70px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "10px"
+           }}/>
   )
 }
 
@@ -111,7 +153,10 @@ function Elasticsearch() {
   return (
     <Skill name="Elasticsearch"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "10px"
+           }}/>
   )
 }
 
@@ -119,6 +164,9 @@ function Hadoop() {
   return (
     <Skill name="Hadoop"
            desktop="50px"
-           mobile="35px"/>
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "10px"
+           }}/>
   )
 }

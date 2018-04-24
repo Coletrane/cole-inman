@@ -14,8 +14,8 @@ export default class Handsmith extends Component {
                  imgSrc={webshots.localSrc(webshots.pages.handsmith)}
                  liveSite={webshots.pages.handsmith.url}>
           <p>
-            Nonprofit organization with a mission to deliver bionic hands at a fraction of the current prices in the
-            medical devices industry.
+            Handsmith is a nonprofit organization with a mission to deliver bionic hands at a fraction of the current prices in the
+            medical devices industry. I am responsible for maintenance and new features on this website. It uses Wordpress, but I often end up writing custom HTML,CSS, and JavaScript to accomplish new feature goals.
           </p>
         </Project>
       </div>

@@ -1,4 +1,4 @@
-import {css} from "styled-components"
+import {css} from 'styled-components'
 
 export const sizes = {
   ceiling: 99999,
@@ -12,31 +12,28 @@ export const sizes = {
 // @formatter:off
 export const mediaQuery =
   Object.keys(sizes).reduce((accumulator, label) => {
+    const emSize = sizes[label] / 16
 
-      const emSize = sizes[label] / 16
-
-      accumulator[label] = (...args) => css`
+    accumulator[label] = (...args) => css`
         @media (max-width: ${emSize}em) {
           ${css(...args)
-        }
+}
       `
 
-      return accumulator
-    }, {})
+    return accumulator
+  }, {})
 
 // @formatter:on
 
 export const topBarStyle = {
-  backgroundColor: "rgba(0,0,0,.75)",
-  color: "white"
+  backgroundColor: 'rgba(0,0,0,.75)',
+  color: 'white'
 }
 
 export const titleStyle = {
   margin: 0,
-  fontSize: "5rem",
-  color: "white"
+  fontSize: '5rem',
+  color: 'white'
 }
 
-export const boxShadow = "0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)"
-
-
+export const boxShadow = '0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)'

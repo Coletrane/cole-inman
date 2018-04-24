@@ -2,9 +2,7 @@ import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import {ServerStyleSheet} from 'styled-components'
 
-
 export default class ColeDocument extends Document {
-
   static getInitialProps ({ renderPage }) {
     const sheet = new ServerStyleSheet()
     const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
@@ -12,7 +10,7 @@ export default class ColeDocument extends Document {
     return { ...page, styleTags }
   }
 
-  render() {
+  render () {
     return (
       <html lang="en">
         <Head>
@@ -21,9 +19,9 @@ export default class ColeDocument extends Document {
           </title>
           <meta charSet="utf-8"/>
           <meta name="viewport"
-                content="initial-scale=1.0, width=device-width"/>
+            content="initial-scale=1.0, width=device-width"/>
           <meta name="description"
-                content="Cole Inman Full Stack Software Developer Resume and Project showcase"/>
+            content="Cole Inman Full Stack Software Developer Resume and Project showcase"/>
           <link href="https://fonts.googleapis.com/css?family=Open+Sans|Vidaloka" rel="stylesheet"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
           {this.props.styleTags}
@@ -41,5 +39,5 @@ export default class ColeDocument extends Document {
 
 // Styles
 const bodyStyle = {
-  margin: "0"
+  margin: '0'
 }

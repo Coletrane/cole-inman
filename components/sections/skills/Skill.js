@@ -31,9 +31,22 @@ export default class Skill extends Component {
                  desktop={this.props.desktop}
                  mobile={this.props.mobile}
                  style={this.props.imgStyle}/>
-        <div style={skillTitleStyle}> {this.props.name} </div>
+        <SkillName name={this.props.name}/>
       </div>
     )
+  }
+}
+
+// Using this to stop C name from being printed since its reduntant to the logo
+function SkillName(props) {
+  if (props.name !== "C") {
+    return (
+      <div style={skillTitleStyle}>
+        {props.name}
+      </div>
+    )
+  } else {
+    return (null)
   }
 }
 

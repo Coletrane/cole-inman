@@ -5,13 +5,13 @@ const handle = app.getRequestHandler()
 const Pageres = require('pageres')
 const webshots = require('./util/webshots')
 
-console.log("Capturing pages:\n")
+console.log('Capturing pages:\n')
 for (page in webshots.pages) {
   if (webshots.pages.hasOwnProperty(page)) {
     console.log(webshots.pages[page].url)
   }
 }
-console.log("\n")
+console.log('\n')
 
 const pageresInstance = new Pageres({delay: 2})
   .src(
@@ -27,9 +27,9 @@ const pageresInstance = new Pageres({delay: 2})
   .dest(__dirname + '/static/img/webshots')
   .run()
   .then(() => {
-    console.log("Page capture done.\n")
+    console.log('Page capture done.\n')
 
-    console.log("Starting app")
+    console.log('Starting app')
     app.prepare()
       .then(() => {
         const server = express()
@@ -38,10 +38,8 @@ const pageresInstance = new Pageres({delay: 2})
           return handle(req, res)
         })
 
-        server.listen(3000, function() {
-          console.log("Cole Inman listening on port 3000!")
+        server.listen(3000, function () {
+          console.log('Cole Inman listening on port 3000!')
         })
       })
   })
-
-

@@ -6,8 +6,7 @@ const port = 3001
 
 app.use(express.static(dist))
 
-app.listen(port, function() {
-  console.log("Cole Inman serving static files from " + dist +
-    "On port: " + port)
+app.listen(port, function () {
+  console.log('Cole Inman serving static files from ' + dist +
+    'On port: ' + port)
 })
-

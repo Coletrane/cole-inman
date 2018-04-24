@@ -51,7 +51,7 @@ export default class Header extends Component {
     } else {
       return (
         <h4>
-          Full Stack Developer with a focus on Front End
+          Full Stack Software Developer
         </h4>
       )
     }

@@ -9,6 +9,7 @@
     "webshots": "node ./webshots.js",
     "build": "next build && next export",
     "static": "node ./static.js",
+    "lint": "eslint --fix **/*.js *.js --ignore-pattern node_modules --ignore-pattern out --ignore-pattern .next",
     "start": "rimraf static/img/webshots && mkdir static/img/webshots &&NODE_ENV=production node ./server.js"
   },
   "author": "",
@@ -24,5 +25,13 @@
     "react-responsive": "^4.0.3",
     "rimraf": "^2.6.2",
     "styled-components": "^2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }

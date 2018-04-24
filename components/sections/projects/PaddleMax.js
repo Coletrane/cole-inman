@@ -27,7 +27,7 @@ export default class PaddleMax extends Component {
                }>
         <p>
           PaddleMax is an app who's mission is to give kayak and paddle board paddles connected abilities such as data
-          recording and analytics.
+          recording and analytics. It is an Android, iOS, and watchOS app developed using Kotlin and Swift, respectively.
         </p>
       </Project>
     )

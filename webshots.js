@@ -2,13 +2,13 @@ const express = require('express')
 const Pageres = require('pageres')
 const webshots = require('./util/webshots')
 
-console.log("Capturing pages:\n")
+console.log('Capturing pages:\n')
 for (page in webshots.pages) {
   if (webshots.pages.hasOwnProperty(page)) {
     console.log(webshots.pages[page].url)
   }
 }
-console.log("\n")
+console.log('\n')
 
 // TODO: make this take arguments
 const pageresInstance = new Pageres({delay: 10})
@@ -29,7 +29,5 @@ const pageresInstance = new Pageres({delay: 10})
   .dest(__dirname + '/static/img/webshots')
   .run()
   .then(() => {
-    console.log("Page capture done.\n")
+    console.log('Page capture done.\n')
   })
-
-

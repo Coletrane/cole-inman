@@ -30,7 +30,7 @@ export default class Profile extends Component {
               </tr>
               <tr>
                 <td className="key">Address</td>
-                <td className="value">535 Main St. Apt. 228, Nashville, TN 37206</td>
+                <td className="value">2719 Summit Ridge Rd. Roanoke, VA 24012</td>
               </tr>
               <tr>
                 <td className="key">Email</td>
