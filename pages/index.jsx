@@ -1,118 +1,120 @@
-import React, {Component} from 'react'
-import styled from 'styled-components'
-import {mediaQuery, sizes} from '../util/styles'
-import {imgPath} from '../util/enums'
+import React, { Component } from "react";
+import styled from "styled-components";
+import { mediaQuery, sizes } from "../util/styles";
+import { imgPath } from "../util/enums";
 
 // Components
-import Layout from '../components/Layout'
-import Skills from '../components/sections/Skills'
-import Projects from '../components/sections/Projects'
-import Education from '../components/sections/Education'
-import Experience from '../components/sections/Experience'
+import Layout from "../components/Layout";
+import Skills from "../components/sections/Skills";
+import Projects from "../components/sections/Projects";
+import Education from "../components/sections/Education";
+import Experience from "../components/sections/Experience";
 
 export default class Index extends Component {
-  constructor (props) {
-    super(props)
-    this.handleScroll = this.handleScroll.bind(this)
+  constructor(props) {
+    super(props);
+    this.handleScroll = this.handleScroll.bind(this);
     this.state = {
       experience: false,
       projects: false,
       skillsMobile: false,
-      height: '20000px' // setting this to something huge for scroll, changed to auto dynamically
-    }
+      height: "20000px" // setting this to something huge for scroll, changed to auto dynamically
+    };
   }
 
   // Helpers
-  handleScroll () {
+  handleScroll() {
     if (document.body.clientWidth <= sizes.tablet) {
-      this.attachSections(1300, 2900, 300)
+      this.attachSections(1300, 2900, 300);
     } else {
-      this.attachSections(300, 1500)
+      this.attachSections(300, 1500);
     }
   }
 
-  attachSections (exp, proj, skills) {
+  attachSections(exp, proj, skills) {
     if (skills && window.scrollY > skills) {
       this.setState({
         ...this.state,
         skillsMobile: true
-      })
+      });
     }
 
     if (window.scrollY > exp) {
       this.setState({
         ...this.state,
         experience: true
-      })
+      });
     }
     if (window.scrollY > proj) {
       this.setState({
         ...this.state,
         projects: true,
-        height: 'auto'
-      })
+        height: "auto"
+      });
     }
   }
 
-  get experience () {
+  get experience() {
     if (this.state.experience) {
       return (
         <FastFade>
-          <Experience/>
+          <Experience />
         </FastFade>
-      )
+      );
     }
   }
 
-  get projects () {
+  get projects() {
     if (this.state.projects) {
       return (
         <FastFade>
-          <Projects/>
+          <Projects />
         </FastFade>
-      )
+      );
     }
   }
 
-  get skills () {
+  get skills() {
     if (process.browser) {
-      if (document.body.clientWidth <= sizes.tablet &&
-          this.state.skillsMobile) {
+      if (
+        document.body.clientWidth <= sizes.tablet &&
+        this.state.skillsMobile
+      ) {
         return (
           <FastFade>
-            <Skills/>
+            <Skills />
           </FastFade>
-        )
+        );
       } else if (document.body.clientWidth > sizes.tablet) {
         return (
           <DelayedFade>
-            <Skills/>
+            <Skills />
           </DelayedFade>
-        )
+        );
       }
     }
   }
 
   // Lifecycle
-  componentDidMount () {
+  componentDidMount() {
     if (process.browser) {
-      window.addEventListener('scroll', this.handleScroll)
+      window.addEventListener("scroll", this.handleScroll);
     }
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     if (process.browser) {
-      window.removeEventListener('scroll', this.handleScroll)
+      window.removeEventListener("scroll", this.handleScroll);
     }
   }
 
-  render () {
+  render() {
     return (
       <AppWrapper height={this.state.height}>
         <Layout>
           <EduSkills>
             <Fade>
-              <Education/>
+              <Education />
             </Fade>
             {this.skills}
           </EduSkills>
@@ -120,42 +122,47 @@ export default class Index extends Component {
           {this.projects}
         </Layout>
       </AppWrapper>
-    )
+    );
   }
-};
+}
 
 // Styles
 // Use styled components for un-scoped styles, inline styles for scoped
 const AppWrapper = styled.div`
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lobster', cursive;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lobster", cursive;
     margin: 0;
   }
-  
-  p, span, div {
-    font-family: 'Open Sans', sans-serif;
+
+  p,
+  span,
+  div {
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
   }
-  
+
   height: ${props => props.height};
   background-color: #331501;
   background-image: url(${imgPath}/trees.jpg);
   background-size: contain;
-  
-`
+`;
 
 const EduSkills = styled.div`
-// TODO: remove all of these
+  // TODO: remove all of these
   ${mediaQuery.ceiling`
     display: grid;
     grid-template-columns: 50% 50%;
-  `}
-  ${mediaQuery.tablet`
+  `} ${mediaQuery.tablet`
     display: block;
-  `}
-`
+  `};
+`;
 
-const transform = 'translateY(100px)'
+const transform = "translateY(100px)";
 
 const Fade = styled.div`
   @keyframes fadeInUp {
@@ -169,7 +176,7 @@ const Fade = styled.div`
     }
   }
   animation: fadeInUp 1.5s ease;
-`
+`;
 
 const DelayedFade = styled.div`
   @keyframes fadeInUp {
@@ -186,7 +193,7 @@ const DelayedFade = styled.div`
     }
   }
   animation: fadeInUp 2s ease;
-`
+`;
 const FastFade = styled.div`
   @keyframes fadeInLeft {
     0% {
@@ -198,4 +205,4 @@ const FastFade = styled.div`
     }
   }
   animation: fadeInLeft 1s ease;
-`
+`;

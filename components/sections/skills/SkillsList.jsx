@@ -1,22 +1,17 @@
-import React, {Component} from "react"
-import styled from "styled-components"
-import {mediaQuery} from "../../../util/styles"
+import React, { Component } from "react";
+import styled from "styled-components";
+import { mediaQuery } from "../../../util/styles";
 
 // Components
 
 export default class SkillsList extends Component {
-
   render() {
     return (
       <div>
-        <span style={skillsListTitle}>
-          {this.props.title}
-        </span>
-        <SkillsListColumns>
-          {this.props.children}
-        </SkillsListColumns>
+        <span style={skillsListTitle}>{this.props.title}</span>
+        <SkillsListColumns>{this.props.children}</SkillsListColumns>
       </div>
-    )
+    );
   }
 }
 
@@ -24,7 +19,7 @@ export default class SkillsList extends Component {
 const skillsListTitle = {
   margin: "0",
   fontSize: "2rem"
-}
+};
 
 // TODO: make this flexbox?
 const SkillsListColumns = styled.div`
@@ -42,4 +37,4 @@ const SkillsListColumns = styled.div`
   ${mediaQuery.phablet`
     grid-template-columns: 33.3% 33.3% 33.3%;
   `}
-`
+`;
