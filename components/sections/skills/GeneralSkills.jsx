@@ -7,12 +7,13 @@ export default class GeneralSkills extends Component {
   render() {
     return (
       <SkillsList title="General">
-        <Git />
-        <Scrum />
-        <AWS />
-        <TDD />
-        <Bash />
-        <Linux />
+        <Git/>
+        <Scrum/>
+        <AWS/>
+        <GoogleCloud/>
+        <TDD/>
+        <Bash/>
+        <Linux/>
       </SkillsList>
     );
   }
@@ -20,7 +21,7 @@ export default class GeneralSkills extends Component {
 
 // Skill Components
 function Git() {
-  return <Skill name="Git" desktop="50px" mobile="35px" />;
+  return <Skill name="Git" desktop="50px" mobile="35px"/>;
 }
 
 function Scrum() {
@@ -50,8 +51,18 @@ function AWS() {
   );
 }
 
+function GoogleCloud() {
+  return (
+    <Skill
+      name="Google Cloud"
+      desktop="50px"
+      mobile="42px"
+      />
+  );
+}
+
 function TDD() {
-  return <Skill name="Test Driven Development" desktop="60px" mobile="35px" />;
+  return <Skill name="Test Driven Development" desktop="60px" mobile="35px"/>;
 }
 
 function Bash() {
@@ -69,5 +80,5 @@ function Bash() {
 }
 
 function Linux() {
-  return <Skill name="Linux" desktop="50px" mobile="35px" />;
+  return <Skill name="Linux" desktop="50px" mobile="35px"/>;
 }
