@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { imgPath } from "../../util/enums";
+import React, { Component } from "react"
+import { imgPath } from "../../util/enums"
 
 // Components
-import Section from "./Section";
+import Section from "./Section"
 
 export default class Experience extends Component {
   render() {
@@ -85,7 +85,7 @@ export default class Experience extends Component {
           </p>
         </div>
       </Section>
-    );
+    )
   }
 }
 
@@ -93,28 +93,28 @@ export default class Experience extends Component {
 const imgStyle = {
   display: "block",
   margin: "auto"
-};
+}
 
 const timeStyle = {
   fontSize: "1.5rem"
-};
+}
 
 const drStyle = {
   width: "75%",
   maxWidth: "500px"
-};
+}
 
 const handsmithStyle = {
   width: "60%",
   maxWidth: "420px"
-};
+}
 
 const luStyle = {
   width: "70%",
   maxWidth: "400px"
-};
+}
 
 const webJamStyle = {
   width: "50%",
   maxWidth: "330px"
-};
+}

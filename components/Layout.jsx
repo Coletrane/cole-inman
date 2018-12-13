@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { mediaQuery } from "../util/styles.js";
-import NavIcons from "./header/NavIcons";
-import { boxShadow, topBarStyle } from "../util/styles";
+import React, { Component } from "react"
+import styled from "styled-components"
+import { mediaQuery } from "../util/styles.js"
+import NavIcons from "./header/NavIcons"
+import { boxShadow, topBarStyle } from "../util/styles"
 // Components
-import Header from "./header/Header";
+import Header from "./header/Header"
 
 export default class Layout extends Component {
   render() {
@@ -24,7 +24,7 @@ export default class Layout extends Component {
           <NavIcons />
         </BottomNavStyle>
       </div>
-    );
+    )
   }
 }
 
@@ -37,7 +37,7 @@ const GithubBanner = styled.div`
     right: 0;
     border: 0;
   }
-`;
+`
 const MainContent = styled.div`
   padding-top: 600px;
   padding-bottom: 4rem;
@@ -46,7 +46,7 @@ const MainContent = styled.div`
   ${mediaQuery.tablet`
     padding-top: 50px;
   `};
-`;
+`
 
 const BottomNavStyle = styled.div`
   ${mediaQuery.ceiling`
@@ -61,4 +61,4 @@ const BottomNavStyle = styled.div`
     background-color: ${topBarStyle.backgroundColor};
     box-shadow: ${boxShadow};
   `};
-`;
+`

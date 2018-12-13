@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 // Components
-import Skill from "./Skill";
-import SkillsList from "./SkillsList";
+import Skill from "./Skill"
+import SkillsList from "./SkillsList"
 
 export default class FrontEndSkills extends Component {
   render() {
@@ -22,7 +22,7 @@ export default class FrontEndSkills extends Component {
         <Aurelia />
         <Rails />
       </SkillsList>
-    );
+    )
   }
 }
 
@@ -38,11 +38,11 @@ function Html() {
         paddingTop: "4px"
       }}
     />
-  );
+  )
 }
 
 function Css() {
-  return <Skill name="CSS" desktop="45px" mobile="30px" />;
+  return <Skill name="CSS" desktop="45px" mobile="30px" />
 }
 
 function Jquery() {
@@ -55,7 +55,7 @@ function Jquery() {
         paddingBottom: "12px"
       }}
     />
-  );
+  )
 }
 
 function Javascript() {
@@ -69,7 +69,7 @@ function Javascript() {
         paddingBottom: "10px"
       }}
     />
-  );
+  )
 }
 
 function Typescript() {
@@ -83,7 +83,7 @@ function Typescript() {
         paddingBottom: "10px"
       }}
     />
-  );
+  )
 }
 
 function ReactLolNameCollision() {
@@ -93,11 +93,11 @@ function ReactLolNameCollision() {
       desktop="60px"
       mobile="35px"
     />
-  );
+  )
 }
 
 function Angular() {
-  return <Skill name="Angular" desktop="59px" mobile="35px" />;
+  return <Skill name="Angular" desktop="59px" mobile="35px" />
 }
 
 function Vue() {
@@ -111,11 +111,11 @@ function Vue() {
         paddingBottom: "4px"
       }}
     />
-  );
+  )
 }
 
 function Aurelia() {
-  return <Skill name="Aurelia" desktop="50px" mobile="35px" />;
+  return <Skill name="Aurelia" desktop="50px" mobile="35px" />
 }
 
 function Node() {
@@ -129,11 +129,11 @@ function Node() {
         paddingBottom: "2px"
       }}
     />
-  );
+  )
 }
 
 function Webpack() {
-  return <Skill name="Webpack" desktop="65px" mobile="45px" />;
+  return <Skill name="Webpack" desktop="65px" mobile="45px" />
 }
 
 function Redux() {
@@ -147,13 +147,13 @@ function Redux() {
         paddingBottom: "8px"
       }}
     />
-  );
+  )
 }
 
 function Express() {
-  return <Skill name="Express.js" desktop="60px" mobile="40px" />;
+  return <Skill name="Express.js" desktop="60px" mobile="40px" />
 }
 
 function Rails() {
-  return <Skill name="Ruby on Rails" desktop="55px" mobile="35px" />;
+  return <Skill name="Ruby on Rails" desktop="55px" mobile="35px" />
 }

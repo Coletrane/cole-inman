@@ -1,15 +1,15 @@
 // This file exists to expose webshots urls and src's to both the
 // app and the build system
 
-const bikeva = 'bikeva.com'
-const handsmith = 'handsmith.org'
-const paddlemax = 'github.com/coletrane/paddlemax-api'
-const effectiveBalance = 'github.com/coletrane/effective-balance-python'
-const coledrums = 'coledrums.com'
-const webjam = 'web-jam.com'
+const bikeva = "bikeva.com"
+const handsmith = "handsmith.org"
+const paddlemax = "github.com/coletrane/paddlemax-api"
+const effectiveBalance = "github.com/coletrane/effective-balance-python"
+const coledrums = "coledrums.com"
+const webjam = "web-jam.com"
 
-const noSlashes = (str) => {
-  const split = str.split('/')
+const noSlashes = str => {
+  const split = str.split("/")
   return split[split.length - 1]
 }
 
@@ -52,12 +52,10 @@ const pages = {
   }
 }
 
-const resolutions = [
-  '1920x1080'
-]
+const resolutions = ["1920x1080"]
 
-const localSrc = (page) => {
-  return '/static/img/webshots/' + noSlashes(page.url) + '.png'
+const localSrc = page => {
+  return "/static/img/webshots/" + noSlashes(page.url) + ".png"
 }
 
 module.exports = {

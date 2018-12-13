@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import webshots from "../../../util/webshots";
-import { gitHub } from "../../header/NavIcons";
+import React, { Component } from "react"
+import webshots from "../../../util/webshots"
+import { gitHub } from "../../header/NavIcons"
 
 // Components
-import Project from "./Project";
-import ProjectButton from "./ProjectButton";
+import Project from "./Project"
+import ProjectButton from "./ProjectButton"
 
 export default class PaddleMax extends Component {
   render() {
@@ -32,6 +32,6 @@ export default class PaddleMax extends Component {
           respectively.
         </p>
       </Project>
-    );
+    )
   }
 }

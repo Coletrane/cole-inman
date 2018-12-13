@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { imgPath } from "../../util/enums";
+import React, { Component } from "react"
+import styled from "styled-components"
+import { imgPath } from "../../util/enums"
 
 // Components
-import Section from "./Section";
+import Section from "./Section"
 
 export default class Education extends Component {
   render() {
@@ -34,7 +34,7 @@ export default class Education extends Component {
           </div>
         </CNSS>
       </Section>
-    );
+    )
   }
 }
 
@@ -43,7 +43,7 @@ const imgStyle = {
   display: "block",
   margin: "auto",
   height: "auto"
-};
+}
 
 const JMU = styled.div`
   padding-bottom: 2rem;
@@ -52,7 +52,7 @@ const JMU = styled.div`
     width: 100%;
     max-width: 450px;
   }
-`;
+`
 
 const CNSS = styled.div`
   padding-bottom: 2rem;
@@ -61,11 +61,11 @@ const CNSS = styled.div`
     width: 50%;
     max-width: 220px;
   }
-`;
+`
 
 const titleStyle = {
   fontSize: "1.5rem"
-};
+}
 const subtitleStyle = {
   fontSize: "1rem"
-};
+}

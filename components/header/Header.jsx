@@ -1,35 +1,33 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from "react"
+import styled from "styled-components"
 import {
   boxShadow,
   topBarStyle,
   mediaQuery,
   titleStyle,
   subtitleStyle
-} from "../../util/styles.js";
+} from "../../util/styles.js"
 
 // Components
-import Profile from "./Profile";
-import NavIcons from "./NavIcons";
+import Profile from "./Profile"
+import NavIcons from "./NavIcons"
 
 // Constants
-const minBarHeight = 80;
-const maxBarHeight = 300;
-const animationDone = 350;
-const profileAnimationStart = 75;
+const minBarHeight = 80
+const maxBarHeight = 300
+const animationDone = 350
+const profileAnimationStart = 75
 
 // This may be the first time I've used calculus/algebra since college
 const barHeightLinear = scroll => {
-  return (
-    ((minBarHeight - maxBarHeight) / animationDone) * scroll + maxBarHeight
-  );
-};
+  return ((minBarHeight - maxBarHeight) / animationDone) * scroll + maxBarHeight
+}
 
 export default class Header extends Component {
   // TODO: change bar height to css transition?
   constructor(props) {
-    super(props);
-    this.handleScroll = this.handleScroll.bind(this);
+    super(props)
+    this.handleScroll = this.handleScroll.bind(this)
     this.state = {
       barStyleDynamic: {
         height: `${maxBarHeight}px`
@@ -39,55 +37,55 @@ export default class Header extends Component {
       profileHasFaded: false,
       barIsCollapsed: false,
       previousScrollY: 0
-    };
+    }
   }
 
   // Helpers
   get title() {
-    return "Cole Inman";
+    return "Cole Inman"
   }
 
   get subtitle() {
     if (this.state.barIsCollapsed) {
-      return null;
+      return null
     } else {
-      return <h4 style={subtitleStyle}>Full Stack Software Developer</h4>;
+      return <h4 style={subtitleStyle}>Full Stack Software Developer</h4>
     }
   }
 
   handleScroll(event) {
     // Defining this since window.scrollY can change during execution of this method
-    const scroll = window.scrollY;
+    const scroll = window.scrollY
     this.setState(prev => {
       let newState = {
         ...this.state,
         previousScrollY: scroll
-      };
+      }
 
-      this.updateBarCollapsed(scroll, newState);
-      this.updateScrollDirection(scroll, newState);
-      this.updateProfile(scroll, newState);
-      this.updateTopBar(newState);
+      this.updateBarCollapsed(scroll, newState)
+      this.updateScrollDirection(scroll, newState)
+      this.updateProfile(scroll, newState)
+      this.updateTopBar(newState)
 
-      return newState;
-    });
+      return newState
+    })
   }
 
   updateBarCollapsed(scroll, newState) {
     if (scroll >= animationDone - 60) {
-      newState.barIsCollapsed = true;
+      newState.barIsCollapsed = true
     } else {
-      newState.barIsCollapsed = false;
+      newState.barIsCollapsed = false
     }
   }
 
   updateScrollDirection(scroll, newState) {
     if (scroll > this.state.previousScrollY) {
-      newState.scrollDirection = "down";
+      newState.scrollDirection = "down"
     } else if (scroll < this.state.previousScrollY) {
-      newState.scrollDirection = "up";
+      newState.scrollDirection = "up"
     } else {
-      newState.scrollDirection = "none";
+      newState.scrollDirection = "none"
     }
   }
 
@@ -97,14 +95,14 @@ export default class Header extends Component {
       newState.scrollDirection === "down"
     ) {
       if (!this.state.profileHasFaded) {
-        newState.profileHasFaded = true;
+        newState.profileHasFaded = true
       }
-      newState.profileFadeOutIn = "out";
+      newState.profileFadeOutIn = "out"
     } else if (
       window.scrollY < profileAnimationStart &&
       newState.scrollDirection === "up"
     ) {
-      newState.profileFadeOutIn = "in";
+      newState.profileFadeOutIn = "in"
     }
   }
 
@@ -113,25 +111,25 @@ export default class Header extends Component {
       barHeightLinear(window.scrollY) > minBarHeight &&
       barHeightLinear(window.scrollY) < maxBarHeight
     ) {
-      newState.barStyleDynamic.height = `${barHeightLinear(window.scrollY)}px`;
+      newState.barStyleDynamic.height = `${barHeightLinear(window.scrollY)}px`
     }
     if (window.scrollY > animationDone) {
-      newState.barStyleDynamic.height = `${minBarHeight}px`;
+      newState.barStyleDynamic.height = `${minBarHeight}px`
     } else if (window.scrollY === 0) {
-      newState.barStyleDynamic.height = `${maxBarHeight}px`;
+      newState.barStyleDynamic.height = `${maxBarHeight}px`
     }
   }
 
   // Lifecycle
   componentDidMount() {
     if (process.browser) {
-      window.addEventListener("scroll", this.handleScroll);
+      window.addEventListener("scroll", this.handleScroll)
     }
   }
 
   componentWillUnmount() {
     if (process.browser) {
-      window.removeEventListener("scroll", this.handleScroll);
+      window.removeEventListener("scroll", this.handleScroll)
     }
   }
 
@@ -161,7 +159,7 @@ export default class Header extends Component {
           />
         </TopNavMedia>
       </HeaderStyle>
-    );
+    )
   }
 }
 
@@ -183,7 +181,7 @@ const HeaderStyle = styled.div`
     margin-top: 9px;
     margin-bottom: auto;
   }
-`;
+`
 const headerStyle = {
   textAlign: "center",
   boxShadow: boxShadow,
@@ -192,7 +190,7 @@ const headerStyle = {
   top: "0px",
   width: "100%",
   zIndex: "2"
-};
+}
 
 const MobileTitle = styled.h1`
   ${mediaQuery.ceiling`
@@ -201,7 +199,7 @@ const MobileTitle = styled.h1`
     display: block;
     text-align: center;
   `};
-`;
+`
 
 const TopNavMedia = styled.div`
   ${mediaQuery.desktop`
@@ -209,9 +207,9 @@ const TopNavMedia = styled.div`
   `} ${mediaQuery.tablet`
     display: none;
   `};
-`;
+`
 
 const barStyle = {
   display: "grid",
   gridTemplateColumns: "50% 50%"
-};
+}

@@ -1,33 +1,33 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { mediaQuery, sizes } from "../util/styles";
-import { imgPath } from "../util/enums";
+import React, { Component } from "react"
+import styled from "styled-components"
+import { mediaQuery, sizes } from "../util/styles"
+import { imgPath } from "../util/enums"
 
 // Components
-import Layout from "../components/Layout";
-import Skills from "../components/sections/Skills";
-import Projects from "../components/sections/Projects";
-import Education from "../components/sections/Education";
-import Experience from "../components/sections/Experience";
+import Layout from "../components/Layout"
+import Skills from "../components/sections/Skills"
+import Projects from "../components/sections/Projects"
+import Education from "../components/sections/Education"
+import Experience from "../components/sections/Experience"
 
 export default class Index extends Component {
   constructor(props) {
-    super(props);
-    this.handleScroll = this.handleScroll.bind(this);
+    super(props)
+    this.handleScroll = this.handleScroll.bind(this)
     this.state = {
       experience: false,
       projects: false,
       skillsMobile: false,
       height: "20000px" // setting this to something huge for scroll, changed to auto dynamically
-    };
+    }
   }
 
   // Helpers
   handleScroll() {
     if (document.body.clientWidth <= sizes.tablet) {
-      this.attachSections(1300, 2900, 300);
+      this.attachSections(1300, 2900, 300)
     } else {
-      this.attachSections(300, 1500);
+      this.attachSections(300, 1500)
     }
   }
 
@@ -36,21 +36,21 @@ export default class Index extends Component {
       this.setState({
         ...this.state,
         skillsMobile: true
-      });
+      })
     }
 
     if (window.scrollY > exp) {
       this.setState({
         ...this.state,
         experience: true
-      });
+      })
     }
     if (window.scrollY > proj) {
       this.setState({
         ...this.state,
         projects: true,
         height: "auto"
-      });
+      })
     }
   }
 
@@ -60,7 +60,7 @@ export default class Index extends Component {
         <FastFade>
           <Experience />
         </FastFade>
-      );
+      )
     }
   }
 
@@ -70,7 +70,7 @@ export default class Index extends Component {
         <FastFade>
           <Projects />
         </FastFade>
-      );
+      )
     }
   }
 
@@ -84,13 +84,13 @@ export default class Index extends Component {
           <FastFade>
             <Skills />
           </FastFade>
-        );
+        )
       } else if (document.body.clientWidth > sizes.tablet) {
         return (
           <DelayedFade>
             <Skills />
           </DelayedFade>
-        );
+        )
       }
     }
   }
@@ -98,13 +98,13 @@ export default class Index extends Component {
   // Lifecycle
   componentDidMount() {
     if (process.browser) {
-      window.addEventListener("scroll", this.handleScroll);
+      window.addEventListener("scroll", this.handleScroll)
     }
   }
 
   componentWillUnmount() {
     if (process.browser) {
-      window.removeEventListener("scroll", this.handleScroll);
+      window.removeEventListener("scroll", this.handleScroll)
     }
   }
 
@@ -122,7 +122,7 @@ export default class Index extends Component {
           {this.projects}
         </Layout>
       </AppWrapper>
-    );
+    )
   }
 }
 
@@ -150,7 +150,7 @@ const AppWrapper = styled.div`
   background-color: #331501;
   background-image: url(${imgPath}/trees.jpg);
   background-size: contain;
-`;
+`
 
 const EduSkills = styled.div`
   // TODO: remove all of these
@@ -160,9 +160,9 @@ const EduSkills = styled.div`
   `} ${mediaQuery.tablet`
     display: block;
   `};
-`;
+`
 
-const transform = "translateY(100px)";
+const transform = "translateY(100px)"
 
 const Fade = styled.div`
   @keyframes fadeInUp {
@@ -176,7 +176,7 @@ const Fade = styled.div`
     }
   }
   animation: fadeInUp 1.5s ease;
-`;
+`
 
 const DelayedFade = styled.div`
   @keyframes fadeInUp {
@@ -193,7 +193,7 @@ const DelayedFade = styled.div`
     }
   }
   animation: fadeInUp 2s ease;
-`;
+`
 const FastFade = styled.div`
   @keyframes fadeInLeft {
     0% {
@@ -205,4 +205,4 @@ const FastFade = styled.div`
     }
   }
   animation: fadeInLeft 1s ease;
-`;
+`

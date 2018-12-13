@@ -1,15 +1,15 @@
-import React from "react";
-import Document, { Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import React from "react"
+import Document, { Head, Main, NextScript } from "next/document"
+import { ServerStyleSheet } from "styled-components"
 
 export default class ColeDocument extends Document {
   static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet();
+    const sheet = new ServerStyleSheet()
     const page = renderPage(App => props =>
       sheet.collectStyles(<App {...props} />)
-    );
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
+    )
+    const styleTags = sheet.getStyleElement()
+    return { ...page, styleTags }
   }
 
   render() {
@@ -45,7 +45,7 @@ export default class ColeDocument extends Document {
           <NextScript />
         </body>
       </html>
-    );
+    )
   }
 }
 
@@ -53,4 +53,4 @@ export default class ColeDocument extends Document {
 const bodyStyle = {
   margin: "0",
   backgroundColor: "black"
-};
+}

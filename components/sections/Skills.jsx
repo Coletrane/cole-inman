@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from "react"
+import styled from "styled-components"
 
 // Components
-import Section from "./Section";
-import GeneralSkills from "./skills/GeneralSkills";
-import FrontEndSkills from "./skills/FrontEndSkills";
-import BackEndSkills from "./skills/BackEndSkills";
+import Section from "./Section"
+import GeneralSkills from "./skills/GeneralSkills"
+import FrontEndSkills from "./skills/FrontEndSkills"
+import BackEndSkills from "./skills/BackEndSkills"
 
 export default class Skills extends Component {
   render() {
@@ -19,7 +19,7 @@ export default class Skills extends Component {
           </GlobalSkillStyles>
         </Section>
       </div>
-    );
+    )
   }
 }
 
@@ -27,4 +27,4 @@ const GlobalSkillStyles = styled.div`
   img {
     height: auto;
   }
-`;
+`

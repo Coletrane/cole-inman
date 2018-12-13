@@ -1,4 +1,4 @@
-import {mobileWidth} from './styles'
+import { mobileWidth } from "./styles"
 
 export const isMobile = () => {
   // Normally this would be done using @media queries
@@ -14,7 +14,7 @@ export const isMobile = () => {
 }
 
 export const getComponent = (props, slot) => {
-  return props.children.filter((comp) => {
+  return props.children.filter(comp => {
     return comp.slot === slot
   })
 }

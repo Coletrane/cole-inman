@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import webshots from "../../../util/webshots";
+import React, { Component } from "react"
+import webshots from "../../../util/webshots"
 
 // Components
-import Project from "./Project";
+import Project from "./Project"
 
 export default class Handsmith extends Component {
   render() {
@@ -23,6 +23,6 @@ export default class Handsmith extends Component {
           </p>
         </Project>
       </div>
-    );
+    )
   }
 }

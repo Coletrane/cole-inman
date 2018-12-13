@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { mediaQuery } from "../../../util/styles";
+import React, { Component } from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import { mediaQuery } from "../../../util/styles"
 
 // Components
 
@@ -10,20 +10,20 @@ export default class Skill extends Component {
     name: PropTypes.string.isRequired,
     desktop: PropTypes.string.isRequired,
     mobile: PropTypes.string.isRequired
-  };
+  }
 
   get imgSrc() {
-    let filename;
+    let filename
     if (this.props.name.includes("(")) {
-      filename = this.props.name.split(" ")[0].toLowerCase();
+      filename = this.props.name.split(" ")[0].toLowerCase()
     } else {
       filename = this.props.name
         .split(" ")
         .join("")
-        .toLowerCase();
+        .toLowerCase()
     }
 
-    return `/static/img/logos/${filename}.png`;
+    return `/static/img/logos/${filename}.png`
   }
 
   render() {
@@ -37,16 +37,16 @@ export default class Skill extends Component {
         />
         <SkillName name={this.props.name} />
       </div>
-    );
+    )
   }
 }
 
 // Using this to stop C name from being printed since its reduntant to the logo
 function SkillName(props) {
   if (props.name !== "C") {
-    return <div style={skillTitleStyle}>{props.name}</div>;
+    return <div style={skillTitleStyle}>{props.name}</div>
   } else {
-    return null;
+    return null
   }
 }
 
@@ -54,7 +54,7 @@ function SkillName(props) {
 const listItemStyle = {
   // padding: "5px",
   // borderRadius: "5px"
-};
+}
 
 const LogoImg = styled.img`
   ${mediaQuery.ceiling`
@@ -62,8 +62,8 @@ const LogoImg = styled.img`
   `} ${mediaQuery.phablet`
     width: ${props => props.mobile};
   `};
-`;
+`
 const skillTitleStyle = {
   margin: "0",
   fontSize: ".8rem"
-};
+}

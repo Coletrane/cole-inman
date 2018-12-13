@@ -1,31 +1,31 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import email from "./NavIcons";
-import { boxShadow } from "../../util/styles.js";
+import React, { Component } from "react"
+import styled from "styled-components"
+import PropTypes from "prop-types"
+import email from "./NavIcons"
+import { boxShadow } from "../../util/styles.js"
 
-const phone = "540-529-1426";
+const phone = "540-529-1426"
 
 export default class Profile extends Component {
   static propTypes = {
     fadeOutIn: PropTypes.string.isRequired,
     hasFaded: PropTypes.bool.isRequired,
     scrollDirection: PropTypes.string.isRequired
-  };
+  }
 
   // Helpers
   get age() {
-    let birthday = new Date("April 13, 1994");
+    let birthday = new Date("April 13, 1994")
     birthday = Date.UTC(
       birthday.getFullYear(),
       birthday.getMonth(),
       birthday.getDay()
-    );
-    let today = new Date();
-    today = Date.UTC(today.getFullYear(), today.getMonth(), today.getDay());
+    )
+    let today = new Date()
+    today = Date.UTC(today.getFullYear(), today.getMonth(), today.getDay())
 
-    const millisecondsPerYear = 1000 * 60 * 60 * 24 * 365;
-    return Math.floor((today - birthday) / millisecondsPerYear);
+    const millisecondsPerYear = 1000 * 60 * 60 * 24 * 365
+    return Math.floor((today - birthday) / millisecondsPerYear)
   }
 
   get profileContent() {
@@ -61,38 +61,38 @@ export default class Profile extends Component {
           </table>
         </div>
       </ProfileStyle>
-    );
+    )
   }
 
   get shouldRenderStatic() {
-    return this.props.fadeOutIn === "none" && !this.props.hasFaded;
+    return this.props.fadeOutIn === "none" && !this.props.hasFaded
   }
 
   get shouldFadeOut() {
-    return this.props.fadeOutIn === "out";
+    return this.props.fadeOutIn === "out"
   }
 
   get shouldFadeIn() {
-    return this.props.fadeOutIn === "in" && this.props.hasFaded;
+    return this.props.fadeOutIn === "in" && this.props.hasFaded
   }
 
   render() {
     if (this.shouldRenderStatic) {
-      return <div>{this.profileContent}</div>;
+      return <div>{this.profileContent}</div>
     }
     if (this.shouldFadeOut) {
-      return <FadeOut id="fadeout">{this.profileContent}</FadeOut>;
+      return <FadeOut id="fadeout">{this.profileContent}</FadeOut>
     }
     if (this.shouldFadeIn) {
-      return <FadeIn id="fadein">{this.profileContent}</FadeIn>;
+      return <FadeIn id="fadein">{this.profileContent}</FadeIn>
     }
 
-    return null;
+    return null
   }
 }
 
 // Styles
-const imgWidth = 350;
+const imgWidth = 350
 
 const ProfileStyle = styled.div`
   position: absolute;
@@ -137,7 +137,7 @@ const ProfileStyle = styled.div`
   td.value {
     padding-left: auto;
   }
-`;
+`
 // TODO: add translates
 const FadeOut = styled.div`
   @keyframes fadeOutUp {
@@ -150,7 +150,7 @@ const FadeOut = styled.div`
   }
   opacity: 0;
   animation: fadeOutUp 0.5s ease;
-`;
+`
 
 const FadeIn = styled.div`
   @keyframes fadeInDown {
@@ -163,4 +163,4 @@ const FadeIn = styled.div`
   }
   opacity: 1;
   animation: fadeInDown 0.5s ease;
-`;
+`

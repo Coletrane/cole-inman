@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import webshots from "../../../util/webshots";
-import { gitHub } from "../../header/NavIcons";
+import React, { Component } from "react"
+import webshots from "../../../util/webshots"
+import { gitHub } from "../../header/NavIcons"
 
 // Components
-import Project from "./Project";
+import Project from "./Project"
 
 export default class Mtbva extends Component {
   render() {
@@ -26,6 +26,6 @@ export default class Mtbva extends Component {
           </p>
         </Project>
       </div>
-    );
+    )
   }
 }

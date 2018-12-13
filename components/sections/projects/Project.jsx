@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from "react"
+import PropTypes from "prop-types"
 
 // Components
-import ProjectButton from "./ProjectButton";
-import Card from "../Card";
-import CardHeader from "../CardHeader";
+import ProjectButton from "./ProjectButton"
+import Card from "../Card"
+import CardHeader from "../CardHeader"
 
 export default class Project extends Component {
   static propTypes = {
@@ -12,13 +12,13 @@ export default class Project extends Component {
     subheader: PropTypes.string.isRequired,
     imgSrc: PropTypes.string.isRequired,
     customButtons: PropTypes.object
-  };
+  }
 
   // This method is needed as a check since we are appending
   // http:// to the beginning of the live site url
   get liveSite() {
     if (this.props.liveSite) {
-      return `http://${this.props.liveSite}`;
+      return `http://${this.props.liveSite}`
     }
   }
 
@@ -36,7 +36,7 @@ export default class Project extends Component {
         <ProjectButton url={this.props.gitHub} text="Github Repo" />
         {this.props.customButtons}
       </div>
-    );
+    )
   }
 }
 
@@ -44,8 +44,8 @@ export default class Project extends Component {
 const projectImgStyle = {
   width: "100%",
   height: "auto"
-};
+}
 
 const cardStyle = {
   backgroundColor: "black"
-};
+}

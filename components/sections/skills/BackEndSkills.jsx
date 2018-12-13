@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 // Components
-import Skill from "./Skill";
-import SkillsList from "./SkillsList";
+import Skill from "./Skill"
+import SkillsList from "./SkillsList"
 
 export default class BackEndSkills extends Component {
   render() {
@@ -21,7 +21,7 @@ export default class BackEndSkills extends Component {
         <Elasticsearch />
         <Hadoop />
       </SkillsList>
-    );
+    )
   }
 }
 
@@ -36,11 +36,11 @@ function Java() {
         paddingBottom: "4px"
       }}
     />
-  );
+  )
 }
 
 function Python() {
-  return <Skill name="Python" desktop="70px" mobile="55px" />;
+  return <Skill name="Python" desktop="70px" mobile="55px" />
 }
 
 function Kotlin() {
@@ -54,7 +54,7 @@ function Kotlin() {
         paddingBottom: "10px"
       }}
     />
-  );
+  )
 }
 
 function Swift() {
@@ -68,12 +68,12 @@ function Swift() {
         paddingBottom: "14px"
       }}
     />
-  );
+  )
 }
 
 // Try and shorten this name, Uglify!
 function C() {
-  return <Skill name="C" desktop="70px" mobile="55px" />;
+  return <Skill name="C" desktop="70px" mobile="55px" />
 }
 
 function Groovy() {
@@ -87,7 +87,7 @@ function Groovy() {
         paddingBottom: "5px"
       }}
     />
-  );
+  )
 }
 
 function Spring() {
@@ -100,7 +100,7 @@ function Spring() {
         paddingTop: "10px"
       }}
     />
-  );
+  )
 }
 
 function JaxRs() {
@@ -114,7 +114,7 @@ function JaxRs() {
         paddingBottom: "6px"
       }}
     />
-  );
+  )
 }
 
 function Hibernate() {
@@ -127,7 +127,7 @@ function Hibernate() {
         paddingTop: "10px"
       }}
     />
-  );
+  )
 }
 
 function Postgresql() {
@@ -141,7 +141,7 @@ function Postgresql() {
         paddingBottom: "5px"
       }}
     />
-  );
+  )
 }
 
 function MongoDB() {
@@ -154,7 +154,7 @@ function MongoDB() {
         paddingTop: "10px"
       }}
     />
-  );
+  )
 }
 
 function Elasticsearch() {
@@ -167,7 +167,7 @@ function Elasticsearch() {
         paddingTop: "10px"
       }}
     />
-  );
+  )
 }
 
 function Hadoop() {
@@ -180,5 +180,5 @@ function Hadoop() {
         paddingTop: "10px"
       }}
     />
-  );
+  )
 }
