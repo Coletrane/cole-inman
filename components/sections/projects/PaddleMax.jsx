@@ -12,18 +12,7 @@ export default class PaddleMax extends Component {
       <Project
         title="PaddleMax"
         subheader="API, iOS, Android, and Webapp for connected paddles"
-        imgSrc={webshots.localSrc(webshots.pages.paddlemax)}
-        customButtons={
-          <div>
-            <ProjectButton url={gitHub + "paddlemax-api"} text="API Repo" />
-            <ProjectButton
-              url={gitHub + "paddlemax-api-spring-boot"}
-              text="API Kotlin Spring Boot Prototype Repo"
-            />
-            <ProjectButton url={gitHub + "paddlemax-ios"} text="iOS App Repo" />
-            <ProjectButton url={gitHub + "paddlemax-web"} text="Web App Repo" />
-          </div>
-        }>
+        imgSrc={webshots.localSrc(webshots.pages.paddlemax)}>
         <p>
           PaddleMax is an app who's mission is to give kayak and paddle board
           paddles connected abilities such as data recording and analytics. It
@@ -38,6 +27,13 @@ export default class PaddleMax extends Component {
             <li>Node.js</li>
           </ul>
         </TechStack>
+        <ProjectButton url={gitHub + "paddlemax-api"} text="API Repo" />
+        <ProjectButton
+          url={gitHub + "paddlemax-api-spring-boot"}
+          text="API Kotlin Spring Boot Prototype Repo"
+        />
+        <ProjectButton url={gitHub + "paddlemax-ios"} text="iOS App Repo" />
+        <ProjectButton url={gitHub + "paddlemax-web"} text="Web App Repo" />
       </Project>
     )
   }

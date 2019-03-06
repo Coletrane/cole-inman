@@ -13,20 +13,7 @@ export default class EffectiveBalance extends Component {
         <Project
           title="Effective Balance"
           subheader="Python script for tracking bank account and credit card balances"
-          imgSrc={webshots.localSrc(webshots.pages.effectiveBalance)}
-          customButtons={
-            <div>
-              <ProjectButton
-                url={gitHub + "effective-balance-python"}
-                text="Python Repo"
-              />
-              <ProjectButton
-                url={gitHub + "effective-balance-node"}
-                text="Node.js Repo"
-              />
-            </div>
-          }
-        >
+          imgSrc={webshots.localSrc(webshots.pages.effectiveBalance)}>
           <p>
             Effective Balance is a scheduled Python script that runs every day.
             It scrapes my Gmail account for SunTrust and CitiBank daily balance
@@ -41,6 +28,14 @@ export default class EffectiveBalance extends Component {
               <li>AWS Simple Email Service</li>
             </ul>
           </TechStack>
+          <ProjectButton
+            url={gitHub + "effective-balance-python"}
+            text="Python Repo"
+          />
+          <ProjectButton
+            url={gitHub + "effective-balance-node"}
+            text="Node.js Repo"
+          />
         </Project>
       </div>
     )

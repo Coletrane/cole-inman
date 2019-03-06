@@ -4,6 +4,7 @@ import { gitHub } from "../../header/NavIcons"
 
 // Components
 import Project, { TechStack } from "./Project"
+import ProjectButton from "./ProjectButton"
 
 export default class Mtbva extends Component {
   render() {
@@ -27,6 +28,10 @@ export default class Mtbva extends Component {
               <li>Cloudflare</li>
             </ul>
           </TechStack>
+          <ProjectButton
+            url={`https://${webshots.pages.mtbva.url}`}
+            text="Live Site"
+          />
         </Project>
       </div>
     )
