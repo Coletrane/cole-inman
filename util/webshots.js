@@ -2,7 +2,7 @@
 // app and the build system
 
 const bikeva = "bikeva.com"
-const handsmith = "handsmith.org"
+const luvtrails = "luvtrails.com"
 const paddlemax = "github.com/coletrane/paddlemax-api"
 const effectiveBalance = "github.com/coletrane/effective-balance-python"
 const coledrums = "coledrums.com"
@@ -14,8 +14,8 @@ const noSlashes = str => {
 }
 
 const pages = {
-  mtbva: {
-    url: bikeva,
+  luvtrails: {
+    url: luvtrails,
     options: {
       crop: true,
       filename: bikeva,
@@ -23,11 +23,11 @@ const pages = {
       timeout: 120
     }
   },
-  handsmith: {
-    url: handsmith,
+  mtbva: {
+    url: bikeva,
     options: {
       crop: true,
-      filename: handsmith,
+      filename: bikeva,
       scale: 0.5,
       timeout: 120
     }
