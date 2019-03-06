@@ -3,7 +3,7 @@ import webshots from "../../../util/webshots"
 import { gitHub } from "../../header/NavIcons"
 
 // Components
-import Project from "./Project"
+import Project, { TechStack } from "./Project"
 import ProjectButton from "./ProjectButton"
 
 export default class PaddleMax extends Component {
@@ -23,14 +23,21 @@ export default class PaddleMax extends Component {
             <ProjectButton url={gitHub + "paddlemax-ios"} text="iOS App Repo" />
             <ProjectButton url={gitHub + "paddlemax-web"} text="Web App Repo" />
           </div>
-        }
-      >
+        }>
         <p>
           PaddleMax is an app who's mission is to give kayak and paddle board
           paddles connected abilities such as data recording and analytics. It
           is an Android, iOS, and watchOS app developed using Kotlin and Swift,
           respectively.
         </p>
+        <TechStack>
+          <ul>
+            <li>Kotlin</li>
+            <li>Java</li>
+            <li>Swift</li>
+            <li>Node.js</li>
+          </ul>
+        </TechStack>
       </Project>
     )
   }

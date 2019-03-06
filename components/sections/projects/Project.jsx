@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 
 // Components
 import ProjectButton from "./ProjectButton"
@@ -24,28 +25,50 @@ export default class Project extends Component {
 
   render() {
     return (
-      <div>
-        <CardHeader title={this.props.title} subheader={this.props.subheader} />
-        <img
-          src={this.props.imgSrc}
-          alt={this.props.title}
-          style={projectImgStyle}
-        />
-        {this.props.children}
-        <ProjectButton url={this.liveSite} text="Live Site" />
-        <ProjectButton url={this.props.gitHub} text="Github Repo" />
-        {this.props.customButtons}
-      </div>
+      <ProjectCard>
+        <Card>
+          <CardHeader
+            title={this.props.title}
+            subheader={this.props.subheader}
+          />
+          <ProjectImg src={this.props.imgSrc} alt={this.props.title} />
+          {this.props.children}
+          <ProjectButton url={this.liveSite} text="Live Site" />
+          <ProjectButton url={this.props.gitHub} text="Github Repo" />
+          {this.props.customButtons}
+        </Card>
+      </ProjectCard>
     )
   }
 }
 
 // Styles
-const projectImgStyle = {
-  width: "100%",
-  height: "auto"
-}
+const ProjectCard = styled.div`
+  margin-bottom: 2rem;
+`
 
-const cardStyle = {
-  backgroundColor: "black"
+const ProjectImg = styled.img`
+  width: 100%;
+  height: auto;
+`
+
+const TechStackStyle = styled.div`
+  span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+`
+
+export const TechStack = props => {
+  return (
+    <TechStackStyle>
+      <span>Tech Stack:</span>
+      {props.children}
+    </TechStackStyle>
+  )
 }

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 
 // Components
+import { Title } from "./Section"
 import Mtbva from "./projects/Mtbva"
-import Handsmith from "./projects/Handsmith"
 import PaddleMax from "./projects/PaddleMax"
 import EffectiveBalance from "./projects/EffectiveBalance"
 import Section from "./Section"
@@ -10,12 +10,12 @@ import Section from "./Section"
 export default class Projects extends Component {
   render() {
     return (
-      <Section title="Projects">
+      <div>
+        <Title>Projects</Title>
         <Mtbva />
         <EffectiveBalance />
-        <Handsmith />
         <PaddleMax />
-      </Section>
+      </div>
     )
   }
 }

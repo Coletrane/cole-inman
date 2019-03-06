@@ -21,7 +21,7 @@ export default class Section extends Component {
   }
 }
 
-const Title = styled.div`
+export const Title = styled.div`
   text-align: center;
   color: white;
   text-shadow: 0px 3px 1px #000000;

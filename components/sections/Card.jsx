@@ -6,7 +6,7 @@ export default class Card extends Component {
   render() {
     return (
       <CardContainer>
-        <CardStyle className="card-style">{this.props.children}</CardStyle>
+        <CardStyle>{this.props.children}</CardStyle>
       </CardContainer>
     )
   }
@@ -14,12 +14,7 @@ export default class Card extends Component {
 
 // Styles
 const CardContainer = styled.div`
-  .card-style {
-    margin: 1rem;
-  }
-  .card-style:last-child {
-    margin: 1rem 1rem 0 1rem;
-  }
+  margin: 1rem;
 `
 const CardStyle = styled.div`
   background-color: white;
