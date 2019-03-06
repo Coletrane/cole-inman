@@ -30,7 +30,7 @@ export const topBarStyle = {
 
 export const titleStyle = {
   marginTop: "-.5rem",
-  fontSize: "5rem",
+  fontSize: "4.5rem",
   color: "white"
 }
 
