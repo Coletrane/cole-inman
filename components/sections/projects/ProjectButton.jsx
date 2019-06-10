@@ -12,7 +12,9 @@ export default class ProjectButton extends Component {
   render() {
     if (this.props.url && this.props.text) {
       return (
-        <a href={this.props.url} className="btn btn-dark" style={buttonStyle}>
+        <a href={this.props.url}
+           className="btn btn-dark"
+           style={buttonStyle}>
           {this.props.text}
         </a>
       )

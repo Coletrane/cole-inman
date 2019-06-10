@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { imgPath } from "../../util/enums"
-
 // Components
 import Section from "./Section"
 

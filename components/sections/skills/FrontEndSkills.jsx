@@ -7,11 +7,11 @@ export default class FrontEndSkills extends Component {
   render() {
     return (
       <SkillsList title="Front End">
-        <Javascript />
-        <Typescript />
-        <ReactLolNameCollision />
-        <Angular />
-        <Vue />
+        <Javascript/>
+        <Typescript/>
+        <ReactLolNameCollision/>
+        <Angular/>
+        <Vue/>
       </SkillsList>
     )
   }
@@ -57,7 +57,9 @@ function ReactLolNameCollision() {
 }
 
 function Angular() {
-  return <Skill name="Angular" desktop="59px" mobile="35px" />
+  return <Skill name="Angular"
+                desktop="59px"
+                mobile="35px"/>
 }
 
 function Vue() {

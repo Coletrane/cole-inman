@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { mediaQuery, sizes } from "../util/styles"
 import { imgPath } from "../util/enums"
-
 // Components
 import Layout from "../components/Layout"
 import Skills from "../components/sections/Skills"
@@ -58,7 +57,7 @@ export default class Index extends Component {
     if (this.state.experience) {
       return (
         <FastFade>
-          <Employment />
+          <Employment/>
         </FastFade>
       )
     }
@@ -68,7 +67,7 @@ export default class Index extends Component {
     if (this.state.projects) {
       return (
         <FastFade>
-          <Projects />
+          <Projects/>
         </FastFade>
       )
     }
@@ -82,13 +81,13 @@ export default class Index extends Component {
       ) {
         return (
           <FastFade>
-            <Skills />
+            <Skills/>
           </FastFade>
         )
       } else if (document.body.clientWidth > sizes.tablet) {
         return (
           <DelayedFade>
-            <Skills />
+            <Skills/>
           </DelayedFade>
         )
       }
@@ -114,7 +113,7 @@ export default class Index extends Component {
         <Layout>
           <EduSkills>
             <Fade>
-              <Education />
+              <Education/>
             </Fade>
             {this.skills}
           </EduSkills>

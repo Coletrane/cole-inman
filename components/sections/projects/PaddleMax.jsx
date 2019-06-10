@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import webshots from "../../../util/webshots"
 import { gitHub } from "../../header/NavIcons"
-
 // Components
 import Project, { TechStack } from "./Project"
 import ProjectButton from "./ProjectButton"
@@ -27,13 +26,16 @@ export default class PaddleMax extends Component {
             <li>Node.js</li>
           </ul>
         </TechStack>
-        <ProjectButton url={gitHub + "paddlemax-api"} text="API Repo" />
+        <ProjectButton url={gitHub + "paddlemax-api"}
+                       text="API Repo"/>
         <ProjectButton
           url={gitHub + "paddlemax-api-spring-boot"}
           text="API Kotlin Spring Boot Prototype Repo"
         />
-        <ProjectButton url={gitHub + "paddlemax-ios"} text="iOS App Repo" />
-        <ProjectButton url={gitHub + "paddlemax-web"} text="Web App Repo" />
+        <ProjectButton url={gitHub + "paddlemax-ios"}
+                       text="iOS App Repo"/>
+        <ProjectButton url={gitHub + "paddlemax-web"}
+                       text="Web App Repo"/>
       </Project>
     )
   }

@@ -35,7 +35,7 @@ export default class Skill extends Component {
           mobile={this.props.mobile}
           style={this.props.imgStyle}
         />
-        <SkillName name={this.props.name} />
+        <SkillName name={this.props.name}/>
       </div>
     )
   }

@@ -2,12 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { mediaQuery } from "../../util/styles"
 // Components
-import {
-  FaEnvelopeSquare,
-  FaFacebookSquare,
-  FaGithubSquare,
-  FaLinkedinSquare
-} from "react-icons/lib/fa"
+import { FaEnvelopeSquare, FaFacebookSquare, FaGithubSquare, FaLinkedinSquare } from "react-icons/lib/fa"
 
 const linkedIn = "https://www.linkedin.com/in/cole-inman-61738565/"
 export const gitHub = "https://github.com/coletrane/" // exporting this for constructing github links in components
@@ -25,22 +20,22 @@ export default class Icons extends Component {
       <IconsStyle>
         <span>
           <a href={linkedIn}>
-            <FaLinkedinSquare />
+            <FaLinkedinSquare/>
           </a>
         </span>
         <span>
           <a href={facebook}>
-            <FaFacebookSquare />
+            <FaFacebookSquare/>
           </a>
         </span>
         <span>
           <a href={"mailto:" + email}>
-            <FaEnvelopeSquare />
+            <FaEnvelopeSquare/>
           </a>
         </span>
         <span>
           <a href={gitHub}>
-            <FaGithubSquare />
+            <FaGithubSquare/>
           </a>
         </span>
       </IconsStyle>

@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-
 // Components
 import { Title } from "./Section"
 import LuvTrails from "./projects/LuvTrails"
@@ -13,9 +12,9 @@ export default class Projects extends Component {
       <div>
         <Title>Projects</Title>
         <LuvTrails/>
-        <Mtbva />
-        <EffectiveBalance />
-        <PaddleMax />
+        <Mtbva/>
+        <EffectiveBalance/>
+        <PaddleMax/>
       </div>
     )
   }

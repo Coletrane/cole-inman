@@ -1,13 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import {
-  boxShadow,
-  topBarStyle,
-  mediaQuery,
-  titleStyle,
-  subtitleStyle
-} from "../../util/styles.js"
-
+import { boxShadow, topBarStyle, mediaQuery, titleStyle, subtitleStyle } from "../../util/styles.js"
 // Components
 import Profile from "./Profile"
 import NavIcons from "./NavIcons"
@@ -149,7 +142,7 @@ export default class Header extends Component {
               {this.subtitle}
             </div>
             <div className="nav-icons">
-              <NavIcons />
+              <NavIcons/>
             </div>
           </div>
           <Profile

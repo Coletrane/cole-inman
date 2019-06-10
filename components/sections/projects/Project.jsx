@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-
 // Components
 import Card from "../Card"
 import CardHeader from "../CardHeader"
@@ -21,7 +20,8 @@ export default class Project extends Component {
             title={this.props.title}
             subheader={this.props.subheader}
           />
-          <ProjectImg src={this.props.imgSrc} alt={this.props.title} />
+          <ProjectImg src={this.props.imgSrc}
+                      alt={this.props.title}/>
           {this.props.children}
         </Card>
       </ProjectCard>

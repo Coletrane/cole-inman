@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import webshots from "../../../util/webshots"
-
 // Components
 import Project, { TechStack } from "./Project"
 import ProjectButton from "./ProjectButton"

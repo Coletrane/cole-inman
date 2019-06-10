@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-
 // Components
 import Section from "./Section"
 import GeneralSkills from "./skills/GeneralSkills"
@@ -13,9 +12,9 @@ export default class Skills extends Component {
       <div>
         <Section title="Skills">
           <GlobalSkillStyles>
-            <GeneralSkills />
-            <BackEndSkills />
-            <FrontEndSkills />
+            <GeneralSkills/>
+            <BackEndSkills/>
+            <FrontEndSkills/>
           </GlobalSkillStyles>
         </Section>
       </div>

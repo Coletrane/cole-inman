@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import webshots from "../../../util/webshots"
 import { gitHub } from "../../header/NavIcons"
-
 // Components
 import Project, { TechStack } from "./Project"
 import ProjectButton from "./ProjectButton"

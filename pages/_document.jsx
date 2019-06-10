@@ -17,7 +17,7 @@ export default class ColeDocument extends Document {
       <html lang="en">
         <Head>
           <title>Cole Inman</title>
-          <meta charSet="utf-8" />
+          <meta charSet="utf-8"/>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -36,13 +36,13 @@ export default class ColeDocument extends Document {
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous"
           />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="shortcut icon"
+                href="/static/favicon.ico"/>
           {this.props.styleTags}
         </Head>
-
         <body style={bodyStyle}>
-          <Main />
-          <NextScript />
+          <Main/>
+          <NextScript/>
         </body>
       </html>
     )

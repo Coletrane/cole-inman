@@ -12,7 +12,7 @@ export default class CardHeader extends Component {
     return (
       <div>
         <Title>{this.props.title}</Title>
-        <Subtitle text={this.props.subtitle} />
+        <Subtitle text={this.props.subtitle}/>
       </div>
     )
   }

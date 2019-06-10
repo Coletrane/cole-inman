@@ -10,7 +10,7 @@ export default class Layout extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header/>
         <GithubBanner>
           <a href="https://github.com/coletrane/cole-inman">
             <img
@@ -21,7 +21,7 @@ export default class Layout extends Component {
         </GithubBanner>
         <MainContent>{this.props.children}</MainContent>
         <BottomNavStyle>
-          <NavIcons />
+          <NavIcons/>
         </BottomNavStyle>
       </div>
     )
