@@ -7,19 +7,15 @@ export default class BackEndSkills extends Component {
   render() {
     return (
       <SkillsList title="Back End">
-        <Java />
-        <Python />
-        <Kotlin />
-        <Swift />
-        <C />
-        <Groovy />
-        <Spring />
-        <JaxRs />
-        <Hibernate />
-        <Postgresql />
-        <MongoDB />
-        <Elasticsearch />
-        <Hadoop />
+        <Java/>
+        <Kotlin/>
+        <Groovy/>
+        <Python/>
+        <Node/>
+        <Spring/>
+        <Elasticsearch/>
+        <Spark/>
+        <C/>
       </SkillsList>
     )
   }
@@ -40,7 +36,9 @@ function Java() {
 }
 
 function Python() {
-  return <Skill name="Python" desktop="70px" mobile="55px" />
+  return <Skill name="Python"
+                desktop="70px"
+                mobile="55px"/>
 }
 
 function Kotlin() {
@@ -57,23 +55,11 @@ function Kotlin() {
   )
 }
 
-function Swift() {
-  return (
-    <Skill
-      name="Swift"
-      desktop="50px"
-      mobile="35px"
-      imgStyle={{
-        paddingTop: "12px",
-        paddingBottom: "14px"
-      }}
-    />
-  )
-}
-
 // Try and shorten this name, Uglify!
 function C() {
-  return <Skill name="C" desktop="70px" mobile="55px" />
+  return <Skill name="C"
+                desktop="70px"
+                mobile="55px"/>
 }
 
 function Groovy() {
@@ -83,7 +69,21 @@ function Groovy() {
       desktop="80px"
       mobile="65px"
       imgStyle={{
-        paddingTop: "15px",
+        paddingTop: "20px",
+        paddingBottom: "10px"
+      }}
+    />
+  )
+}
+
+function Node() {
+  return (
+    <Skill
+      name="Node.js"
+      desktop="55px"
+      mobile="35px"
+      imgStyle={{
+        paddingTop: "10px",
         paddingBottom: "5px"
       }}
     />
@@ -94,62 +94,8 @@ function Spring() {
   return (
     <Skill
       name="Spring"
-      desktop="50px"
-      mobile="35px"
-      imgStyle={{
-        paddingTop: "10px"
-      }}
-    />
-  )
-}
-
-function JaxRs() {
-  return (
-    <Skill
-      name="JAX-RS"
-      desktop="70px"
-      mobile="55px"
-      imgStyle={{
-        paddingTop: "20px",
-        paddingBottom: "6px"
-      }}
-    />
-  )
-}
-
-function Hibernate() {
-  return (
-    <Skill
-      name="Hibernate"
-      desktop="50px"
-      mobile="35px"
-      imgStyle={{
-        paddingTop: "10px"
-      }}
-    />
-  )
-}
-
-function Postgresql() {
-  return (
-    <Skill
-      name="PostgreSQL"
-      desktop="50px"
-      mobile="35px"
-      imgStyle={{
-        paddingTop: "10px",
-        paddingBottom: "5px"
-      }}
-    />
-  )
-}
-
-function MongoDB() {
-  return (
-    <Skill
-      name="MongoDB"
-      desktop="70px"
-      mobile="35px"
+      desktop="60px"
+      mobile="40px"
       imgStyle={{
         paddingTop: "10px"
       }}
@@ -170,15 +116,16 @@ function Elasticsearch() {
   )
 }
 
-function Hadoop() {
+function Spark() {
   return (
-    <Skill
-      name="Hadoop"
-      desktop="50px"
-      mobile="35px"
-      imgStyle={{
-        paddingTop: "10px"
-      }}
+    <Skill name="Spark"
+           desktop="80px"
+           mobile="50px"
+           imgStyle={{
+             paddingTop: "12px",
+             paddingBottom: "5px"
+           }}
     />
   )
 }
+

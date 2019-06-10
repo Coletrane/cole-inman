@@ -7,13 +7,14 @@ export default class GeneralSkills extends Component {
   render() {
     return (
       <SkillsList title="General">
-        <Git />
-        <Scrum />
-        <AWS />
-        <GoogleCloud />
-        <TDD />
-        <Bash />
-        <Linux />
+        <Git/>
+        <Agile/>
+        <AWS/>
+        <GoogleCloud/>
+        <UnitTesting/>
+        <IntegrationTesting/>
+        <Shell/>
+        <Linux/>
       </SkillsList>
     )
   }
@@ -21,58 +22,85 @@ export default class GeneralSkills extends Component {
 
 // Skill Components
 function Git() {
-  return <Skill name="Git" desktop="50px" mobile="35px" />
+  return <Skill name="Git"
+                desktop="50px"
+                mobile="35px"/>
 }
 
-function Scrum() {
+function Agile() {
   return (
-    <Skill
-      name="Scrum"
-      desktop="70px"
-      mobile="55px"
-      imgStyle={{
-        paddingTop: "3px"
-      }}
+    <Skill name="Agile"
+           desktop="50px"
+           mobile="35px"
     />
   )
 }
 
 function AWS() {
   return (
-    <Skill
+    <
+      Skill
       name="Amazon Web Services"
       desktop="80px"
       mobile="65px"
-      imgStyle={{
-        paddingTop: "8px",
-        paddingBottom: "10px"
-      }}
+      imgStyle={
+        {
+          paddingTop: "8px",
+          paddingBottom:
+            "10px"
+        }
+      }
     />
   )
 }
 
 function GoogleCloud() {
-  return <Skill name="Google Cloud" desktop="50px" mobile="42px" />
-}
-
-function TDD() {
-  return <Skill name="Test Driven Development" desktop="60px" mobile="35px" />
-}
-
-function Bash() {
   return (
-    <Skill
-      name="Bash"
+    <Skill name="Google Cloud"
+           desktop="50px"
+           mobile="42px"/>
+  )
+}
+
+function UnitTesting() {
+  return (
+    <Skill name="Unit Testing"
+           desktop="50px"
+           mobile="35px"
+    />
+  )
+}
+
+function IntegrationTesting() {
+  return (
+    <Skill name="Integration Testing"
+           desktop="50px"
+           mobile="35px"
+    />
+  )
+}
+
+function Shell() {
+  return (
+    <
+      Skill
+      name="Shell"
       desktop="50px"
       mobile="35px"
-      imgStyle={{
-        paddingTop: "6px",
-        paddingBottom: "10px"
-      }}
+      imgStyle={
+        {
+          paddingTop: "6px",
+          paddingBottom:
+            "10px"
+        }
+      }
     />
   )
 }
 
 function Linux() {
-  return <Skill name="Linux" desktop="50px" mobile="35px" />
+  return <Skill name="Linux"
+                desktop="50px"
+                mobile="35px"
+  />
 }

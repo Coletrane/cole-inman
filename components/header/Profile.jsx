@@ -31,8 +31,8 @@ export default class Profile extends Component {
   get profileContent() {
     return (
       <ProfileStyle>
-        <div className="profile-container">
-          <img src="/static/img/cole.jpeg" />
+        <address>
+          <img src="/static/img/cole.jpeg"/>
           <table>
             <tbody>
               <tr>
@@ -42,7 +42,7 @@ export default class Profile extends Component {
               <tr>
                 <td className="key">Address</td>
                 <td className="value">
-                  2719 Summit Ridge Rd. Roanoke, VA 24012
+                  2516 Fairway Dr. Roanoke, VA 24015
                 </td>
               </tr>
               <tr>
@@ -59,7 +59,7 @@ export default class Profile extends Component {
               </tr>
             </tbody>
           </table>
-        </div>
+        </address>
       </ProfileStyle>
     )
   }
@@ -103,10 +103,11 @@ const ProfileStyle = styled.div`
   z-index: 3;
   transform: translate(-50%, 0);
 
-  .profile-container {
+  address {
     display: grid;
     grid-template-columns: 50% 50%;
     width: ${imgWidth * 2}px;
+    margin: 0;
   }
 
   img {

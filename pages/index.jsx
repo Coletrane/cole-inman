@@ -8,7 +8,7 @@ import Layout from "../components/Layout"
 import Skills from "../components/sections/Skills"
 import Projects from "../components/sections/Projects"
 import Education from "../components/sections/Education"
-import Experience from "../components/sections/Experience"
+import Employment from "../components/sections/Employment"
 
 export default class Index extends Component {
   constructor(props) {
@@ -58,7 +58,7 @@ export default class Index extends Component {
     if (this.state.experience) {
       return (
         <FastFade>
-          <Experience />
+          <Employment />
         </FastFade>
       )
     }

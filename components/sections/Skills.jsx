@@ -14,8 +14,8 @@ export default class Skills extends Component {
         <Section title="Skills">
           <GlobalSkillStyles>
             <GeneralSkills />
-            <FrontEndSkills />
             <BackEndSkills />
+            <FrontEndSkills />
           </GlobalSkillStyles>
         </Section>
       </div>
