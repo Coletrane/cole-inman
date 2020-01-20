@@ -42,7 +42,7 @@ export default class Profile extends Component {
               <tr>
                 <td className="key">Address</td>
                 <td className="value">
-                  2516 Fairway Dr. Roanoke, VA 24015
+                  213 Lakehurst Ave. Salem, VA 24153
                 </td>
               </tr>
               <tr>

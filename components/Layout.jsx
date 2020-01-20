@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { mediaQuery } from "../util/styles.js"
-import NavIcons from "./header/NavIcons"
-import { boxShadow, topBarStyle } from "../util/styles"
 // Components
 import Header from "./header/Header"
 
@@ -20,9 +18,6 @@ export default class Layout extends Component {
           </a>
         </GithubBanner>
         <MainContent>{this.props.children}</MainContent>
-        <BottomNavStyle>
-          <NavIcons/>
-        </BottomNavStyle>
       </div>
     )
   }
@@ -45,20 +40,5 @@ const MainContent = styled.div`
   padding-right: 1rem;
   ${mediaQuery.tablet`
     padding-top: 50px;
-  `};
-`
-
-const BottomNavStyle = styled.div`
-  ${mediaQuery.ceiling`
-    display: none;
-  `} ${mediaQuery.tablet`
-    display: inline;
-    width: 100%;
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    text-align: center;
-    background-color: ${topBarStyle.backgroundColor};
-    box-shadow: ${boxShadow};
   `};
 `

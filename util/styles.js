@@ -28,12 +28,6 @@ export const topBarStyle = {
   color: "white"
 }
 
-export const titleStyle = {
-  marginTop: "-.5rem",
-  fontSize: "4.5rem",
-  color: "white"
-}
-
 export const subtitleStyle = {
   fontSize: "2rem"
 }

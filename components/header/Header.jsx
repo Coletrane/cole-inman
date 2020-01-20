@@ -1,17 +1,16 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { boxShadow, topBarStyle, mediaQuery, titleStyle, subtitleStyle } from "../../util/styles.js"
+import { boxShadow, topBarStyle, mediaQuery, sizes } from "../../util/styles.js"
 // Components
 import Profile from "./Profile"
 import NavIcons from "./NavIcons"
 
 // Constants
-const minBarHeight = 80
+const minBarHeight = 130
 const maxBarHeight = 300
 const animationDone = 350
 const profileAnimationStart = 75
 
-// This may be the first time I've used calculus/algebra since college
 const barHeightLinear = scroll => {
   return ((minBarHeight - maxBarHeight) / animationDone) * scroll + maxBarHeight
 }
@@ -33,23 +32,16 @@ export default class Header extends Component {
     }
   }
 
+  componentDidMount() {
+    this.handleScroll()
+  }
+
   // Helpers
-  get title() {
-    return "Cole Inman"
-  }
 
-  get subtitle() {
-    if (this.state.barIsCollapsed) {
-      return null
-    } else {
-      return <h4 style={subtitleStyle}>Full Stack Software Developer</h4>
-    }
-  }
-
-  handleScroll(event) {
+  handleScroll() {
     // Defining this since window.scrollY can change during execution of this method
     const scroll = window.scrollY
-    this.setState(prev => {
+    this.setState(() => {
       let newState = {
         ...this.state,
         previousScrollY: scroll
@@ -100,16 +92,20 @@ export default class Header extends Component {
   }
 
   updateTopBar(newState) {
-    if (
-      barHeightLinear(window.scrollY) > minBarHeight &&
-      barHeightLinear(window.scrollY) < maxBarHeight
-    ) {
-      newState.barStyleDynamic.height = `${barHeightLinear(window.scrollY)}px`
-    }
-    if (window.scrollY > animationDone) {
+    if (window.innerWidth >= sizes.tablet) {
+      if (
+        barHeightLinear(window.scrollY) > minBarHeight &&
+        barHeightLinear(window.scrollY) < maxBarHeight
+      ) {
+        newState.barStyleDynamic.height = `${barHeightLinear(window.scrollY)}px`
+      }
+      if (window.scrollY > animationDone) {
+        newState.barStyleDynamic.height = `${minBarHeight}px`
+      } else if (window.scrollY === 0) {
+        newState.barStyleDynamic.height = `${maxBarHeight}px`
+      }
+    } else {
       newState.barStyleDynamic.height = `${minBarHeight}px`
-    } else if (window.scrollY === 0) {
-      newState.barStyleDynamic.height = `${maxBarHeight}px`
     }
   }
 
@@ -129,28 +125,26 @@ export default class Header extends Component {
   render() {
     return (
       <HeaderStyle style={topBarStyle}>
-        <MobileTitle>{this.title}</MobileTitle>
-        <TopNavMedia>
-          <div
-            style={{
-              ...this.state.barStyleDynamic,
-              ...barStyle
-            }}
-          >
-            <div className="desktop-title">
-              <h1 style={titleStyle}>{this.title}</h1>
-              {this.subtitle}
-            </div>
-            <div className="nav-icons">
-              <NavIcons/>
-            </div>
+        <TopBarStyle
+          style={{
+            ...this.state.barStyleDynamic
+          }}
+        >
+          <div className="title-container">
+            <h1>Cole Inman</h1>
+            <h2>Full Stack Software Developer</h2>
           </div>
+          <div className="nav-icons">
+            <NavIcons/>
+          </div>
+        </TopBarStyle>
+        <ProfileStyle>
           <Profile
             fadeOutIn={this.state.profileFadeOutIn}
             hasFaded={this.state.profileHasFaded}
             scrollDirection={this.state.scrollDirection}
           />
-        </TopNavMedia>
+        </ProfileStyle>
       </HeaderStyle>
     )
   }
@@ -171,38 +165,39 @@ const HeaderStyle = styled.div`
   .nav-icons {
     padding-right: 2rem;
     text-align: right;
-    margin-top: 9px;
+    margin-top: 24px;
     margin-bottom: auto;
   }
+  
+  .title-container {
+    padding-left: .5rem;
+  }
+  
+  h1 {
+    margin-top: -.5rem;
+    font-size: 4.5rem;
+    color: white;
+  }
+  ${mediaQuery.tablet`
+    h1 {
+      font-size: 2rem;
+      padding-top: 17px;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+  `}
+  
 `
-const headerStyle = {
-  textAlign: "center",
-  boxShadow: boxShadow,
-  position: "fixed",
-  left: "0px",
-  top: "0px",
-  width: "100%",
-  zIndex: "2"
-}
 
-const MobileTitle = styled.h1`
-  ${mediaQuery.ceiling`
+const TopBarStyle = styled.div`
+  display: grid;
+  grid-template-columns: 50% 50%;
+`
+
+const ProfileStyle = styled.div`
+  ${mediaQuery.tablet`
     display: none;
-  `} ${mediaQuery.tablet`
-    display: block;
-    text-align: center;
-  `};
+  `}
 `
 
-const TopNavMedia = styled.div`
-  ${mediaQuery.desktop`
-    display: block;
-  `} ${mediaQuery.tablet`
-    display: none;
-  `};
-`
-
-const barStyle = {
-  display: "grid",
-  gridTemplateColumns: "50% 50%"
-}
