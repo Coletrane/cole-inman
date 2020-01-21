@@ -7,6 +7,7 @@ import NavIcons from "./NavIcons"
 
 // Constants
 const minBarHeight = 130
+const minBarHeightMobile = 80
 const maxBarHeight = 300
 const animationDone = 350
 const profileAnimationStart = 75
@@ -32,28 +33,47 @@ export default class Header extends Component {
     }
   }
 
+  // Lifecycle
   componentDidMount() {
-    this.handleScroll()
+    if (process.browser) {
+      window.addEventListener("scroll", this.handleScroll)
+      this.handleScroll()
+      if (window.innerWidth < sizes.tablet) {
+        this.setState(() => ({
+          barStyleDynamic: {
+            height: minBarHeightMobile
+          }
+        }))
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    if (process.browser) {
+      window.removeEventListener("scroll", this.handleScroll)
+    }
   }
 
   // Helpers
 
   handleScroll() {
-    // Defining this since window.scrollY can change during execution of this method
-    const scroll = window.scrollY
-    this.setState(() => {
-      let newState = {
-        ...this.state,
-        previousScrollY: scroll
-      }
+    if (window.innerWidth >= sizes.tablet) {
+      // Defining this since window.scrollY can change during execution of this method
+      const scroll = window.scrollY
+      this.setState(() => {
+        let newState = {
+          ...this.state,
+          previousScrollY: scroll
+        }
 
-      this.updateBarCollapsed(scroll, newState)
-      this.updateScrollDirection(scroll, newState)
-      this.updateProfile(scroll, newState)
-      this.updateTopBar(newState)
+        this.updateBarCollapsed(scroll, newState)
+        this.updateScrollDirection(scroll, newState)
+        this.updateProfile(scroll, newState)
+        this.updateTopBar(newState)
 
-      return newState
-    })
+        return newState
+      })
+    }
   }
 
   updateBarCollapsed(scroll, newState) {
@@ -106,19 +126,6 @@ export default class Header extends Component {
       }
     } else {
       newState.barStyleDynamic.height = `${minBarHeight}px`
-    }
-  }
-
-  // Lifecycle
-  componentDidMount() {
-    if (process.browser) {
-      window.addEventListener("scroll", this.handleScroll)
-    }
-  }
-
-  componentWillUnmount() {
-    if (process.browser) {
-      window.removeEventListener("scroll", this.handleScroll)
     }
   }
 

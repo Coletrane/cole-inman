@@ -39,6 +39,6 @@ const MainContent = styled.div`
   padding-left: 1rem;
   padding-right: 1rem;
   ${mediaQuery.tablet`
-    padding-top: 50px;
+    padding-top: 75px;
   `};
 `
