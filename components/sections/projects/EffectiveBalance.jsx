@@ -15,7 +15,7 @@ export default class EffectiveBalance extends Component {
           imgSrc={webshots.localSrc(webshots.pages.effectiveBalance)}>
           <p>
             Effective Balance is a scheduled Python script that runs every day.
-            It scrapes my Gmail account for SunTrust and CitiBank daily balance
+            It scrapes my Gmail account for daily balance
             emails, determines the balance, subtracts them, and then emails me
             my "real balance" (bankAccountBalance - creditCardBalance).
           </p>

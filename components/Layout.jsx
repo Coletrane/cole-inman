@@ -34,7 +34,7 @@ const GithubBanner = styled.div`
   }
 `
 const MainContent = styled.div`
-  padding-top: 600px;
+  padding-top: 500px;
   padding-bottom: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;

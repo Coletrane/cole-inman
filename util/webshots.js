@@ -5,6 +5,7 @@ const bikeva = "bikeva.com"
 const luvtrails = "luvtrails.com"
 const paddlemax = "github.com/coletrane/paddlemax-api"
 const effectiveBalance = "github.com/coletrane/effective-balance-python"
+const bikevaRaceUtils = "github.com/Coletrane/bikeva.com-race-utils"
 const coledrums = "coledrums.com"
 const webjam = "web-jam.com"
 
@@ -46,6 +47,15 @@ const pages = {
     options: {
       crop: true,
       filename: noSlashes(effectiveBalance),
+      scale: 1,
+      timeout: 120
+    }
+  },
+  bikevaRaceUtils: {
+    url: bikevaRaceUtils,
+    options: {
+      crop: true,
+      filename: noSlashes(bikevaRaceUtils),
       scale: 1,
       timeout: 120
     }
