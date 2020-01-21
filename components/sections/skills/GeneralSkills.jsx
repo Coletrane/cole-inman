@@ -8,6 +8,7 @@ export default class GeneralSkills extends Component {
     return (
       <SkillsList title="General">
         <Git/>
+        <Docker/>
         <Agile/>
         <AWS/>
         <GoogleCloud/>
@@ -22,9 +23,23 @@ export default class GeneralSkills extends Component {
 
 // Skill Components
 function Git() {
-  return <Skill name="Git"
-                desktop="50px"
-                mobile="35px"/>
+  return (
+    <Skill name="Git"
+           desktop="50px"
+           mobile="35px"/>
+  )
+}
+
+function Docker() {
+  return (
+    <Skill name="Docker"
+           desktop="55px"
+           mobile="35px"
+           imgStyle={{
+             paddingTop: "7px",
+             paddingBottom: "5px"
+           }}/>
+  )
 }
 
 function Agile() {
@@ -38,8 +53,7 @@ function Agile() {
 
 function AWS() {
   return (
-    <
-      Skill
+    <Skill
       name="Amazon Web Services"
       desktop="80px"
       mobile="65px"
