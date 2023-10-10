@@ -12,6 +12,7 @@ export default class FrontEndSkills extends Component {
         <ReactLolNameCollision/>
         <Angular/>
         <Vue/>
+        <Backbone/>
       </SkillsList>
     )
   }
@@ -76,3 +77,16 @@ function Vue() {
   )
 }
 
+function Backbone() {
+  return (
+    <Skill
+      name="Backbone"
+      desktop="40px"
+      mobile="30px"
+      imgStyle={{
+        paddingTop: "5px",
+        paddingBottom: "5px"
+      }}
+    />
+  )
+}

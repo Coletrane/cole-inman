@@ -7,6 +7,34 @@ export default class Employment extends Component {
   render() {
     return (
       <Section title="Employment">
+        <a href="https://spiderstrategies.com">
+          <img
+            src={`${imgPath}/logos/ss.png`}
+            alt="Spider Strategies"
+            style={{
+              ...imgStyle,
+              ...spiderStyle
+            }}
+          />
+        </a>
+        <div>
+          <div style={timeStyle}>March 2020 - Present</div>
+          <p>
+            Senior full stack developer working on the Spider Impact application, a
+            business intelligence software product. Lead developer on the Datasets
+            feature, which is a BI layer on top of multiple import types
+            (spreadsheets, databases, Google Sheets, Zapier, REST APIs, ect).
+            Stack is: Java, Kotlin, Spring, Hibernate, JDBC, Backbone.js.
+            Lead developer on our license management and 3rd party integrations
+            service, which uses AWS Serverless Application Model (SAM), AWS Lambda,
+            AWS API Gateway, AWS DynamoDB, AWS S3, and AWS CloudFormation.
+            Heavy focus on automated testing and continuous integration to catch
+            bugs as early as possible. High level of autonomy and ownership over
+            code. Lean agile environment, where estimates and iterations happen, but
+            are not the center piece of the process. Code is the center piece of our
+            process and over 95% of my working hours are spent coding!
+          </p>
+        </div>
         <a href="http://digitalreasoning.com">
           <img
             src={`${imgPath}/logos/dr.png`}
@@ -18,9 +46,9 @@ export default class Employment extends Component {
           />
         </a>
         <div>
-          <div style={timeStyle}>May 2017 - Present</div>
+          <div style={timeStyle}>May 2017 - March 2020</div>
           <p>
-            Front end developer working on the Monitoring application, utilized
+            Full stack developer working on the Monitoring application, utilized
             by large banking clients. Stack is: Hadoop, Elasticsearch,
             Java(Jetty/JAXRS), Ruby on Rails, KnockoutJs, jQuery, Bootstrap.
           </p>
@@ -66,17 +94,12 @@ const drStyle = {
   maxWidth: "500px"
 }
 
-const handsmithStyle = {
-  width: "60%",
-  maxWidth: "420px"
-}
-
 const luStyle = {
   width: "70%",
   maxWidth: "400px"
 }
 
-const webJamStyle = {
-  width: "50%",
-  maxWidth: "330px"
+const spiderStyle = {
+  width: "80%",
+  maxWidth: "500px"
 }

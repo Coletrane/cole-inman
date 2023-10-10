@@ -2,11 +2,12 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { mediaQuery } from "../../util/styles"
 // Components
-import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/lib/fa"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { SiUpwork } from "react-icons/si"
 
 const linkedIn = "https://www.linkedin.com/in/cole-inman-61738565/"
 export const gitHub = "https://github.com/coletrane/" // exporting this for constructing github links in components
-const instagram = "https://instagram.com/cole_inman"
+const upwork = "https://www.upwork.com/freelancers/~01003ea0c20a3ab5b5"
 export const email = "eloc49@gmail.com"
 
 export const svgDimensions = {
@@ -29,8 +30,8 @@ export default class NavIcons extends Component {
           </a>
         </span>
         <span>
-          <a href={instagram}>
-            <FaInstagram/>
+          <a href={upwork}>
+            <SiUpwork/>
           </a>
         </span>
       </IconsStyle>

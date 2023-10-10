@@ -5,6 +5,7 @@ import Section from "./Section"
 import GeneralSkills from "./skills/GeneralSkills"
 import FrontEndSkills from "./skills/FrontEndSkills"
 import BackEndSkills from "./skills/BackEndSkills"
+import DatabaseSkills from "./skills/DatabaseSkills"
 
 export default class Skills extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class Skills extends Component {
             <GeneralSkills/>
             <BackEndSkills/>
             <FrontEndSkills/>
+            <DatabaseSkills/>
           </GlobalSkillStyles>
         </Section>
       </div>

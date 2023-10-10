@@ -12,7 +12,7 @@ export default class Layout extends Component {
         <GithubBanner>
           <a href="https://github.com/coletrane/cole-inman">
             <img
-              src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+              src="https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149"
               alt="Fork me on GitHub"
             />
           </a>

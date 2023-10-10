@@ -24,7 +24,7 @@ export default class ColeDocument extends Document {
           />
           <meta
             name="description"
-            content="Cole Inman Full Stack Software Developer Resume and Project showcase"
+            content="Cole Inman Full Stack Software Engineer Resume and Project showcase"
           />
           <link
             href="https://fonts.googleapis.com/css?family=Open+Sans|Lobster"

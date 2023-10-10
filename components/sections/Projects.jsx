@@ -11,12 +11,12 @@ export default class Projects extends Component {
   render() {
     return (
       <div>
-        <Title>Projects</Title>
+        <Title>Personal Projects</Title>
+        <Mtbva/>
         <BikeVARaceUtils/>
         <LuvTrails/>
         <EffectiveBalance/>
         <PaddleMax/>
-        <Mtbva/>
       </div>
     )
   }

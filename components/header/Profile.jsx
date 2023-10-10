@@ -40,9 +40,9 @@ export default class Profile extends Component {
                 <td className="value">{this.age}</td>
               </tr>
               <tr>
-                <td className="key">Address</td>
+                <td className="key">City</td>
                 <td className="value">
-                  213 Lakehurst Ave. Salem, VA 24153
+                  Roanoke, Virginia
                 </td>
               </tr>
               <tr>
