@@ -15,6 +15,7 @@ export default class GeneralSkills extends Component {
         <UnitTesting/>
         <IntegrationTesting/>
         <Shell/>
+        <Zapier/>
         <Linux/>
       </SkillsList>
     )
@@ -117,4 +118,13 @@ function Linux() {
                 desktop="50px"
                 mobile="35px"
   />
+}
+
+function Zapier() {
+  return (
+    <Skill name="Zapier"
+           desktop="50px"
+           mobile="35px"
+    />
+  )
 }

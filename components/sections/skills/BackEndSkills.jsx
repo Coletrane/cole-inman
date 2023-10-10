@@ -9,12 +9,14 @@ export default class BackEndSkills extends Component {
       <SkillsList title="Back End">
         <Java/>
         <Kotlin/>
-        <Groovy/>
-        <Python/>
-        <Node/>
         <Spring/>
+        <Node/>
+        <Lambda/>
+        <Python/>
+        <RestAPIIntegration/>
         <Elasticsearch/>
         <Spark/>
+        <Groovy/>
         <C/>
       </SkillsList>
     )
@@ -59,7 +61,11 @@ function Kotlin() {
 function C() {
   return <Skill name="C"
                 desktop="70px"
-                mobile="55px"/>
+                mobile="55px"
+                imgStyle={{
+                  paddingTop: "16px",
+                }}
+  />
 }
 
 function Groovy() {
@@ -110,7 +116,7 @@ function Elasticsearch() {
       desktop="50px"
       mobile="35px"
       imgStyle={{
-        paddingTop: "10px"
+        paddingTop: "15px"
       }}
     />
   )
@@ -129,3 +135,28 @@ function Spark() {
   )
 }
 
+function RestAPIIntegration() {
+  return (
+    <Skill
+      name="REST API Integration"
+      desktop="60px"
+      mobile="30px"
+      imgStyle={{
+        paddingTop: "8px",
+      }}
+    />
+  )
+}
+
+function Lambda() {
+  return (
+    <Skill
+      name="AWS Lambda"
+      desktop="50px"
+      mobile="35px"
+      imgStyle={{
+        paddingTop: "10px"
+      }}
+    />
+  )
+}

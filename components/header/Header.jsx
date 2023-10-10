@@ -139,7 +139,7 @@ export default class Header extends Component {
         >
           <div className="title-container">
             <h1>Cole Inman</h1>
-            <h2>Full Stack Software Developer</h2>
+            <h2>Full Stack Software Engineer</h2>
           </div>
           <div className="nav-icons">
             <NavIcons/>
@@ -202,6 +202,7 @@ const TopBarStyle = styled.div`
   grid-template-columns: 50% 50%;
 `
 
+// TODO: show profile on mobile
 const ProfileStyle = styled.div`
   ${mediaQuery.tablet`
     display: none;
