@@ -14,7 +14,9 @@ export default class Section extends Component {
     return (
       <div>
         <Title>{this.props.title}</Title>
-        <Card>{this.props.children}</Card>
+        <SectionCard>
+          <Card>{this.props.children}</Card>
+        </SectionCard>
       </div>
     )
   }
@@ -25,5 +27,10 @@ export const Title = styled.div`
   color: white;
   text-shadow: 0px 3px 1px #000000;
   font-size: 4rem;
-  font-family: "Lobster", cursive !important;
+  font-family: "Cutive Mono", monospace !important;
+  text-shadow: 4px 1px 1px #000000;
+`
+
+export const SectionCard = styled.div`
+  margin: 0 10%;
 `

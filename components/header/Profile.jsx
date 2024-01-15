@@ -97,7 +97,7 @@ const imgWidth = 350
 const ProfileStyle = styled.div`
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 50%;
   background-color: white;
   box-shadow: ${boxShadow};
   z-index: 3;
@@ -128,15 +128,20 @@ const ProfileStyle = styled.div`
     font-size: 1.3rem;
   }
 
+  td {
+    font-family: "Cutive Mono", monospace;
+  }
+  
   td.key {
     font-weight: 400;
-    padding: 1rem;
-    font-family: "Lobster", cursive;
-    font-size: 1.5rem;
+    padding-left: 1rem;
+    font-family: "Cutive Mono", monospace;
+    font-size: 1.8rem;
   }
 
   td.value {
     padding-left: auto;
+    font-size: 1.2rem;
   }
 `
 // TODO: add translates

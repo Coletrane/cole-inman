@@ -20,6 +20,6 @@ const CardStyle = styled.div`
   background-color: white;
   box-shadow: ${boxShadow};
   padding: 1rem;
-  opacity: 0.95;
+  opacity: 0.98;
   text-align: center;
 `

@@ -6,18 +6,20 @@ import Mtbva from "./projects/Mtbva"
 import PaddleMax from "./projects/PaddleMax"
 import EffectiveBalance from "./projects/EffectiveBalance"
 import BikeVARaceUtils from "./projects/BikeVARaceUtils"
+import SoundiizApiExtensions from "./projects/SoundiizApiExtensions"
+import Section from "./Section"
 
 export default class Projects extends Component {
   render() {
     return (
-      <div>
-        <Title>Personal Projects</Title>
+      <Section title="Projects">
+        <SoundiizApiExtensions/>
         <Mtbva/>
         <BikeVARaceUtils/>
         <LuvTrails/>
         <EffectiveBalance/>
         <PaddleMax/>
-      </div>
+      </Section>
     )
   }
 }

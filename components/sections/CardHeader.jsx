@@ -28,6 +28,6 @@ function Subtitle(props) {
 
 // Styles
 const Title = styled.span`
-  font-family: "Raleway", sans-serif;
+  font-family: "Cutive Mono", monospace !important;
   font-size: 2rem;
 `

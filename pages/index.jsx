@@ -134,7 +134,7 @@ const AppWrapper = styled.div`
   h4,
   h5,
   h6 {
-    font-family: "Lobster", cursive;
+    font-family: "Cutive Mono", monospace;
     margin: 0;
   }
 

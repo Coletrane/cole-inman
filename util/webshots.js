@@ -8,13 +8,23 @@ const effectiveBalance = "github.com/coletrane/effective-balance-python"
 const bikevaRaceUtils = "github.com/Coletrane/bikeva.com-race-utils"
 const coledrums = "coledrums.com"
 const webjam = "web-jam.com"
+const soundiizApiExtensions = "github.com/coletrane/soundiiz-api-extensions"
 
-const noSlashes = str => {
+const lastPathOfUrl = str => {
   const split = str.split("/")
   return split[split.length - 1]
 }
 
 const pages = {
+  soundiizApiExtensions: {
+    url: soundiizApiExtensions,
+    options: {
+      crop: true,
+      filename: lastPathOfUrl(soundiizApiExtensions),
+      scale: 1,
+      timeout: 120
+    }
+  },
   luvtrails: {
     url: luvtrails,
     options: {
@@ -37,7 +47,7 @@ const pages = {
     url: paddlemax,
     options: {
       crop: true,
-      filename: noSlashes(paddlemax),
+      filename: lastPathOfUrl(paddlemax),
       scale: 1,
       timeout: 120
     }
@@ -46,7 +56,7 @@ const pages = {
     url: effectiveBalance,
     options: {
       crop: true,
-      filename: noSlashes(effectiveBalance),
+      filename: lastPathOfUrl(effectiveBalance),
       scale: 1,
       timeout: 120
     }
@@ -55,7 +65,7 @@ const pages = {
     url: bikevaRaceUtils,
     options: {
       crop: true,
-      filename: noSlashes(bikevaRaceUtils),
+      filename: lastPathOfUrl(bikevaRaceUtils),
       scale: 1,
       timeout: 120
     }
@@ -65,7 +75,7 @@ const pages = {
 const resolutions = ["1920x1080"]
 
 const localSrc = page => {
-  return "/static/img/webshots/" + noSlashes(page.url) + ".png"
+  return "/static/img/webshots/" + lastPathOfUrl(page.url) + ".png"
 }
 
 module.exports = {
