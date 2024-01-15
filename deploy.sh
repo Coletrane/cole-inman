@@ -1,4 +1,4 @@
 #!/bin/sh
 
 gcloud config set project coleinman
-gsutil -m rsync -r -d -c ./out gs://coleinman.com
+gsutil -m rsync -r out gs://coleinman.com
